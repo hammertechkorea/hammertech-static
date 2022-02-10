@@ -1,0 +1,134 @@
+///**********************************************************************/
+///**********************************************************************/
+                        ///*transition & easing*/
+///**********************************************************************/
+///**********************************************************************/
+
+///*사용방법*/
+//@include easing네임(transition target,transition시간+ms, easing네임, 딜레이시간+ms);
+//ex) @include easing(all, 1000ms, $easeInOutSine, 0ms);
+
+//Sine
+$easInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+//Quad
+$easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+//Cubic
+$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+//Quart
+$easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+//Quint
+$easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+//Expo
+$easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+$easeInOutExpo:cubic-bezier(1, 0, 0, 1);
+//Circ
+$easeInCirc:cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$easeOutCirc:cubic-bezier(0.075, 0.82, 0.165, 1);
+$easeInOutCirc:cubic-bezier(0.785, 0.135, 0.15, 0.86);
+//Back
+$easeInBack:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$easeOutBack:cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeInOutBack:cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+
+@mixin transition($target, $time, $eas, $delay){
+    -webkit-transition: $target $time $eas $delay;
+    -moz-transition: $target $time $eas $delay; 
+    -ms-transition: $target $time $eas $delay; 
+    -o-transition: $target $time $eas $delay;
+    transition: $target $time $eas $delay;
+}
+
+
+///**********************************************************************/
+///**********************************************************************/
+                            ///*border-radius*/
+///**********************************************************************/
+///**********************************************************************/
+
+
+@mixin border-radius($val:10px){ //custom border-radius
+    -webkit-border-radius: $val;
+    -moz-border-radius: $val;
+    -ms-border-radius: $val;
+    -o-border-radius: $val;
+    border-radius: $val;
+}
+@mixin border-radius-circle($val:50%){ //원
+    -webkit-border-radius: $val;
+    -moz-border-radius: $val;
+    -ms-border-radius: $val;
+    -o-border-radius: $val;
+    border-radius: $val;
+}
+
+///**********************************************************************/
+///**********************************************************************/
+                            ///*box-shadow*/
+///**********************************************************************/
+///**********************************************************************/
+
+
+///*사용방법*/
+//box-shadow(수평축, 수직축, blur, spread, color, 그림자위치);
+//ex) @include box-shadow(10px, 10px, 10px, 0px, #aaa); <== 바깥 그림자
+//ex) @include box-shadow(10px, 10px, 10px, 0px, black, inset); <== 안쪽 그림자
+
+
+@mixin box-shadow($val_X, $val_Y, $val_B, $val_S, $color, $val_P:outset){ 
+    -webkit-box-shadow: $val_X $val_Y $val_B $val_S $color;
+    -moz-box-shadow: $val_X $val_Y $val_B $val_S $color;
+    -ms-box-shadow: $val_X $val_Y $val_B $val_S $color;
+    -o-box-shadow: $val_X $val_Y $val_B $val_S $color;
+    box-shadow: $val_X $val_Y $val_B $val_S $color;
+    
+    @if $val_P == 'inset' {
+        -webkit-box-shadow: $val_X $val_Y $val_B $val_S $color $val_P;
+        -moz-box-shadow: $val_X $val_Y $val_B $val_S $color $val_P;
+        -ms-box-shadow: $val_X $val_Y $val_B $val_S $color $val_P;
+        -o-box-shadow: $val_X $val_Y $val_B $val_S $color $val_P;
+        box-shadow: $val_X $val_Y $val_B $val_S $color $val_P;
+    }
+}
+
+///**********************************************************************/
+///**********************************************************************/
+                            ///*transform*/
+///**********************************************************************/
+///**********************************************************************/
+
+
+@mixin rotate($val:90deg){
+    -webkit-transform:rotate($val);
+    -moz-transform:rotate($val);
+    -ms-transform:rotate($val);
+    -o-transform:rotate($val);
+    transform:rotate($val);
+}
+
+
+///**********************************************************************/
+///**********************************************************************/
+                            ///*opacity*/
+///**********************************************************************/
+///**********************************************************************/
+
+@mixin opacity($val:1){
+    -khtml-opacity: $val;  // old safari
+    -moz-opacity: $val;  // old firefox
+    -ms-filter: alpha(opacity=$val*100);  // new ie
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=$val*100);  // new ie
+    filter: alpha(opacity=$val*100);  // old ie
+    opacity: $val;  // modern gecko and webkit
+}

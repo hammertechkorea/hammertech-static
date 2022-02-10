@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF8" />
+    <title>HAMMER</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="packed.js"></script>
+
+    <link rel="shortcut icon" href="1616ico.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Baloo+Thambi|Fjalla+One"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".topmenu").click(function () {
+          $(".case_sub_bg").slideToggle("slow");
+        });
+        $(".case_sub_bg").click(function () {
+          $(".case_sub_bg").slideUp(500);
+        });
+      });
+
+      /* case click 페이지 제이쿼리 start */
+      $(document).ready(function () {
+        $("#nav a").mouseover(function (e) {
+          e.preventDefault();
+          $("#nav a").removeClass("active");
+          $(this).addClass("active");
+          img_url = $(this).attr("href");
+          $("#window img").attr("src", img_url);
+        });
+
+        /*accessary_ac_01*/
+        $(".product01_wrapper button").click(function () {
+          $(".panel_01").slideToggle("fast");
+        });
+        $(".product02_wrapper button").click(function () {
+          $(".panel_02").slideToggle("fast");
+        });
+        $(".product03_wrapper button").click(function () {
+          $(".panel_03").slideToggle("fast");
+        });
+      });
+    </script>
+    <style>
+      body {
+              font-family: "Arial","微软雅黑","맑은 고딕";
+              margin:0 auto;
+              text-align:center;
+      }
+      ul li {
+              list-style: none;
+      }
+      a {
+              text-decoration: none; color: #43433c;
+      }
+      .topfix {
+              margin:0 auto;
+      }
+
+      .topsidebg {
+              background-color:#5a1813;
+              height:25px;
+      }
+      .topside {
+              margin: 0 auto;
+              width:1200px;
+              height:30px;
+
+      }
+      .topside ul {
+              float-right;
+              margin:0 5px 0 0;
+      }
+      .topsidebg li {
+              cursor:pointer;
+              float:right;
+              margin-left:15px;
+              font-size:9pt;
+              margin-top:4px;
+              color:#ffffff;
+      }
+      .topmenu li {
+              cursor:pointer;
+              margin-top:32px;
+              margin-right:120px;
+              font-size:11pt;
+              overflow: hidden;
+      }
+      .topmenubg_wrapper{
+
+      }
+
+      .topmenubg {
+
+              background-color:#efeeea;
+              height:80px;
+
+      }
+      /*  가운데정렬적용때문에(?) relative속성을 absolute로 변경. 맞는지 모르겠음 */
+      .top_contents  li {
+              cursor:pointer;
+              float:left; ist-style: none;
+      }
+      .top_contents {
+              list-style: none;
+              position : absolute;
+              margin:0 auto;
+              color :#43433c;
+              overflow:hidden;
+              text-align:center;
+      left: 50%; transform: translateX(-50%);
+              width:1200px;
+              height:80px;
+      }
+      .toplogo li img {
+
+              display:block;
+
+              margin-left: 40px;
+              margin-top: 18px;
+      }
+      .toplogo li{
+
+               padding: 0 5px 0 5px;
+               margin-right: 200px;
+      }
+
+
+
+
+      .case_sub_bg{
+      display: none;
+      z-index: 1;
+      position: absolute;
+      background :#cccccc;
+      opacity:0.97;
+      margin:0 auto;
+      left: 50%; transform: translateX(-50%);
+      height: 120px;
+      top:105px;
+      width: 1050px;
+      padding:30px;
+      text-align:center;
+      }
+      .sub_menu{
+        margin-left: 210px;
+        width: 850px;
+        height: 50px;
+        left:100px;
+
+
+
+
+      }
+      .sub_name1, .sub_name2,
+       .sub_name3, .sub_name4{
+
+        list-style: none;
+        float:left;
+        margin-right: 105px;
+        font-size: 14px;
+
+
+
+      }
+
+      .sub_menu li{
+
+        clear: both;
+        margin-bottom: 15px;
+        margin-right: 0px;
+
+
+      }
+
+      .sub_name1{
+              position: absolute;
+      left:250px;
+      }
+
+      .sub_name2{
+              position: absolute;
+      left:430px;
+      }
+
+      .sub_name2 a{
+
+        color: #8b8b88 !important;
+      }
+
+      .sub_name3{
+              position: absolute;
+      left:700px;
+      }
+
+
+      .sub_name4{
+              position: absolute;
+      left:935px;
+      }
+
+      /* -------keyboard------    */
+
+
+
+      .accessary_wrapper{
+
+        position: relative;
+        width:100%;
+        height:1400px;
+        left: 50%; transform: translateX(-50%);
+
+
+      }
+
+      .ac_main_title{
+        width:1000px;
+        position: relative;
+        margin-top:80px;
+        text-align: left;
+         left: 50%; transform: translateX(-50%);
+
+
+      }
+      .ac_main_title h{
+        font-size: 30px;
+      }
+      .ac_main_title p{
+        font-size: 20px;
+        color:#535353;
+      }
+      .ac_main_title_line1{
+        position: absolute;
+
+        background-color: #5a1813;
+        width:1000px;
+        height:6px;
+      }
+
+
+
+      .product01_wrapper{
+        position: relative;
+        top:200px;
+        background-color: white;
+        border : 1px solid #9b9b9b;
+        width:1000px;
+        padding: 0 0 280px 0;
+        height: auto;
+        left: 50%; transform: translateX(-50%);
+
+
+      }
+      .ac_a1ms_main{
+        position: absolute;
+
+
+      }
+      .product01_wrapper img{
+        position: absolute;
+        padding: 45px 0 0 20px;
+        width: 280px;
+        left:0;
+      }
+      .ac_01{
+        position: absolute;
+        right:70px;
+        top: 30px;
+        text-align: left;
+      }
+      .ac_01 h{
+        font-size: 25px;
+        font-weight:bolder;
+      }
+      .ac_01 p{
+        font-size: 15px;
+        margin-top: 10px;
+          line-height : 140%;
+
+      }
+      .ac_01_panel{
+      position: relative;
+        top:280px;
+          left: 50%; transform: translateX(-50%);
+      }
+
+
+      .product01_wrapper button{
+        width: 1000px;
+      position:  relative;
+        bottom:0px;
+        left: 50%; transform: translateX(-50%);
+        background-color: #f4f4f4;
+        border: 1px solid #dedede;
+
+
+      }
+      .panel_01{
+
+        display:none;
+        top: 0px;
+        width:1000px;
+        height: 200px;
+        background-color: white;
+        padding:  0 ;
+
+      }
+      .panel_01 img{
+        display: block;
+        margin: 0 auto;
+        width: 850px;
+        padding: 20px 0 0 80px;
+      }
+                                            /*----2--*/
+      .product02_wrapper{
+        position: relative;
+        top:300px;
+        background-color: white;
+        border : 1px solid #9b9b9b;
+        width:1000px;
+        padding: 0 0 280px 0;
+        height: auto;
+        left: 50%; transform: translateX(-50%);
+
+
+      }
+      .ac_ls1al_main{
+
+        position: absolute;
+
+
+      }
+      .product02_wrapper img{
+        position: absolute;
+        padding: 30px 0 0 30px;
+        width: 270px;
+        left:0;
+
+
+      }
+      .ac_02{
+        position: absolute;
+        right:100px;
+        top: 30px;
+        text-align: left;
+      }
+      .ac_02 h{
+        font-size: 25px;
+        font-weight:bolder;
+      }
+      .ac_02 p{
+        font-size: 15px;
+        margin-top: 10px;
+          line-height : 140%;
+
+      }
+      .ac_02_panel{
+        position: relative;
+        top:280px;
+         left: 50%; transform: translateX(-50%);
+      }
+
+
+      .product02_wrapper button{
+        width: 1000px;
+        position: relative;
+        bottom:0px;
+        left: 50%; transform: translateX(-50%);
+        background-color:#f4f4f4;
+          width: 1000px;
+        border: 1px solid #dedede;
+
+
+      }
+      .panel_02{
+
+        display:none;
+        top: 0px;
+        width:1000px;
+        height: 200px;
+        background-color: white;
+        padding:  0 ;
+      }
+
+      .panel_02 img{
+        display: block;
+        margin: 0 auto;
+        width: 850px;
+        padding: 20px 0 0 80px;
+      }
+
+
+                                           /*----3--*/
+      .product03_wrapper{
+        position: relative;
+         z-index: 5;
+        top:400px;
+        background-color: white;
+        border : 1px solid #9b9b9b;
+        width:1000px;
+        padding: 0 0 280px 0;
+        height: auto;
+        left: 50%; transform: translateX(-50%);
+
+
+      }
+      .ac_m2alm1al_main{
+        position: absolute;
+
+
+      }
+      .product03_wrapper img{
+        position: absolute;
+        padding: 30px 0 0 30px;
+        width: 270px;
+        left:0;
+
+
+      }
+      .ac_03{
+        position: absolute;
+        right:59px;
+        top: 30px;
+        text-align: left;
+      }
+      .ac_03 h{
+        font-size: 25px;
+        font-weight:bolder;
+      }
+      .ac_03 p{
+        font-size: 15px;
+        margin-top: 10px;
+          line-height : 140%;
+
+      }
+      .ac_03_panel{
+        position: relative;
+        top:280px;
+         left: 50%; transform: translateX(-50%);
+      }
+
+
+      .product03_wrapper button{
+        width: 1000px;
+        position: relative;
+        bottom:0px;
+        left: 50%; transform: translateX(-50%);
+        background-color:#f4f4f4;
+          width: 1000px;
+        border: 1px solid #dedede;
+
+
+      }
+      .panel_03{
+
+        display:none;
+        top: 0px;
+        width:1000px;
+        height: 200px;
+        background-color: white;
+        padding:  0 ;
+      }
+
+      .panel_03 img{
+        display: block;
+        margin: 0 auto;
+        width: 850px;
+        padding: 20px 0 0 80px;
+      }
+      .accessary_bg1{
+
+        height: 500px;
+
+        z-index: 1;
+        bottom:auto;
+        background-image: url(accessary_bg1.png);
+
+        width:100%;
+
+      }
+      .aceessary_bottom_bg{
+        background-position: center bottom;
+
+        height: auto;
+      }
+    </style>
+  </head>
+
+  <!--                     헤드라인                         -->
+  <!--                     바디시작                         -->
+  <!--                     상단고정메뉴시작                   -->
+  <body bgcolor="#f9f9f9">
+    <div class="topfix">
+      <div class="topsidebg">
+        <div class="topside">
+          <ul>
+            <li>CONTACT</li>
+            <li>SUPPORT</li>
+            <li>WHERE TO BUY</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="topmenubg_wrapper">
+        <div class="topmenubg">
+          <div class="top_contents">
+            <div class="toplogo">
+              <li>
+                <a href="/"><img src="logo.png" /></a>
+              </li>
+            </div>
+            <div class="topmenu">
+              <div class="case_bt"><li>CASE</li></div>
+              <li>POWER SUPPLY</li>
+              <li>KEYBOARD&MOUSE</li>
+              <li>ACCESSORY</li>
+            </div>
+          </div>
+        </div>
+        <div class="case_sub_bg">
+          <div class="sub_menu">
+            <div class="sub_name1">
+              <li><a href="re_home3_case_1211.html">G Series</a></li>
+              <li><a href="re_home3_case_1211-2.html">Aluminium</a></li>
+            </div>
+            <div class="sub_name2">
+              <li><a href="">Coming up Soon</a></li>
+            </div>
+            <div class="sub_name3">
+              <li><a href="re_home3_keyboard.html">Keyboard</a></li>
+              <li><a href="">Mouse</a></li>
+            </div>
+            <div class="sub_name4">
+              <li><a href="re_home3_accessary.html">Accessory</a></li>
+              <li><a href="">Cooling & Tunning</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--                상단고정메뉴끝                   -->
+    <!--                홈화면내용시작                   -->
+    <div class="aceessary_bottom_bg">
+      <div class="accessary_wrapper">
+        <div class="ac_main_title">
+          <h>HAMMER ACCESSORY </h>
+          <p>EXTRADINARY DESIGN</p>
+          <div class="ac_main_title_line1"></div>
+          <div class="ac_main_title_line2"></div>
+          <div class="ac_main_title_line3"></div>
+        </div>
+        <div class="product01_wrapper">
+          <img src="ac_a1ms_main.png" />
+          <div class="ac_01">
+            <h>A1MS</h>
+            <p>
+              A stand made of full aluminum frame. <br />
+              Simple yet sophisticated design without much detail, you can see
+              <br />
+              a seamless design that fits well in your surroundings.<br />
+              It is a user-oriented monitor & notebook stand that prevents
+              turtle neck <br />
+              syndrome and neck disk diseases in accordance with the user's eye
+              level.
+            </p>
+          </div>
+          <div class="ac_01_panel">
+            <button type="button" name="button">Full spec Click</button>
+            <div class="panel_01">
+              <img src="case_spec_png/spec_a1ms.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="product02_wrapper">
+          <img src="ac_ls1al_main.png" />
+          <div class="ac_02">
+            <h>LS1AL</h>
+            <p>
+              You can simply fold and carry it. <br />
+              Please use the stand in the cafe and the library with sense.
+              <br />Thin and light material can be carried freely. You can
+              adjust the stand <br />to the most optimal angle for your various
+              body environments.
+            </p>
+          </div>
+          <div class="ac_02_panel">
+            <button type="button" name="button">Full spec Click</button>
+            <div class="panel_02">
+              <img src="case_spec_png/spec_ls1al.png" />
+            </div>
+          </div>
+        </div>
+        <div class="product03_wrapper">
+          <img src="ac_m2alm1al_main.png" />
+          <div class="ac_03">
+            <h>M1AL / M2AL</h>
+            <p>
+              Aluminum material and diamond cutting finish make it even more
+              luxurious.<br />
+              As well as design and functionality, <br />
+              it is made of a honeycomb-shaped silicon bottom plate <br />
+              that performs a strong grounding action. <br />
+              It is highly resistant to external contamination due to its
+              special <br />
+              abrasion resistance due to anodizing treatment.
+            </p>
+          </div>
+          <div class="ac_03_panel">
+            <button type="button" name="button">Full spec Click</button>
+            <div class="panel_03">
+              <img src="case_spec_png/spec_m1alm2al.png" />
+            </div>
+          </div>
+        </div>
+        <div class="accessary_bg1"></div>
+      </div>
+    </div>
+  </body>
+</html>

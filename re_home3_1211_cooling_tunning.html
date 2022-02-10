@@ -1,0 +1,723 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF8">
+<title> HAMMER</title>
+<link rel="shortcut icon" href="1616ico.ico">
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Baloo+Thambi|Fjalla+One" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.25, minimum-scale=0, user-scalable=no, target-densitydpi=medium-dpi" /><!--모바일페이지크기조절메타태그--> 
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+
+<!-- 탑메뉴 -->
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+        $(".topmenu").click(function(){
+                $(".case_sub_bg").slideToggle("slow");
+        });
+        $(".case_sub_bg").click(function(){
+                $(".case_sub_bg").slideUp(500)});
+        });
+
+
+
+
+
+</script>
+<style>
+body {
+        font-family: "Arial","微软雅黑","맑은 고딕";
+        margin:0 auto; 
+       
+
+        
+}
+ul li {
+        list-style: none;
+}
+a {
+        text-decoration: none; color: white;
+}
+.topfix {
+        margin:0 auto;
+}
+
+.topsidebg {
+        background-color:#5a1813;
+        height:25px;
+}
+.topside {
+        
+        margin: 0 auto;
+         left: 80%; transform: translateX(-10%);
+        height:30px;
+
+}
+
+.topside ul {
+        float-right;
+        margin:0 5px 0 0;
+}
+.topsidebg li {
+        cursor:pointer;
+        float:right;
+        margin-left:15px;
+        font-size:9pt;
+        margin-top:4px;
+        color:#ffffff;
+        
+       
+    
+}
+
+.topside A :visited { text-decoration: none; color :#ffffff;
+      
+}
+
+
+
+
+
+/*  가운데정렬적용때문에(?) relative속성을 absolute로 변경. 맞는지 모르겠음 */
+.top_contents  li {
+      
+        cursor:pointer;
+       
+        float:left; list-style: none;
+        
+}
+.top_contents {
+        float:left;
+        margin-top:10px;
+        list-style: none;
+        width: 300px;
+        color :#43433c;
+        overflow:hidden;
+        text-align:center;
+       
+       
+}
+.toplogo li img {
+        
+        display:block;
+        width: 80px;
+        margin-left: 0px;
+        margin-top: 15px;
+}
+.toplogo li{    
+         padding: 0 5px 0 5px;      
+}
+.top_slogun{ 
+         float:left;
+        width: 170px;      
+}
+.top_slogun img{   
+        margin-top:31px;
+        width: 170px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
+/* main Styles */
+
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+  
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+a { text-decoration: none; }
+
+.container {
+  width: 1200px;
+ 
+  margin: auto;
+
+}
+
+
+h1 { text-align:center; margin-top:150px;}
+
+/* Navigation Styles */
+
+nav { background: #efeeea;  }
+
+nav ul {
+       
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+
+}
+
+nav ul li a {
+       
+  color: #3c3c3c;
+  display: block;
+  font-size: 19px;
+  padding: 40px 30px;
+  transition: 0.3s linear;
+  
+}
+
+
+nav ul li:hover { background: #5a1813;  
+                z-index :5; }
+
+nav ul li :hover {
+        color: #ececec;
+}
+nav ul li ul :hover {
+        color: #5a1813;
+}
+
+nav ul li ul {
+     
+  border-bottom: 3px solid #c8c8c8;
+  display: none;
+  position: absolute;
+  width: 253px;
+  
+
+}
+
+nav ul li ul li {
+  border-top: 1px solid #ffffff;
+ 
+  display: block;
+ 
+}
+
+nav ul li ul li:first-child { border-top: none; }
+
+nav ul li ul li a {
+     
+  background: #efeeea;
+  display: block;
+  padding: 20px 14px;
+
+}
+
+nav ul li ul li a:hover { background: #efeeea; }
+
+nav .fa.fa-angle-down { margin-left: 6px; }
+
+
+
+
+
+
+
+/*                     -------------- 바디CSS시작 --------------                     */
+
+
+
+
+.h_series_wrapper{
+    color: #c6c6c6;
+    background :#ffffff;
+    padding:0px 0 70px 0;
+    width: 100%;
+    height: 1500px;
+    margin: 0 auto;
+    
+}
+
+.h_series{
+        background-image: url(fan_series_banner.png);  
+        background-position: center;
+        max-width:2000px;
+        min-width:1000px;
+        height:300px;
+        margin: 0 auto;
+   
+        background-repeat: no-repeat;
+        overflow: hidden;
+        
+       
+    
+}
+
+.h_series img{
+        width: 2000px;
+        margin:0 auto;
+        display:block;
+
+}
+.h_product_bg{
+        width:100%;
+        height:1400px;
+        background: #ebebeb;
+        padding: 90px 0 ;
+        
+}
+.h_product {
+        width: 1300px;
+        height:35px;
+        margin: 0 auto;
+        padding: 3px 0 3px 0;
+        background: #b60000;
+        border-radius: 0 20px 20px 0;
+        padding: 4px 4px;
+        font-size: 18px;
+       
+        
+    
+
+}
+.h_product_list{
+        width: 1300px;
+        padding: 70px 0 0 30px;
+        margin: 0 auto;
+        position: relative; 
+        
+        
+     
+}
+.h_product_list img {
+        position: absolute;
+        left: 25px;
+        display: block;
+        padding: 0px 2px 0 0px;
+        width: 230px;
+        
+}
+.h_product_list li{
+       
+        margin-right: 110px;
+        margin-bottom: 90px;
+        float: left;
+        
+}
+
+.h1_wrap{
+        position: relative;
+        width: 300px;
+        height: 420px;
+        padding: 40px 10px 30px 10px;
+        border-radius: 4px;
+        background: #ffffff;
+
+       
+
+     
+     
+       
+}
+
+.h_product_white{
+        position: absolute;
+        width:300px;
+        height:85px;
+        top:320px;
+        left: 0px;
+        float: left;
+        color:#464646;
+        
+    
+
+}
+.h_product_white h{
+        
+        font-size: 32px;
+        background: #b60000;
+        color:#e0e0e0;
+        padding: 5px 80px 8px 10px;
+        border-radius: 0 30px 30px 0;
+        
+}
+
+.h_product_white {
+        
+        font-size: 32px;
+
+       
+
+}
+
+.h_product_white p{
+        font-size: 20px;
+        display: block;
+        margin:0;
+        padding:0;
+       
+}
+#h1_case_color{
+        position: absolute;
+        top: 283px;
+        left: 10px;
+        width:25px;
+        height:25px;
+        border-radius: 30px 30px 30px 30px;
+        background: #bababa;
+
+}
+.h1_casename{
+        position: absolute;
+        font-size: 23px;
+        top:58px;
+        left: 35px;
+}
+
+
+
+
+
+
+
+
+.footer {
+    color: #a9a9aa;
+    font-size:9pt;
+    overflow:hidden;
+    background :#483637;
+    padding:40px 0 70px 0;
+    width: 100%;
+    height: 340px;
+    margin: 0 auto;
+    
+   
+  
+   
+}
+.footer_p{
+
+        width: 1310px;
+        padding: 40px 0 30px 0;
+        text-align: left;
+        line-height : 165%;
+        font-size: 14px;
+        margin: 0 auto; 
+  
+        
+}
+.ft_logo{
+
+         float:left;
+        width:58px;
+        margin-right: 12px;
+      
+}
+.ft_main_p{
+        
+        color: #a9a9aa;
+      
+        margin : 3px;
+      
+        
+        
+       
+}
+.ft_sub_p{ 
+      width: 740px;
+        
+        float : left;
+        
+}
+
+.footer_icon{
+
+
+      float : left;
+
+      margin-top:0; 
+      margin-left: 350px;
+          
+}
+.footer_icon ul{
+        display:block; padding:0; margin:0;
+        width:200px;
+        margin-left:0px;
+        margin-top:5px;
+}
+.footer_icon li{
+        float: left;
+}
+.footer_icon img{
+        width:47px;
+        
+}
+.footer_icon p{
+        padding:0;
+        margin:0;
+        font-size: 13px;
+        margin-left: 15px;
+}
+</style>
+</head>
+
+
+
+
+
+<!--                     헤드라인                         -->
+<!--                     바디시작                         -->
+<!--                     상단고정메뉴시작                   -->
+<body bgcolor = "#f9f9f9">
+
+
+<div class ="topfix">
+
+    <div class ="topsidebg">
+        <div class="topside">
+           <ul>
+              <li><a href="re_home3_contact.html">CONTACT</a></li>
+         <!--     <li>SUPPORT</li>   -->
+              <li>WHERE TO BUY</li>
+           </ul>
+         </div>
+    </div>
+
+
+
+<div class="topmenubg_wrapper">
+
+
+
+
+
+
+
+
+
+
+
+<nav>
+  <div class="container">
+
+
+
+           
+
+
+           <div class="top_contents">
+                   <div class="toplogo"> 
+                        <li><a href="/"><img src="logo.png"></a></li>
+                </div>
+                <div class="top_slogun">
+                        <img src="top_slogun.png">
+                </div>
+                
+ 
+           </div>
+
+
+
+    <ul>
+
+
+  
+        <li id="name"> <a href="#">CHASSIS<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_1211_h_series.html">H Series</a></li>
+          <li><a href="re_home3_1211_m_series.html">M Series</a></li>
+          <li><a href="re_home3_1211_i_series.html">I Series</a></li>
+        </ul>
+      </li>
+        
+      <li><a href="#">POWER SUPPLY</a></li>
+      <li> <a href="#">KEYBOARD & MICE<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_1211_keyboard.html">Keyboard</a></li>
+          <li><a href="#">Mice</a></li>
+          <li><a href="re_home3_1211_mousepad.html">Mouse pad</a></li>
+        </ul>
+      </li>
+      <li class='sub-menu'> <a href="#">ACCESSORY<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_1211_accessory.html">Accessory</a></li>
+          <li><a href="re_home3_1211_cooling_tunning.html">Cooling & Tunning</a></li>
+    
+        </ul>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    </div>
+
+
+
+    <!--                상단고정메뉴끝                   -->
+    <!--                홈화면내용시작                   -->
+
+<div class="h_series_wrapper">
+        <div class="h_series_banner"> </div>
+        <div class="h_series">
+             <!--   <img src="fan_series_banner.png">  -->
+        </div>
+        
+        <div class="h_product_bg">
+        <div class="h_product">
+                PRODUCT / ACCESSORY / COOLING & TUNNING
+        </div>
+        <div class="h_product_list">
+                <ul>
+                        <li>
+                                <div class="h1_wrap">
+                                <img src="imgs/typhoon_main_01.png">
+                                <!--<div id="h1_case_color"></div>-->
+                                <div class="h_product_white">
+                                        <h>TYPHOON</h>
+                                         <br><br>
+                                        <div class="h1_casename">Cooling Fan LED</div>
+                                </div>
+                                </div> 
+                        </li>
+               
+
+                       <li>
+                               <a href="cooling_tunning_click_vh1_01.html">
+                                <div class="h1_wrap">
+                                <img src="imgs/vh1_main_01.png">
+                                <div class="h_product_white">
+                                        <h>VH1</h>
+                                         <br><br>
+                                        <div class="h1_casename">VGA Card Holder</div>
+                                </div>
+                                </div> 
+                        </li>
+      
+          
+                        
+                </ul>
+        </div>
+        </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--홈화면내용끝-->
+
+
+<div class="footer">
+        <div class="footer_p">
+<p>
+<img class="ft_logo" src="hammer_ing_g.png">
+<div class="ft_main_p">Copyright © 2017 Hammertech. All rights reserved<br> 
+Hammertech korea Co., Ltd<br><br>
+</div>
+<div class="ft_sub_p">
+
+Korea Office ｜ 6F 104 Office, 147, Yanghwa-ro, Mapo-gu, Seoul,Korea 03995 <br>
+E-mail : daniel@hammertech.co.kr</div>
+</p> 
+
+
+<div class="footer_icon">
+        <p> WANT TO BE SOCIAL US? </p>
+        <ul>
+                <a href="https://www.facebook.com/HammertechHK/"><li><img src="footer_icon_fb.png"></li></a>
+                <a href=""><li><img src="footer_icon_yt.png"></li></a>
+                <a href=""><li><img src="footer_icon_insta.png"></li></a>
+                <a href=""><li><img src="footer_icon_t.png"></li></a>
+        </ul>
+        
+</div>
+
+
+        </div>
+</div>
+
+
+
+
+
+
+
+
+<!--홈화면탑메뉴 -->
+
+
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script> 
+<script>
+$('nav li').hover(
+  function() {
+	  $('ul', this).stop().slideDown(200);
+  },
+	function() {
+    $('ul', this).stop().slideUp(200);
+  }
+);
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

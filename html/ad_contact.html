@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+</html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	<title>hammertech/admin</title>
+</head>
+<link rel="stylesheet" href="/css/ad_contact.css" />
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+<script src="/lib/vue.min.js"></script>
+<script src="/lib/axios.min.js"></script>
+<body>
+  <div id="app">
+    <div class="date">
+      date:
+      <input type="date" name="bday">
+      <!-- <input type="submit"> -->
+    </div>
+    <table id="mytable" cellspacing="0" summary="">
+      <caption>Table 1: Hammertech. Contact </caption>  
+      <tr>
+        <th class="nobg">Configurations</th>
+        <th>NAME</th>
+        <th>Country</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Comments</th>
+      </tr>
+      <tr v-for="item in list">
+        <th scope="row" abbr="No1" class="spec">{{ item.date }}</th>
+        <td>{{ item.first_name + ' ' + item.last_name }}</td>
+        <td>{{ item.country }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.phone }}</td>
+        <td class="firstRow">{{ item.comment }}</td>
+      </tr>
+    </table>
+  </div>
+<script src="/js/ad_contact.js"></script>
+</body>
+</html>

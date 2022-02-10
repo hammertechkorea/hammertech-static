@@ -1,0 +1,745 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF8">
+<title> HAMMER</title>
+<link rel="shortcut icon" href="1616ico.ico">
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Baloo+Thambi|Fjalla+One" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.25, minimum-scale=0, user-scalable=no, target-densitydpi=medium-dpi" /><!--모바일페이지크기조절메타태그--> 
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+
+<!-- 탑메뉴 -->
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+        $(".topmenu").click(function(){
+                $(".case_sub_bg").slideToggle("slow");
+        });
+        $(".case_sub_bg").click(function(){
+                $(".case_sub_bg").slideUp(500)});
+        });
+
+
+
+
+
+</script>
+<style>
+body {
+        font-family: "Arial","微软雅黑","맑은 고딕";
+        margin:0 auto; 
+       
+
+        
+}
+ul li {
+        list-style: none;
+}
+a {
+        text-decoration: none; color: #43433c;
+}
+.topfix {
+        margin:0 auto;
+}
+
+.topsidebg {
+        background-color:#5a1813;
+        height:25px;
+}
+.topside {
+        
+        margin: 0 auto;
+         left: 80%; transform: translateX(-10%);
+        height:30px;
+
+}
+
+.topside ul {
+        float-right;
+        margin:0 5px 0 0;
+}
+.topsidebg li {
+        cursor:pointer;
+        float:right;
+        margin-left:15px;
+        font-size:9pt;
+        margin-top:4px;
+        color:#ffffff;
+        
+       
+    
+}
+
+.topside A :visited { text-decoration: none; color :#ffffff;
+      
+}
+
+
+
+
+
+/*  가운데정렬적용때문에(?) relative속성을 absolute로 변경. 맞는지 모르겠음 */
+.top_contents  li {
+      
+        cursor:pointer;
+       
+        float:left; list-style: none;
+        
+}
+.top_contents {
+        float:left;
+        margin-top:10px;
+        list-style: none;
+        width: 300px;
+        color :#43433c;
+        overflow:hidden;
+        text-align:center;
+       
+       
+}
+.toplogo li img {
+        
+        display:block;
+        width: 80px;
+        margin-left: 0px;
+        margin-top: 19px;
+}
+.toplogo li{    
+         padding: 0 5px 0 5px;      
+}
+.top_slogun{ 
+         float:left;
+        width: 170px;      
+}
+.top_slogun img{   
+        margin-top:33px;
+        width: 170px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
+/* main Styles */
+
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+  
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+a { text-decoration: none; }
+
+.container {
+  width: 1200px;
+ 
+  margin: auto;
+
+}
+
+
+h1 { text-align:center; margin-top:150px;}
+
+/* Navigation Styles */
+
+nav { background: #efeeea;  }
+
+nav ul {
+       
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+
+}
+
+nav ul li a {
+       
+  color: #3c3c3c;
+  display: block;
+  font-size: 19px;
+  padding: 40px 30px;
+  transition: 0.3s linear;
+  
+}
+
+
+nav ul li:hover { background: #5a1813;  
+                z-index :5; }
+
+nav ul li :hover {
+        color: #ececec;
+}
+nav ul li ul :hover {
+        color: #5a1813;
+}
+
+nav ul li ul {
+     
+  border-bottom: 3px solid #c8c8c8;
+  display: none;
+  position: absolute;
+  width: 253px;
+  
+
+}
+
+nav ul li ul li {
+  border-top: 1px solid #ffffff;
+ 
+  display: block;
+ 
+}
+
+nav ul li ul li:first-child { border-top: none; }
+
+nav ul li ul li a {
+     
+  background: #efeeea;
+  display: block;
+  padding: 20px 14px;
+
+}
+
+nav ul li ul li a:hover { background: #efeeea; }
+
+nav .fa.fa-angle-down { margin-left: 6px; }
+
+
+
+
+
+
+
+/*                     -------------- 바디CSS시작 --------------                     */
+
+
+
+
+.m_series_m1_detail{
+    color: #c6c6c6;
+    background-image: url(m1_bg.png);
+   
+    text-align: center;
+    width: 100%;
+    height: 4100px;
+    margin: 0 auto;
+    
+}
+.m_series_bt {
+        position: absolute;
+        top:300px;
+        left: 30%; transform: translateX(-10%);
+        width: 1300px;
+      
+}
+.m_series_bt li{
+        float:left;
+        margin-right: 300px;
+}
+.m_series_bt img{
+       
+        left: 290px;
+        top: 170px;
+        width: 310px;
+       
+       
+}
+.m1_detail_img {
+        background-image: url(m1_2-2-2_bg.png);
+}
+.m1_detail_img img{
+        
+        margin:0 auto;
+        max-width: 1900px;
+       
+        
+}
+.m1_title_middle{
+        margin: 0 auto;
+        width: 1200px;
+        height: 50px;
+        border-radius: 30px;
+        background: #009cff;
+        font-size: 30px;
+        margin-top: 50px;
+}
+
+
+
+
+.m1_middle{ 
+position: relative;
+        padding: 50px 0 0 0;
+}
+#m1_one h{
+        background: #3e3e55;
+        color: #009cff;
+        font-size: 20px;
+        padding: 0 20px 20px 20px;
+         border-radius: 0 0 15px 15px;
+}
+#m1_two h{
+        background: #484861;
+        color: #009cff;
+        font-size: 20px;
+        padding: 0 20px 20px 20px;
+         border-radius: 0 0 15px 15px;
+}
+#m1_three h{
+        background: #3e3e55;
+        color: #009cff;
+        font-size: 20px;
+        padding: 0 20px 20px 20px;
+         border-radius: 0 0 15px 15px;
+}
+#m1_one{
+        width:100%;
+        height: 450px;
+        background: #484861;
+        margin: 0 auto;
+     
+      
+}
+#m1_one ul{position: absolute;
+        width: 1500px;
+        left: 50%; transform: translateX(-50%);
+        margin: 0 auto;
+        padding: 50px;
+        
+}
+#m1_one ul li{
+        margin-right: 90px;
+        float:left;
+        
+}
+#m1_one img{
+     
+        left:200px;
+        margin-top:50px;
+    height: 250px;
+}
+#m1_ment1{
+         position: absolute;
+         font-size: 25px;
+         text-align: left;
+         left: 980px;
+         top:100px;
+}
+
+#m1_two{
+        width:100%;
+        height: 450px;
+        background: #3e3e55;
+        margin: 0 auto;
+      
+}
+#m1_two ul{
+        position:absolute;
+        width: 1500px;
+        left: 50%; top: 40%; transform: translateX(-50%);
+        margin: 0 auto;
+      
+}
+#m1_two ul li{
+        margin-right: 90px;
+        float:left;
+        text-align: left;
+        
+}
+#two_txt{
+        margin-top:170px;
+        color:#9e9e9e;
+}
+#m1_two img{
+     
+        left:200px;
+        top:160px;
+    height: 280px;
+}
+
+#m1_three{
+        width:100%;
+        height: 450px;
+        background: #484861;
+      
+}
+#m1_three img{
+     
+        left:200px;
+        margin-top:60px;
+    height: 250px;
+}
+
+#m1_three ul{
+        position:absolute;
+        width: 1500px;
+        left: 50%; transform: translateX(-50%);
+        margin: 0 auto;
+      
+}
+#m1_three ul li{
+        margin-right: 90px;
+        float:left;
+}
+#three_03 img{
+        border:1px solid white;
+}
+.m1_spec { 
+        position: absolute;
+        width:1500px;
+        left: 50%;transform: translateX(-50%);
+        
+        
+}
+.m1_spec img{
+        padding-top: 0px;
+        width: 1450px;
+  
+        
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    color: #c6c6c6;
+    font-size:9pt;
+    overflow:hidden;
+    background :#483637;
+    padding:70px 0 70px 0;
+    width: 100%;
+    height: 350px;
+    margin: 0 auto;
+   
+  
+   
+}
+.footer_p{
+
+        width: 1295px;
+        padding: 40px 0 30px 0;
+        text-align: left;
+        line-height : 165%;
+        font-size: 14px;
+        margin: 0 auto;
+  
+        
+}
+.ft_logo{
+
+         float:left;
+        width:58px;
+      
+}
+.ft_main_p{
+        
+        color: #a9a9aa;
+      
+        margin-top : 0;
+        margin-left: 90px;  
+        
+        
+       
+}
+.ft_sub_p{ 
+      width: 720px;
+        
+        float : left;
+        margin-right: 370px;
+}
+
+.footer_icon{
+
+      float : left;
+
+      margin-top:0;
+           
+}
+.footer_icon img{
+        width:186px;
+        
+}
+.footer_icon p{
+        padding:0;
+        margin:0;
+        font-size: 13px;
+        margin-left: 15px;
+}
+</style>
+</head>
+
+
+
+
+
+<!--                     헤드라인                         -->
+<!--                     바디시작                         -->
+<!--                     상단고정메뉴시작                   -->
+<body bgcolor = "#f9f9f9">
+
+
+<div class ="topfix">
+
+    <div class ="topsidebg">
+        <div class="topside">
+           <ul>
+              <li><a href="re_home3_contact.html">CONTACT</a></li>
+         <!--     <li>SUPPORT</li>   -->
+              <li>WHERE TO BUY</li>
+           </ul>
+         </div>
+    </div>
+
+
+
+<div class="topmenubg_wrapper">
+
+
+
+
+
+
+
+
+
+
+
+<nav>
+  <div class="container">
+
+
+
+           
+
+
+           <div class="top_contents">
+                   <div class="toplogo"> 
+                        <li><a href="/"><img src="logo.png"></a></li>
+                </div>
+                <div class="top_slogun">
+                        <img src="top_slogun.png">
+                </div>
+                
+ 
+           </div>
+
+
+
+    <ul>
+
+
+  
+         <li id="name"> <a href="#">CHASSIS<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_1211_h_series.html">H Series</a></li>
+          <li><a href="re_home3_1211_M_series_detail_2.html">M Series</a></li>
+        </ul>
+      </li>
+        
+      <li><a href="#">POWER SUPPLY</a></li>
+      <li> <a href="#">KEYBOARD&MICE<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_keyboard.html">Keyboard</a></li>
+          <li><a href="#">Mice</a></li>
+          <li><a href="#">Mouse pad</a></li>
+        </ul>
+      </li>
+      <li class='sub-menu'> <a href="#">ACCESSORY<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_accessary.html">Accessory</a></li>
+          <li><a href="#">Cooling & Tunning</a></li>
+    
+        </ul>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    </div>
+
+
+
+    <!--                상단고정메뉴끝                   -->
+    <!--                홈화면내용시작                   -->
+
+<div class="m_series_m1_detail">
+        <!-- 잠시
+        <div class="m_series_bt">
+        <ul>
+         <li><a href="re_home3_1211_M_series_detail_2.html"><img src="m1_bt.png"></a></li>
+          <li><a href="re_home3_1211_M_series_detail_2.html"><img src="m1_bt.png"></a></li> 
+        </ul>
+        </div>
+        -->
+       
+        <div class="m1_detail_img">
+                <img src="m1_2-2-2.png">
+
+        </div>
+        <div class="m1_title_middle">
+                HIGH PERFORMANCE EXTENDABILITY
+                </div>
+                
+        <div class="m1_middle">
+                <div id="m1_one">
+                        <h>CONVENIENCE FUNCTION & INTERFACE</h>
+                        <ul>
+                        <li><img src="m1_img_01.png"></li>
+                         <li><img src="m1_img_02.png"></li>
+                          <li><img src="m1_img_03.png"></li>
+                          <li id="m1_ment1">모던하고 감각적인 디자인의 M1. <br>튜닝 시스템의 LED를 더욱 더 아름답게
+                                  빛나게 하는 고급스러운 케이스입니다.
+                          </li>
+                          </ul>
+
+                    
+                </div>
+                <div id="m1_two">
+                        <h>CONVENIENCE FUNCTION & INTERFACE</h>
+                        <ul>
+                        <li><img src="m1_img_04.png"></li>
+                        <li id="two_txt">측면이 모두 아크릴로 구성되어<br> PC 내부의 튜닝된 조명 시스템이 <br>막힘없이 노출되어 분위기를 극대화 합니다. </li>
+                         <li><img src="m1_img_05.png"></li>
+                         <li id="two_txt">LED 쿨링팬이 적용되어 <br>흔들림 없이 케이스 내부에 발생되는 열을<br> 신속하게 배출하는 시스템이 구성되었습니다. </li>
+                          </ul>
+                </div>
+                <div id="m1_three">
+                         <h>CONVENIENCE FUNCTION & INTERFACE</h>
+                        <ul>
+                        <li><img src="m1_img_06.png"></li>
+                        <li><img src="m1_img_08.png"></li>
+                        <li>blahblahblah</li>
+                        <li id="three_03"><img src="m1_img_07.png"></li>
+                        <li>blahblah</li>
+                        </ul>
+                </div>      
+        </div>
+        <div class="m1_spec">
+                <img src="m1_spec.png">
+                </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--홈화면내용끝-->
+
+
+<div class="footer">
+        <div class="footer_p">
+<p>
+<img class="ft_logo" src="hammer_ing_g.png">
+<div class="ft_main_p">Copyright © 2017 Hammertech. All rights reserved<br> 
+Hammertech Co., Ltd<br><br>
+</div>
+<div class="ft_sub_p">
+Hong Kong Office : Room 12A, 3/F., Tower B, Cambridge Plaza, 188 San Wan Road, Sheung Shui, N.T. Hong Kong <br>
+Korea Office : 2/F., 19, Ihyeon-ro 29beon-gil, Giheung-gu, Yongin-si, Gyeonggi-do, Korea 16931 <br>
+｜TEL +82 070-8896-4480 ｜  FAX : +82 02-839-4408 </div></p> 
+
+
+<div class="footer_icon">
+        <p> WANT TO BE SOCIAL US? </p>
+        <img src="footer_icon_b.png">
+        </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+<!--홈화면탑메뉴 -->
+
+
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script> 
+<script>
+$('nav li').hover(
+  function() {
+	  $('ul', this).stop().slideDown(200);
+  },
+	function() {
+    $('ul', this).stop().slideUp(200);
+  }
+);
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

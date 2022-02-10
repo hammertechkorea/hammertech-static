@@ -1,0 +1,711 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF8">
+<title> HAMMER</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<META HTTP-EQUIV="Page-Enter" CONTENT="BlendTrans(Duration=0.4)">
+<META HTTP-EQUIV="Page-exit" CONTENT="BlendTrans(Duration=0.4)">
+<link rel="shortcut icon" href="1616ico.ico">
+<link href="https://fonts.googleapis.com/css?family=Abel|Didact+Gothic|Khand" rel="stylesheet">
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script>
+
+
+/* 홈화면 페이지 제이쿼리 start */
+
+$(document).ready(function(){
+        $(".topmenu").click(function(){
+                $(".case_sub_bg").slideToggle("slow");
+        });
+        $(".case_sub_bg").click(function(){
+                $(".case_sub_bg").slideUp(500)});
+
+/* case 페이지 제이쿼리 start */
+
+        $(".menu>a").click(function(){
+                var submenu = $(this).next("ul");
+                if(submenu.is(":visible") ){
+                        submenu.slideUp(500);
+                }else{
+                        submenu.slideDown(500);
+                }
+        })/*.click(function(){
+                $(this).next("ul").slideDown(500);
+        });*/
+        });
+
+</script>
+<style>
+body {
+        font-family: "Arial","微软雅黑","맑은 고딕";
+        margin:0 auto;
+        text-align:center;
+}
+ul li {
+        list-style: none;
+}
+a {
+        text-decoration: none; color: #43433c;
+}
+.topfix {
+        margin:0 auto;
+}
+
+.topsidebg {
+        background-color:#5a1813;
+        height:25px;
+}
+.topside {
+        margin: 0 auto;
+        width:1200px;
+        height:30px;
+
+}
+.topside ul {
+        float-right;
+        margin:0 5px 0 0;
+}
+.topsidebg li {
+        float:right;
+        cursor:pointer;
+        margin-left:15px;
+        font-size:9pt;
+        margin-top:4px;
+        color:#ffffff;
+        cursor:pointer;
+}
+.topmenu li {
+        margin-top:32px;
+        cursor:pointer;
+        margin-right:120px;
+        font-size:11pt;
+        overflow: hidden;
+        cursor:pointer;
+}
+
+
+.topmenubg {
+
+        background-color:#efeeea;
+        height:80px;
+
+}
+
+/*  가운데정렬적용때문에(?) relative속성을 absolute로 변경. 맞는지 모르겠음 */
+.top_contents  li {
+        float:left; ist-style: none; cursor:pointer;
+}
+.top_contents {
+        list-style: none;
+        position : absolute;
+        margin:0 auto;
+        color :#43433c;
+        overflow:hidden;
+        text-align:center;
+left: 50%; transform: translateX(-50%);
+        width:1200px;
+        height:80px;
+}
+.toplogo li img {
+
+        display:block;
+
+        margin-left: 40px;
+        margin-top: 18px;
+}
+.toplogo li{
+
+         padding: 0 5px 0 5px;
+         margin-right: 200px;
+}
+
+
+
+
+.case_sub_bg{
+display: none;
+z-index: 1;
+position: absolute;
+background :#cccccc;
+opacity:0.97;
+margin:0 auto;
+left: 50%; transform: translateX(-50%);
+height: 120px;
+top:105px;
+width: 1050px;
+padding:30px;
+text-align:center;
+}
+.sub_menu{
+  margin-left: 210px;
+  width: 850px;
+  height: 50px;
+  left:100px;
+
+
+
+
+}
+.sub_name1, .sub_name2,
+ .sub_name3, .sub_name4{
+
+  list-style: none;
+  float:left;
+  margin-right: 105px;
+  font-size: 14px;
+
+
+
+}
+
+.sub_menu li{
+
+  clear: both;
+  margin-bottom: 15px;
+  margin-right: 0px;
+
+
+}
+
+.sub_name1{
+        position: absolute;
+left:250px;
+}
+
+.sub_name2{
+        position: absolute;
+left:440px;
+}
+
+.sub_name3{
+        position: absolute;
+left:700px;
+}
+
+
+.sub_name4{
+        position: absolute;
+left:935px;
+}
+
+
+                                    /* body css start */
+
+
+.wrapper {
+ background: #efeeea;
+        margin:0 auto;
+        text-align:center;
+        overflow: hidden;
+        max-width: 1700px;
+        min-width: 1000px;
+
+ }
+
+
+
+.wrapper_mainimg {
+        background-image: url(main_img_case_01.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+        max-width:100%;
+        min-width:1000px;
+        overflow: hidden;
+        position: relative;
+        height: 230px;
+        padding:0;
+        text-align:center;
+
+
+}
+
+
+
+
+
+.middle_white {
+
+    position:relative;
+    color: #552a2a;
+    font-size: 35px;
+    margin-bottom: 100px;
+   right: 0px;
+    width: 1700px;
+
+    background-image: url(click_middle.png);
+    height: 170px;
+    font-family: 'Abel', sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Khand', sans-serif;
+
+
+
+}
+
+.middle_white h{
+        position:absolute;
+        padding-top:30px;
+        left: 50%; transform: translateX(-50%);
+        top: 0;
+        color:#ff6009;
+        font-size: 25px;
+
+}
+
+.middle_white p{
+        position:absolute;
+        padding-top:18px;
+        top: 0;
+        font-size: 40px;
+        color:white;
+        left: 50%; transform: translateX(-50%);
+
+}
+
+
+.wrapper_case_page{
+    position: relative;
+    background: #eeeae0;
+    padding:4px 0 50px 0;
+    margin:0 auto;
+    text-align:center;
+    overflow: hidden;
+    max-width: 100%;
+    height: 1480px;
+    min-width: 1000px;
+
+
+
+
+
+
+}
+
+
+
+
+
+.hide li {
+
+  padding: 10px;
+}
+.hide a{
+        display:block;
+        padding:  0px;
+        width:280px;
+        height:23px;
+        line-height: 25px;
+       
+
+}
+
+.case_place{
+     position: relative;
+    height: 1300px;
+    width: 1698px;
+    text-align:center;
+   left: 50%; transform: translateX(-50%);
+
+}
+
+
+
+.case_list_bg{
+position: relative;
+  float: left;
+  left: 100px;
+  width:380px;
+ height: 1120px;
+background-color: #f7f7f6;
+
+
+
+
+}
+.menu{
+
+
+    margin:0;
+    background-color: #f7f7f6;
+    margin-bottom: 20px;
+    width:300px;
+    top:0;
+    margin-left:0px;
+    text-align: center;
+
+
+
+
+}
+.title{
+    color: white;
+    background-color: #ff8f51;
+    border-radius:4px;
+    transition: all 0.5s;
+    width:300px;
+    display:inline-block;
+    padding: 20px 0;
+    cursor:pointer;
+     text-align: center;
+     font-size: 18px;
+
+
+}
+.title span{
+        cursor:pointer;
+        transition: 0.5s;
+}
+.title span:after{
+        content: '\00bb';
+        right: -20px;
+        transition:0.5s;
+}
+.title :hover span{
+        padding-right:25px;
+}
+.title :hover span:after{
+        opacity: 1;
+        right:0;
+}
+
+.menu li{
+        background-color: #eaeaea;
+        width: 275px;
+ border-radius:4px;
+
+        margin-bottom: 5px;
+         font-weight: 300;
+         text-align: center;
+
+}
+.menu ul{
+        padding: 0;
+        margin:0;
+
+}
+.menu .hide{
+        display:none;
+}
+
+.g_case{
+
+    font-size:1px;
+    margin-left:5px;
+    margin-top:25px;
+
+}
+
+.product_case{
+  position: absolute;
+  overflow: hidden;
+  padding: 0px;
+  width: 1100px;
+  right:0;
+
+
+}
+.case_img{
+  position: relative;
+  background :#e1e1e1;
+  float: left;
+  margin-right: 96px;
+  margin-bottom: 95px;
+  width:270px;
+  height: 310px;
+
+
+
+}
+.img01 img{
+  position: absolute;
+  top:40px;
+  left:53px;
+  width:156px;
+
+}
+.img01 :hover{
+  width: 162px;
+  -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.5s;
+}
+.name{
+  position: absolute;
+  bottom: 0;
+  color:#919191;
+  background-color: white;
+  width: 270px;
+  height: 25px;
+  font-size: 15px;
+  line-height:25px;
+
+
+}
+.name2{
+  position: absolute;
+  color: white;
+  top:0;
+  padding: 16px;
+  font-size: 26px;
+
+}
+
+
+
+.footer {
+  color: #c6c6c6;
+  font-size:9pt;
+  overflow:hidden;
+  background :#483637;
+  padding:70px 0 70px 0;
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+}
+.footer_p{
+        width: 1330px;
+        padding: 0;
+        text-align: left;
+        line-height : 180%;
+
+        margin: 0 auto;
+}
+.footer_icon{
+        position: absolute;
+        top: 2010px;
+        right: 150px;
+
+
+}
+</style>
+</head>
+
+
+
+
+
+<!--                     헤드라인                         -->
+<!--                     바디시작                         -->
+<!--                     상단고정메뉴시작                   -->
+<body bgcolor = "#eeeae0">
+
+
+<div class ="topfix">
+
+    <div class ="topsidebg">
+        <div class="topside">
+           <ul>
+              <li>CONTACT</li>
+              <li>SUPPORT</li>
+              <li>WHERE TO BUY</li>
+           </ul>
+         </div>
+    </div>
+
+
+
+<div class="topmenubg_wrapper">
+    <div class ="topmenubg">
+
+           <div class="top_contents">
+
+             <div class="toplogo"> <li><a href="/"><img src="logo.png"></a></li></div>
+             <div class="topmenu">
+                      <div class="case_bt"><li>CASE</li></div>
+                      <li>POWER SUPPLY</li>
+                      <li>KEYBOARD&MOUSE</li>
+                      <li>ACCESSORY</li>
+             </div>
+
+           </div>
+    </div>
+             <div class="case_sub_bg">
+                <div class="sub_menu">
+                     <div class="sub_name1">
+
+                             <li><a href="re_home3_case_1211.html">G Series</a></li>
+                             <li><a href="re_home3_case_1211-2.html">Aluminium</a></li>
+
+                      </div>
+                      <div class="sub_name2">
+                              <li><a href="">준비중입니다</a></li>
+                       </div>
+                       <div class="sub_name3">
+                               <li><a href="re_home3_keyboard.html">Keyboard</a></li>
+                               <li><a href="">Mouse</a></li>
+                        </div>
+                        <div class="sub_name4">
+                                <li><a href="re_home3_accessary.html">Accessory</a></li>
+                                <li><a href="">Cooling & Tunning</a></li>
+                        </div>
+                </div>
+             </div>
+
+</div>
+
+
+    </div>
+
+
+
+    <!--                상단고정메뉴끝                   -->
+    <!--                홈화면내용시작                   -->
+
+
+<div class="wrapper">
+
+          <div class="wrapper_mainimg">
+                          <div class="caseonly">
+
+                          </div>
+          </div>
+
+
+
+
+
+
+
+          <div class="wrapper_case_page">
+            <div class="case_place">
+                  <div class="middle_white">
+             <h>HAMMER TECH CASE</h></br>
+             <p>YOUR HAMMER TO CONQUER!</p>
+             </div>
+
+                <div class="case_list_bg">
+                        <ul>
+                                <li class="menu">
+                                        <a class="title" ><span>G CASE</span></a>
+                                        <ul class="hide">
+                                                <li><a href="re_home3_caseclick_1211(5).html">G1</a></li>
+                                                <li><a href="hm_case_click.html">G20</a></li>
+                                                <li><a href="caseclick_g23.html">G23</a></li>
+                                                <li><a href="caseclick_g25.html">G25</a></li>
+                                                <li><a href="caseclick_g26.html">G26</a></li>
+                                                <li><a href="caseclick_g30.html">G30</a></li>
+                                                <li><a href="caseclick_g40.html">G40</a></li>
+                                         </ul>
+                                 </li>
+                                 <li class="menu">
+                                         <a class="title"><span>Aluminium CASE</span></a>
+                                         <ul class="hide">
+                                                 <li><a href="caseclick_c1.html">I-1AL</a></li>
+                                                <li><a href="">I-2AL</a></li>
+                                                <li><a href="caseclick_c1.html">C1</a></li>
+                                                <li><a href="">C2</a></li>
+                                                <li><a href="caseclick_i4b.html">I-4B</a></li>
+                                                <li><a href="">I-4W</a></li>
+                                                <li><a href="caseclick_h1.html">H1</a></li>
+                                                <li><a href="">H2</a></li>
+                                                <li><a href="caseclick_n2al.html">N-2AL</a></li>
+                                                <li><a href="">E-1</a></li>
+                                                <li><a href="caseclick_e2albatross.html">E-2</a></li>
+                                                <li><a href="">N1</a></li>
+
+                                        </ul>
+                                </li>
+                </div>
+                <div class="product_case">
+                      <a href="re_home3_caseclick_1211(5).html">
+                        <div class="case_img">
+                            <div class="case_01">
+                              <div class="img01"><img src="g1_main.png"></div>
+                                <div class="name">Middle Tower</div>
+                                <div class="name2">G1</div>
+                           </div>
+                      </div></a>
+
+                      
+                        <div class="case_img">
+                          <div class="case_01">
+                            <div class="img01"><img src="g20_main.png"></div>
+                              <div class="name">Middle Tower</div>
+                              <div class="name2">G20</div>
+                         </div>
+                        </div>
+                     
+
+                        <a href="caseclick_g23.html">
+                        <div class="case_img">
+                          <div class="case_01">
+                            <div class="img01"><img src="g23_main.png"></div>
+                              <div class="name">Middle Tower</div>
+                              <div class="name2">G23</div>
+                         </div>
+                        </div>
+                        </a>
+
+                        <a href="caseclick_g25.html">
+                        <div class="case_img">
+                            <div class="case_01">
+                            <div class="img01"><img src="g25_main.png"></div>
+                              <div class="name">Middle Tower</div>
+                              <div class="name2">G25</div>
+                         </div>
+                        </div>
+                        </a>
+
+                        <a href="caseclick_g26.html">
+                        <div class="case_img">
+                            <div class="case_01">
+                            <div class="img01"><img src="g26_main.png"></div>
+                              <div class="name">Middle Tower</div>
+                              <div class="name2">G26</div>
+                         </div>
+                        </div>
+                        </a>
+
+                        <a href="caseclick_g30.html">
+                        <div class="case_img">
+                            <div class="case_01">
+                            <div class="img01"><img src="g30_main.png"></div>
+                              <div class="name">Middle Tower</div>
+                              <div class="name2">G30</div>
+                         </div>
+                        </div>
+                        </a>
+
+                         <a href="caseclick_g40.html">
+                        <div class="case_img">
+                            <div class="case_01">
+                            <div class="img01"><img src="g40_main.png"></div>
+                              <div class="name">Middle Tower</div>
+                              <div class="name2">G40</div>
+                         </div>
+                        </div>
+                        </a>
+
+
+          </div>
+        </div>
+        </div>
+          </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--홈화면내용끝-->
+<div class="footer">
+        <div class="footer_p">
+<p>
+｜HAMMER ., Co  LTD PC COMPONENT  <br><br>CEO Sung-chun, Jeong  <br> Business number : 128-81-90890 ｜
+Address : 406 Woolim Ebiz Center2, Guro 3 dong 184-1 Guro-gu, Seoul Korea (Seoul Branch) <br>
+TEL : 070-8896-4480 ｜  FAX : 02-839-4480 </p>
+<div class="footer_icon">
+        <img src="footer_icon.png">
+        </div>
+        </div>
+</div>
+
+
+</body>
+</html>

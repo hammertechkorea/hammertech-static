@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+dl,ul,ol,menu,li {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+input,select,textarea,button {vertical-align:middle}
+input::-ms-clear {display:none}
+button {border:0 none;background-color:transparent;cursor:pointer}
+body,th,td,input,select,textarea,button {font-size:14px;line-height:1.5;font-family:'돋움',dotum,sans-serif;color:#666}
+.os_mac body,.os_mac th,.os_mac td,.os_mac input,.os_mac select,.os_mac textarea,.os_mac button {font-family:apple SD gothic neo,'돋움',dotum,sans-serif}
+
+/*링크에 대한 설정*/
+a {color:#444;text-decoration:none}
+a:active, a:hover {text-decoration:none;}
+a:active {background-color:transparent}
+
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+article, aside, figure, figure img,figcaption, hgroup, footer, header, nav, section, video, object {display:block;}
+*{
+    -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+ }  
+html{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.clearfix:after,
+.clearfixDiv{
+    display: block;
+    visibility: hidden;
+    content: ".";
+    clear: both;
+    text-indent: -9999px;
+    height: 0;
+}
+/*----------------------------------------샘플  코딩----------------------------------------*/
+body{
+    background-color: #fff;
+}
+#samplesection{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #69D2E7;
+}
+#sampledivL,
+#sampledivR{
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    font-size: 1em;
+    font-family: '돋움',dotum, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    line-height: 200px;
+    float: left;
+}
+#sampledivL{
+    margin-left: -200px;
+    background-color: #FA6900;
+    color: #fff;
+}
+#sampledivR{
+    margin-left: 0px;
+    background-color: #F38630;
+    color: #fff;
+}
+#sampledivL.clicked,
+#sampledivR.clicked{
+     background-color: #FE4365; 
+}
+@media screen and (min-width:1024px){
+    /*1024 사이즈 이상부터는 웹폰트 적용, 그 미만은 모바일이기 때문에 웹폰트 로드 불필요*/
+    @font-face{
+    font-family:NanumBarun;
+    src:url(../font/NanumBarunGothic.eot);
+    src:local(※), 
+              url(../font/NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+              url(../font/NanumBarunGothic.woff) format('woff');
+    }
+    body{
+        font-family: NanumBarun;
+        font-weight: normal;
+        font-size: 14px;
+    }
+    #sampledivL,
+    #sampledivR{
+        font-family: NanumBarun;
+        font-weight: normal;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF8" />
+    <title>HAMMER</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="packed.js"></script>
+
+    <link rel="shortcut icon" href="1616ico.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Baloo+Thambi|Fjalla+One"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".topmenu").click(function () {
+          $(".case_sub_bg").slideToggle("slow");
+        });
+        $(".case_sub_bg").click(function () {
+          $(".case_sub_bg").slideUp(500);
+        });
+      });
+
+      /* case click 페이지 제이쿼리 start */
+      $(document).ready(function () {
+        $("#nav a").mouseover(function (e) {
+          e.preventDefault();
+          $("#nav a").removeClass("active");
+          $(this).addClass("active");
+          img_url = $(this).attr("href");
+          $("#window img").attr("src", img_url);
+        });
+      });
+    </script>
+    <style>
+      body {
+              font-family: "Arial","微软雅黑","맑은 고딕";
+              margin:0 auto;
+              text-align:center;
+      }
+      ul li {
+              list-style: none;
+      }
+      a {
+              text-decoration: none; color: #43433c;
+      }
+      .topfix {
+              margin:0 auto;
+      }
+
+      .topsidebg {
+              background-color:#5a1813;
+              height:25px;
+      }
+      .topside {
+              margin: 0 auto;
+              width:1200px;
+              height:30px;
+
+      }
+      .topside ul {
+              float-right;
+              margin:0 5px 0 0;
+      }
+      .topsidebg li {
+              float:right;
+              cursor:pointer;
+              margin-left:15px;
+              font-size:9pt;
+              margin-top:4px;
+              color:#ffffff;
+      }
+      .topmenu li {
+              margin-top:32px;
+              cursor:pointer;
+              margin-right:120px;
+              font-size:11pt;
+              overflow: hidden;
+      }
+      .topmenubg_wrapper{
+
+      }
+
+      .topmenubg {
+
+              background-color:#efeeea;
+              height:80px;
+
+      }
+      /*  가운데정렬적용때문에(?) relative속성을 absolute로 변경. 맞는지 모르겠음 */
+      .top_contents  li {
+              float:left; ist-style: none;
+              cursor:pointer;
+      }
+      .top_contents {
+              list-style: none;
+              position : absolute;
+              margin:0 auto;
+              color :#43433c;
+              overflow:hidden;
+              text-align:center;
+      left: 50%; transform: translateX(-50%);
+              width:1200px;
+              height:80px;
+      }
+      .toplogo li img {
+
+              display:block;
+
+              margin-left: 40px;
+              margin-top: 18px;
+      }
+      .toplogo li{
+
+               padding: 0 5px 0 5px;
+               margin-right: 200px;
+      }
+
+
+      .case_sub_bg{
+      display: none;
+      z-index: 1;
+      position: absolute;
+      background :#cccccc;
+      opacity:0.97;
+      margin:0 auto;
+      left: 50%; transform: translateX(-50%);
+      height: 120px;
+      top:105px;
+      width: 1050px;
+      padding:30px;
+      text-align:center;
+      }
+      .sub_menu{
+        margin-left: 210px;
+        width: 850px;
+        height: 50px;
+        left:100px;
+
+
+
+
+      }
+      .sub_name1, .sub_name2,
+       .sub_name3, .sub_name4{
+
+        list-style: none;
+        float:left;
+        margin-right: 105px;
+        font-size: 14px;
+
+
+
+      }
+
+      .sub_menu li{
+
+        clear: both;
+        margin-bottom: 15px;
+        margin-right: 0px;
+
+
+      }
+
+      .sub_name1{
+              position: absolute;
+      left:250px;
+      }
+
+      .sub_name2{
+              position: absolute;
+      left:440px;
+      }
+
+      .sub_name3{
+              position: absolute;
+      left:700px;
+      }
+
+
+      .sub_name4{
+              position: absolute;
+      left:935px;
+      }
+
+
+
+
+      /* --------caseclick---------  */
+
+
+
+
+      .case_click_wrapper{
+        background-image: url(case_click_bg.png);
+        background-repeat: repeat-x;
+
+        overflow:hidden;
+        padding: 30px 0 20px 0;
+
+
+
+
+      }
+      .box_bg{
+        position:relative;
+
+        margin: 0 auto;
+        width: 1050px;
+        height: 500px;
+        padding: 100px 30px 100px 30px;
+
+
+      }
+      .pdf{
+              position: absolute;
+              top: 175px;
+              left: 930px;
+              font-size: 11px;
+      }
+      .pdf img{
+              width:46px;
+      }
+
+
+      #ㅜnav li{
+          float: left;
+      }
+
+      .case_name{
+              position: absolute;
+              top:57px;
+              left: 0;
+              font-size: 48px;
+      }
+      .case_name_line{
+        position: absolute;
+        top: 160px;
+        left: 0px;
+        border-bottom: 2px solid black;
+        width: 125px;
+      }
+      .case_name2{
+             color: #585858;
+              position: absolute;
+              top: 130px;
+              left: 0;
+              font-size:17px;
+      }
+
+      .case_name3{
+        position: absolute;
+        background-color: white;
+         border-radius: 7px;
+        padding: 2px 10px;
+        top: 200px;
+        left: 0;
+        font-size: 17px;
+      }
+
+
+      #wrap img{
+         width: 30px;
+      }
+
+      #window img{
+          position: absolute;
+          top:208px;
+          left:130px;
+          width: 320px;
+      }
+
+      #nav{
+          position: absolute;
+          width: 350px;
+           top:505px;
+          left: 668px;
+
+      }
+
+      #nav img{
+           background-color: white;
+          padding:4px 7px;
+          border: 1px solid #b8b8b8;
+          width:48px;
+      }
+      #nav li{
+          float: left;
+          margin-right: 5px;
+      }
+
+
+
+
+
+      .case_list a img {
+          background-color: white;
+          padding:4px 7px;
+          border: 1px solid black;
+          width:40px;
+
+
+      }
+
+
+
+       /*
+
+      .spec_01 {
+              color: white;
+        position: absolute;
+        background-color: #666666;
+        opacity:0.47;
+        float:left;
+        top:200px;
+        left: 660px;
+        width: 320px;
+        height: 200px;
+
+      }
+
+      */
+
+
+
+
+
+      .spec_0203{
+              position: relative;
+
+              top:65px;
+              background-color: #dbdbdb;
+              width:100%;
+              height: 530px;
+               left: 50%; transform: translateX(-50%);
+               padding: 30px 0;
+
+
+
+      }
+      .bg_0203{
+              background-color: rgba( 146, 149, 158, 0.5 );
+
+
+
+      }
+      .bg_0203{
+
+              position: absolute;
+              top:840px;
+
+               padding: 120px 0;
+               width: 1400px;
+               height: 355px;
+
+                left: 50%; transform: translateX(-50%);
+
+      }
+      .spec_line{
+              position: absolute;
+              top:840px;
+              background-color:#272d3e;
+              width: 1400px;
+              height: 9px;
+                left: 50%; transform: translateX(-50%);
+      }
+      .spec_04{
+          position:absolute;
+        padding-left: 25px;
+              z-index: 5;
+              color: #272d3e;
+              font-size: 13px;
+              top:27px;
+              left: 200px;
+
+      }
+      .spec_04 img {
+        position: absolute;
+        left:0;
+        top:-3px;
+      }
+      .spec_03{
+              position:absolute;
+                 border-radius: 5px;
+               top: -60px;
+              margin:0;
+              padding:0;
+              background-color: white;
+              position: relative;
+              top: 20px;
+              width: 1000px;
+              height: 150px;
+               left: 50%; transform: translateX(-50%);
+
+
+      }
+
+      .spec_03 ul {
+
+              margin:0;
+              padding:0;
+              float:left;
+              margin-right: 10px;
+
+
+      }
+      .spec_03 li{
+               float:left;
+                 margin-right: 10px;
+
+      }
+
+
+      .feature{
+        position: absolute;
+        font-size: 13px;
+        left:228px;
+        top:109px;
+
+      }
+      .feature_line{
+        position: absolute;
+        border-bottom: 2px solid black;
+        left: 200px;
+        width:100px;
+        top: 100px;
+
+      }
+
+      .fullspec{
+          z-index: 3;
+        position: absolute;
+        font-size: 13px;
+        left:228px;
+        top:310px;
+
+      }
+      .feature_line2{
+        position: absolute;
+        z-index: 3;
+        border-bottom: 2px solid black;
+        left: 200px;
+        width:100px;
+        top: 305px;
+
+      }
+
+      .spec_left{
+              background-color: #ffdf5e;
+              padding: 0;
+
+              text-align: center;
+              width: 200px;
+              height: 150px;
+              margin-right: 10px;
+
+
+      }
+      #class_id{
+        color: white;
+        font-size: 38px;
+        padding:50px;
+      }
+      .spec_right{
+              text-align: left;
+
+              font-size: 15px;
+              line-height : 120%;
+              padding: 10px 0 5px 130px;
+              background-color: white;
+              width: 600px;
+              height: 80px;
+
+
+      }
+      .spec_right img{
+              width:9px;
+              margin-right: 48px;
+
+      }
+
+
+
+
+
+
+
+      .spec_02{
+              position: relative;
+
+              width: 100%;
+              top: 20px;
+              background-color:url(case_click_bg_bottom.png);
+              height: 310px;
+              text-align:center;
+
+              left: 50%; transform: translateX(-50%);
+
+      }
+
+      .spec_02 img{
+              margin-top: 27px;
+              width :850px;
+      }
+      .fullspec_bg{
+        position:absolute;
+
+      background-color: #f4f4f4;
+           border-radius: 1px;
+        width: 1000px;
+        height: 200px;
+        top: 15px;
+        left: 50%; transform: translateX(-50%);
+      }
+      .fullspec_sq{
+        position:absolute;
+       top: 0;
+        background-color: #ffdf5e;
+        width: 1000px;
+        height:3px;
+          z-index: 5;
+
+      }
+      .fullspec_bg img{
+        padding: 0px 0 0 0;
+      }
+    </style>
+  </head>
+
+  <!--                     헤드라인                         -->
+  <!--                     바디시작                         -->
+  <!--                     상단고정메뉴시작                   -->
+  <body bgcolor="#f9f9f9">
+    <div class="topfix">
+      <div class="topsidebg">
+        <div class="topside">
+          <ul>
+            <li>CONTACT</li>
+            <li>SUPPORT</li>
+            <li>WHERE TO BUY</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="topmenubg_wrapper">
+        <div class="topmenubg">
+          <div class="top_contents">
+            <div class="toplogo">
+              <li>
+                <a href="/"><img src="logo.png" /></a>
+              </li>
+            </div>
+            <div class="topmenu">
+              <div class="case_bt"><li>CASE</li></div>
+              <li>POWER SUPPLY</li>
+              <li>KEYBOARD&MOUSE</li>
+              <li>ACCESSAOY</li>
+            </div>
+          </div>
+        </div>
+        <div class="case_sub_bg">
+          <div class="sub_menu">
+            <div class="sub_name1">
+              <li><a href="re_home3_case_1211.html">G Series</a></li>
+              <li><a href="">Aluminium</a></li>
+            </div>
+            <div class="sub_name2">
+              <li><a href="">준비중입니다</a></li>
+            </div>
+            <div class="sub_name3">
+              <li><a href="re_home3_keyboard.html">Keyboard</a></li>
+              <li><a href="">Mouse</a></li>
+            </div>
+            <div class="sub_name4">
+              <li><a href="">Accessory</a></li>
+              <li><a href="">Cooling & Tunning</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--                상단고정메뉴끝                   -->
+    <!--                홈화면내용시작                   -->
+
+    <div class="case_click_wrapper">
+      <div class="box_bg">
+        <div class="pdf">
+          <a href="filepdf.pdf"><img src="icon_down.png" /></a>
+        </div>
+        <div id="wrap">
+          <div class="case_name">#C2</div>
+          <div class="case_name_line"></div>
+          <div class="case_name2">Mini Tower Case</div>
+          <div class="case_name3">Color BLACK</div>
+          <ul id="nav">
+            <li>
+              <a href="imgs/g1_main_01.png" class="active"
+                ><img src="imgs/g1_main_s_01.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="imgs/g1_main_02.png"
+                ><img src="imgs/g1_main_s_02.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="imgs/g1_main_03.png"
+                ><img src="imgs/g1_main_s_03.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="imgs/g1_main_04.png"
+                ><img src="imgs/g1_main_s_04.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="imgs/g1_main_05.png"
+                ><img src="imgs/g1_main_s_05.png" alt=""
+              /></a>
+            </li>
+          </ul>
+          <div id="window"><img src="imgs/g1_main_01.png" alt="" /></div>
+        </div>
+
+        <!--                슬라이드시작                  -->
+
+        <div id="wrapper">
+          <div>
+            <div class="sliderbutton">
+              <img
+                src="left.gif"
+                width="32"
+                height="38"
+                alt="Previous"
+                onclick="slideshow.move(-1)"
+              />
+            </div>
+            <div id="slider">
+              <ul>
+                <li id="content">
+                  <img
+                    src="320200_02.png"
+                    width="320"
+                    height="200"
+                    alt="Coral Reef"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="320200_01.png"
+                    width="320"
+                    height="200"
+                    alt="Sea turtle"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="320200_02.png"
+                    width="320"
+                    height="200"
+                    alt="Coral Reef"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="320200_01.png"
+                    width="320"
+                    height="200"
+                    alt="Blue Fish"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div class="sliderbutton">
+              <img
+                src="right.gif"
+                width="32"
+                height="38"
+                alt="Next"
+                onclick="slideshow.move(1)"
+              />
+            </div>
+          </div>
+
+          <ul id="pagination" class="pagination">
+            <li onclick="slideshow.pos(0)"></li>
+            <li onclick="slideshow.pos(1)"></li>
+            <li onclick="slideshow.pos(2)"></li>
+            <li onclick="slideshow.pos(3)"></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--                슬라이드끝                  -->
+
+      <div class="spec_0203"></div>
+      <div class="spec_line"></div>
+
+      <div class="bg_0203">
+        <div class="spec_04">
+          <img src="case_spec_icon.png" />
+          <p>THE STORY CLEAN AND PRECISE.</p>
+        </div>
+        <div class="feature">Feature</div>
+        <div class="feature_line"></div>
+        <!--<div class="fullspec">Fullspec</div>
+                            <div class="feature_line2"></div>-->
+
+        <div class="spec_03">
+          <ul>
+            <li class="spec_left">
+              <div id="class_id">C2<br /></div>
+            </li>
+            <li class="spec_right">
+              <img src="icon_pot.png" />Full-sized acrylic side windows on both
+              sides <br />
+              <img src="icon_pot.png" />Handy I/O ports on top <br />
+              <img src="icon_pot.png" />Sufficient cable routing holes <br />
+              <img src="icon_pot.png" />LED strip & gorgeous blue LED fan to
+              provide awesome visual effects <br />
+              <img src="icon_pot.png" />Fan controller to adjust up to 5 system
+              fans at one time <br />
+              <img src="icon_pot.png" />Multiple drive bays location for big
+              storage system building <br />
+              <img src="icon_pot.png" />Conveniently removable dust filter on
+              the bottom
+            </li>
+          </ul>
+        </div>
+        <div class="spec_02">
+          <div class="fullspec_bg">
+            <div class="fullspec_sq"></div>
+            <img src="case_spec_png/spec_c2.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--   case click 페이지 제이쿼리 start -->
+    <script>
+      var slideshow = new TINY.slider.slide("slideshow", {
+        id: "slider",
+        auto: 3,
+        resume: true,
+        vertical: false,
+        navid: "pagination",
+        activeclass: "current",
+        position: 0,
+      });
+    </script>
+  </body>
+</html>

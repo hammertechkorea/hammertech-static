@@ -1,0 +1,957 @@
+<!Doctype html >
+<html>
+<head>
+<meta charset="UTF8">
+<title> HAMMER</title>
+
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="packed.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.25, minimum-scale=0, user-scalable=no, target-densitydpi=medium-dpi" /><!--모바일페이지크기조절메타태그--> 
+<link rel="shortcut icon" href="1616ico.ico">
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Baloo+Thambi|Fjalla+One" rel="stylesheet">
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+
+
+<!-- 탑메뉴 -->
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+<style>
+body {
+  font-family: "Arial","微软雅黑","맑은 고딕";
+  margin:0 auto;
+}
+ul li {
+  list-style: none;
+}
+a {
+        text-decoration: none; color: white;
+}
+.topfix {
+        margin:0 auto;
+}
+
+.topsidebg {
+        background-color:#5a1813;
+        height:25px;
+}
+.topside {
+        
+        margin: 0 auto;
+         left: 80%; transform: translateX(-10%);
+        height:30px;
+
+}
+
+.topside ul {
+  float-right: 0;
+  margin:0 5px 0 0;
+}
+.topsidebg li {
+        cursor:pointer;
+        float:right;
+        margin-left:15px;
+        font-size:9pt;
+        margin-top:4px;
+        color:#ffffff;
+        
+       
+    
+}
+
+.topside A :visited { text-decoration: none; color :#ffffff;
+      
+}
+
+
+/*  가운데정렬적용때문에(?) relative속성을 absolute로 변경. 맞는지 모르겠음 */
+.top_contents  li {
+      
+        cursor:pointer;
+       
+        float:left; list-style: none;
+        
+}
+.top_contents {
+        float:left;
+        margin-top:10px;
+        list-style: none;
+        width: 300px;
+        color :#43433c;
+        overflow:hidden;
+        text-align:center;
+        
+       
+       
+}
+.toplogo li img {
+        
+        display:block;
+        width: 80px;
+        margin-left: 0px;
+        margin-top: 15px;
+}
+.toplogo li{    
+         padding: 0 5px 0 5px;      
+}
+.top_slogun{ 
+         float:left;
+        width: 170px;      
+}
+.top_slogun img{   
+        margin-top:31px;
+        width: 170px;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
+/* main Styles */
+
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+  background: #fafafa;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+a { text-decoration: none; }
+
+.container {
+  width: 1200px;
+ 
+  margin: auto;
+
+}
+
+
+h1 { text-align:center; margin-top:150px;}
+
+/* Navigation Styles */
+
+nav { background: #efeeea;  }
+
+nav ul {
+       
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+
+}
+
+nav ul li a {
+       
+  color: #3c3c3c;
+  display: block;
+  font-size: 19px;
+  padding: 40px 30px;
+  transition: 0.3s linear;
+  
+  
+}
+
+
+nav ul li:hover { background: #5a1813;  
+                z-index :5; }
+
+nav ul li :hover {
+        color: #ececec;
+}
+nav ul li ul :hover {
+        color: #5a1813;
+}
+
+nav ul li ul {
+     
+  border-bottom: 3px solid #c8c8c8;
+  display: none;
+  position: absolute;
+  width: 253px;
+  
+
+}
+
+nav ul li ul li {
+  border-top: 1px solid #ffffff;
+ 
+  display: block;
+ 
+}
+
+nav ul li ul li:first-child { border-top: none; }
+
+nav ul li ul li a {
+     
+  background: #efeeea;
+  display: block;
+  padding: 20px 14px;
+
+}
+
+nav ul li ul li a:hover { background: #efeeea; }
+
+nav .fa.fa-angle-down { margin-left: 6px; }
+
+
+
+
+/*                     -------------- 바디CSS시작 --------------                     */
+
+
+
+
+.contact_wrapper{
+        background-color: #e8e8e8;
+        padding : 60px 0 160px 0;
+        height: 1300px;
+        width:100%;
+       
+        
+}
+
+
+
+.contact_form { 
+ 
+  width:1400px;
+  position: relative;
+  margin-top:80px;
+  text-align: left;
+   left: 52%; transform: translateX(-51%);
+     
+     
+}
+.contact_txt{
+       
+}
+.contact_txt p{
+         padding: 0 23px;
+         font-size: 40px;
+         color: #a38585;
+}
+.contact_txt h{
+        padding: 0 28px;
+        font-size: 19px;
+        color: #a38585;
+}
+.contact_form_left {
+        font-size: 18px;
+        margin:0;
+        float:left;
+        background-color: #a38585;
+        height: 692px;
+        color: white;
+        padding : 30px 120px ;
+        
+       
+        
+}
+.contact_form_left ul{
+        margin: 0;
+        padding: 0;
+        display: block;
+       
+}
+.contact_form_left li{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        display: block;
+        margin-bottom :53px;
+        
+}
+.contact_form_right {
+        background-color:white;
+        height: 692px;
+        padding: 30px 120px;
+        float:left;
+        
+         
+}
+.contact_form_right li{
+         margin-bottom :47px;
+}
+select{ font-size: 18px;
+        width: 350px;
+        height: 25px;
+}
+
+input{
+        width: 350px;
+        height: 30px;
+        font-size: 15px;
+        
+}
+textarea{
+         width: 700px;
+         font-size: 15px;
+}
+
+.contact_bt{
+        clear:both;
+        background-color:white;
+        padding: 30px 60px;
+        text-align: right;
+       
+        width: 1294px;
+}
+.contact_bt button{
+        margin-right: 10px;
+        width: 120px;
+        height: 30px;
+
+}
+
+.contact_input{
+        
+        background-color: white;
+        position: absolute;
+        width: 300px;
+        height: 220px;
+        top: 230px;
+        left: 980px;
+        font-size: 13px;
+        padding: 10px 10px;
+        border:dotted 1px;
+       
+        
+}
+
+
+
+.footer {
+    color: #a9a9aa;
+    font-size:9pt;
+    overflow:hidden;
+    background :#483637;
+    padding:40px 0 70px 0;
+    width: 100%;
+    height: 340px;
+    margin: 0 auto;
+    
+   
+  
+   
+}
+.footer_p{
+
+        width: 1310px;
+        padding: 40px 0 30px 0;
+        text-align: left;
+        line-height : 165%;
+        font-size: 14px;
+        margin: 0 auto; 
+  
+        
+}
+.ft_logo{
+
+         float:left;
+        width:58px;
+        margin-right: 12px;
+      
+}
+.ft_main_p{
+        
+        color: #a9a9aa;
+      
+        margin : 3px;
+      
+        
+        
+       
+}
+.ft_sub_p{ 
+      width: 740px;
+        
+        float : left;
+        
+}
+
+
+.footer {
+    color: #a9a9aa;
+    font-size:9pt;
+    overflow:hidden;
+    background :#483637;
+    padding:40px 0 70px 0;
+    width: 100%;
+    height: 340px;
+    margin: 0 auto; 
+    
+   
+  
+   
+}
+.footer_p{
+
+        width: 1310px;
+        padding: 40px 0 30px 0;
+        text-align: left;
+        line-height : 165%;
+        font-size: 14px;
+        margin: 0 auto; 
+  
+        
+}
+.ft_logo{
+
+         float:left;
+        width:58px;
+        margin-right: 12px;
+      
+}
+.ft_main_p{
+        
+        color: #a9a9aa;
+      
+        margin : 3px;
+      
+        
+        
+       
+}
+.ft_sub_p{ 
+      width: 740px;
+        
+        float : left;
+        
+}
+
+.footer_icon{
+
+      float : left;
+
+      margin-top:0; 
+      margin-left: 350px;
+           
+}
+.footer_icon ul{
+        width:200px;
+        margin-left:0px;
+        margin-top:5px;
+}
+.footer_icon li{
+        float: left;
+}
+.footer_icon img{
+        width:47px;
+        
+}
+.footer_icon p{
+        padding:0;
+        margin:0;
+        font-size: 13px;
+        margin-left: 15px;
+}
+
+
+</style>
+<script>
+  $(function () {
+    $(".topmenu").click(function () {
+      $(".case_sub_bg").slideToggle("slow");
+    });
+
+    $(".case_sub_bg").click(function () {
+      $(".case_sub_bg").slideUp(500)
+    });
+
+    /* case click 페이지 제이쿼리 start */
+
+    $('#nav1 a').mouseover(function (e) {
+      e.preventDefault();
+      $('#nav1 a').removeClass('active');
+      $(this).addClass('active');
+      img_url = $(this).attr('href');
+      $('#window img').attr('src', img_url);
+    });
+
+
+    $('#nav2 a').mouseover(function (e) {
+      e.preventDefault();
+      $('#nav2 a').removeClass('active');
+      $(this).addClass('active');
+      img_url = $(this).attr('href');
+      $('#window img').attr('src', img_url);
+    });
+  });
+</script>
+
+
+</head>
+<!--                     헤드라인                         -->
+<!--                     바디시작                         -->
+<!--                     상단고정메뉴시작                   -->
+<body bgcolor = "#f9f9f9">
+
+
+<div class ="topfix">
+
+    <div class ="topsidebg">
+        <div class="topside">
+           <ul>
+              <li><a href="re_home3_contact.html">CONTACT</a></li>
+         <!--     <li>SUPPORT</li>   -->
+              <li>WHERE TO BUY</li>
+           </ul>
+         </div>
+    </div>
+
+
+
+<div class="topmenubg_wrapper">
+
+
+<nav>
+  <div class="container">
+
+           <div class="top_contents">
+                   <div class="toplogo"> 
+                        <li><a href="/"><img src="logo.png"></a></li>
+                </div>
+                <div class="top_slogun">
+                        <img src="top_slogun.png">
+                </div>
+                
+ 
+           </div>
+
+    <ul>
+
+
+  
+         <li id="name"> <a href="#">CHASSIS<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_1211_h_series.html">H Series</a></li>
+          <li><a href="re_home3_1211_m_series.html">M Series</a></li>
+          <li><a href="re_home3_1211_i_series.html">I Series</a></li>
+        </ul>
+      </li>
+        
+      <li><a href="#">POWER SUPPLY</a></li>
+      <li> <a href="#">KEYBOARD & MICE<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_1211_keyboard.html">Keyboard</a></li>
+          <li><a href="#">Mice</a></li>
+          <li><a href="re_home3_1211_mousepad.html">Mouse pad</a></li>
+        </ul>
+      </li>
+      <li class='sub-menu'> <a href="#">ACCESSORY<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_1211_accessory.html">Accessory</a></li>
+          <li><a href="re_home3_1211_cooling_tunning.html">Cooling & Tunning</a></li>
+    
+        </ul>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+
+
+</div>
+
+
+    </div>
+
+
+
+    <!--                상단고정메뉴끝                   -->
+    <!--                홈화면내용시작                   -->
+
+
+
+<div class="contact_wrapper">
+  <div class="contact_form">
+    <div class="contact_txt">
+      <p>Contact US</p><br>
+      <h>If you do have any further enquiries or comments about Hammertech, please feel to contact us with information Request Form.</h>
+    </div>
+    <div class="contact_form">
+      <div class="contact_form_left">
+        <ul>
+          <li>Country</li>
+          <li>First Name</li>
+          <li>Last Name</li>
+          <li>Email</li>
+          <li>Mobile Phone</li>
+          <li>Comments</li>
+        </ul>
+      </div>
+      <div class="contact_form_right">
+        <ul>
+          <li>
+            <select id='country' name="country">
+              <option value="audi">Afghanistan</option>
+              <option value="audi">Aland Lslands</option>
+              <option value="audi">Albania</option>
+              <option value="audi">Algeria</option>
+              <option value="audi">American Samoa</option>
+              <option value="audi">Andorra</option>
+              <option value="audi">Angola</option>
+              <option value="audi">Anguilla</option>
+              <option value="audi">Antarctica</option>
+              <option value="audi">Antigua And Barbuda</option>
+              <option value="audi">Argentina</option>
+              <option value="audi">Armenia</option>
+              <option value="audi">Aruba</option>
+              <option value="audi">Australia</option>
+              <option value="audi">Austria</option>
+              <option value="audi">Azerbaijan</option>
+              <option value="audi">Bahamas</option>
+              <option value="audi">Bahrain</option>
+              <option value="audi">Bangladesh</option>
+              <option value="audi">Barbados</option>
+              <option value="audi">Belarus</option>
+              <option value="audi">Belgium</option>
+              <option value="audi">Belize</option>
+              <option value="audi">Benin</option>
+              <option value="audi">Bermuda</option>
+              <option value="audi">Bhutan</option>
+              <option value="audi">Bolivia</option>
+              <option value="audi">Bosnia And Herzegovina</option>
+              <option value="audi">Botswana</option>
+              <option value="audi">Bouvet Island</option>
+              <option value="audi">Brazil</option>
+              <option value="audi">British Indian Ocean Territory</option>
+              <option value="audi">Brunei Darussalam</option>
+              <option value="audi">Bulgaria</option>
+              <option value="audi">Burkina Faso</option>
+              <option value="audi">Burundi</option>
+              <option value="audi">Cambodia</option>
+              <option value="audi">Cameroon</option>
+              <option value="audi">Canada</option>
+              <option value="audi">Cape Verde</option>
+              <option value="audi">Cayman Islands</option>
+              <option value="audi">Central African Republic</option>
+              <option value="audi">Chad</option>
+              <option value="audi">Chile</option>
+              <option value="audi">China</option>
+              <option value="audi">Christmas Island</option>
+              <option value="audi">Cocos(Keeling) Islands</option>
+              <option value="audi">Colombia</option>
+              <option value="audi">Comoros</option>
+              <option value="audi">Congo</option>
+              <option value="audi">Congo, The Democratic Republic Of The</option>
+              <option value="audi">Cook Islands</option>
+              <option value="audi">Costa Rica</option>
+              <option value="audi">Cote D'ivoire</option>
+              <option value="audi">Croatia</option>
+              <option value="audi">Cuba</option>
+              <option value="audi">Cyprus</option>
+              <option value="audi">Czech Republic</option>
+              <option value="audi">Denmark</option>
+              <option value="audi">Djibouti</option>
+              <option value="audi">Dominica</option>
+              <option value="audi">Dominican Republic</option>
+              <option value="audi">Ecuador</option>
+              <option value="audi">Eqypt</option>
+              <option value="audi">El Salvador</option>
+              <option value="audi">Equatorial Guinea</option>
+              <option value="audi">Eritrea</option>
+              <option value="audi">Estonia</option>
+              <option value="audi">Ethiopia</option>
+              <option value="audi">Falkland Islands (Malvinas)</option>
+              <option value="audi">Faroe Islands</option>
+              <option value="audi">Fiji</option>
+              <option value="audi">Finland</option>
+              <option value="audi">France</option>
+              <option value="audi">French Guiana</option>
+              <option value="audi">French Polynesia</option>
+              <option value="audi">French Southern Territories</option>
+              <option value="audi">Gabon</option>
+              <option value="audi">Gambia</option>
+              <option value="audi">Georgia</option>
+              <option value="audi">Germany</option>
+              <option value="audi">Ghana</option>
+              <option value="audi">Gibraltar</option>
+              <option value="audi">Greece</option>
+              <option value="audi">Greenland</option>
+              <option value="audi">Grenada</option>
+              <option value="audi">Guadeloupe</option>
+              <option value="audi">Guam</option>
+              <option value="audi">Guatemala</option>
+              <option value="audi">Guernsey</option>
+              <option value="audi">Guinea</option>
+              <option value="audi">Guinea-bissau</option>
+              <option value="audi">Guyana</option>
+              <option value="audi">Haiti</option>
+              <option value="audi">Heard Island And Mcdonald Idlands</option>
+              <option value="audi">Holy See(Vatican City State)</option>
+              <option value="audi">Honduras</option>
+              <option value="audi">Hong Kong</option>
+              <option value="audi">Hungary</option>
+              <option value="audi">Iceland</option>
+              <option value="audi">India</option>
+              <option value="audi">Indonesia</option>
+              <option value="audi">Iran, Islamic Republic Of</option>
+              <option value="audi">Iraq</option>
+              <option value="audi">Ireland</option>
+              <option value="audi">Isle Of Man</option>
+              <option value="audi">Israel</option>
+              <option value="audi">Italy</option>
+              <option value="audi">Jamaica</option>
+              <option value="audi">Japan</option>
+              <option value="audi">Jersey</option>
+              <option value="audi">Jordan</option>
+              <option value="audi">Kazakhstan</option>
+              <option value="audi">Kenya</option>
+              <option value="audi">Kiribati</option>
+              <option value="audi">Korea, Democratic People's Republic Of</option>
+              <option value="audi" selected>Korea, Republic Of</option>
+              <option value="audi">Kuwait</option>
+              <option value="audi">Kyrgyzstan</option>
+              <option value="audi">Lao People's Democratic Republic</option>
+              <option value="audi">Latvia</option>
+              <option value="audi">Lebanon</option>
+              <option value="audi">Macao</option>
+              <option value="audi">Macadonia, The Former Yugoslav Republic Of</option>
+              <option value="audi">Madagascar</option>
+              <option value="audi">Malawi</option>
+              <option value="audi">Malaysia</option>
+              <option value="audi">Maldives</option>
+              <option value="audi">Mali</option>
+              <option value="audi">Malta</option>
+              <option value="audi">Martinique</option>
+              <option value="audi">Mexico</option>
+              <option value="audi">Monaco</option>
+              <option value="audi">Mongolia</option>
+              <option value="audi">Montenegro</option>
+              <option value="audi">Morocco</option>
+              <option value="audi">Mozambique</option>
+              <option value="audi">Namibia</option>
+              <option value="audi">Nauru</option>
+              <option value="audi">Nepal</option>
+              <option value="audi">Netherlands</option>
+              <option value="audi">Netherlands Aritilles</option>
+              <option value="audi">New Zealand</option>
+              <option value="audi">Niger</option>
+              <option value="audi">Nigeria</option>
+              <option value="audi">Niue</option>
+              <option value="audi">Norway</option>
+              <option value="audi">Oman</option>
+              <option value="audi">Pakistan</option>
+              <option value="audi">Palau</option>
+              <option value="audi">Panama</option>
+              <option value="audi">Papua New Guinea</option>
+              <option value="audi">Paraguay</option>
+              <option value="audi">Peru</option>
+              <option value="audi">Philippines</option>
+              <option value="audi">Poland</option>
+              <option value="audi">Portugal</option>
+              <option value="audi">Qatar</option>
+              <option value="audi">Reunion</option>
+              <option value="audi">Romania</option>
+              <option value="audi">Russian Federation</option>
+              <option value="audi">Rwanda</option>
+              <option value="audi">Saint Helena</option>
+              <option value="audi">Saint Lucia</option>
+              <option value="audi">Samoa</option>
+              <option value="audi">San Marino</option>
+              <option value="audi">Saudi Arabia</option>
+              <option value="audi">Senegal</option>
+              <option value="audi">Serbia</option>
+              <option value="audi">Sierra Leone</option>
+              <option value="audi">Singapore</option>
+              <option value="audi">Slovakia</option>
+              <option value="audi">Slovenia</option>
+              <option value="audi">Solomon Islands</option>
+              <option value="audi">Somalia</option>
+              <option value="audi">South Africa</option>
+              <option value="audi">Spain</option>
+              <option value="audi">Sri Lanka</option>
+              <option value="audi">Sudan</option>
+              <option value="audi">Swaziland</option>
+              <option value="audi">Sweden</option>
+              <option value="audi">Switzerland</option>
+              <option value="audi">Taiwan</option>
+              <option value="audi">Tajikistan</option>
+              <option value="audi">Tanzania, United Republic Of</option>
+              <option value="audi">Thailand</option>
+              <option value="audi">Togo</option>
+              <option value="audi">Tokelau</option>
+              <option value="audi">Tonga</option>
+              <option value="audi">Tunisia</option>
+              <option value="audi">Turkey</option>
+              <option value="audi">Tuvalu</option>
+              <option value="audi">Uganda</option>
+              <option value="audi">Ukraine</option>
+              <option value="audi">United Arab Emirates</option>
+              <option value="audi">United Kingdom</option>
+              <option value="audi">United States</option>
+              <option value="audi">Uruguay</option>
+              <option value="audi">Uzbekistan</option>
+              <option value="audi">Vanuatu</option>
+              <option value="audi">Venezuela</option>
+              <option value="audi">Viet Nam</option>
+              <option value="audi">Virgin Islands, British</option>
+              <option value="audi">Virgin Islands, U.S.</option>
+              <option value="audi">Wallis And Futuna</option>
+              <option value="audi">Western Sahara</option>
+              <option value="audi">Yemen</option>
+              <option value="audi">Zambia</option>
+              <option value="audi">Zimbabwe</option>
+            </select>
+          </li>
+          <li><input id='first_name' name="first_name" placeholder="ex) John"></li>
+          <li><input id='last_name' name="last_name" placeholder="ex) Doe"></li>
+          <li><input id='email' name="email" placeholder="ex) hammertech@email.com"></li>
+          <li><input id='phone' name="phone" placeholder="ex) +82-10-1234-5678"></li>
+          <li>
+            <textarea id='comments' name="comments" rows="10" cols="30"></textarea>
+            <br>
+          </li>
+        </ul>
+      </div>
+      <div class="contact_bt">
+        <button id='submit'>Submit</button>
+        <button id='reset'>Reset</button>
+      </div>
+    </div>
+    <div class="contact_input">
+      Korea Office : 6F 104 Office, 147, Yanghwa-ro, Mapo-gu, Seoul,Korea 03995 <br><br><br><br>
+      ｜  E-MAIL daniel@hammertech.co.kr</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!--홈화면내용끝-->
+
+
+<div class="footer">
+        <div class="footer_p">
+<p>
+<img class="ft_logo" src="hammer_ing_g.png">
+<div class="ft_main_p">Copyright © 2017 Hammertech. All rights reserved<br> 
+Hammertech korea Co., Ltd<br><br>
+</div>
+<div class="ft_sub_p">
+
+Korea Office ｜ 6F 104 Office, 147, Yanghwa-ro, Mapo-gu, Seoul,Korea 03995 <br>
+E-mail : daniel@hammertech.co.kr </div>
+</p> 
+
+
+<div class="footer_icon">
+        <p> WANT TO BE SOCIAL US? </p>
+        <ul>
+                <a href="https://www.facebook.com/HammertechHK/"><li><img src="footer_icon_fb.png"></li></a>
+                <a href=""><li><img src="footer_icon_yt.png"></li></a>
+                <a href=""><li><img src="footer_icon_insta.png"></li></a>
+                <a href=""><li><img src="footer_icon_t.png"></li></a>
+        </ul>
+        
+</div>
+
+
+        </div>
+</div>
+
+
+
+
+
+
+
+  <!--   case click 페이지 제이쿼리 start -->
+<script>
+var slideshow = new TINY.slider.slide('slideshow', {
+	id: 'slider',
+  auto: 3,
+  resume: true,
+  vertical: false,
+  navid: 'pagination',
+  activeclass: 'current',
+  position: 0
+})
+</script>
+
+<!--홈화면탑메뉴 -->
+
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script> 
+<script>
+$('nav li').hover(
+  function() {
+	  $('ul', this).stop().slideDown(200);
+  },
+	function() {
+    $('ul', this).stop().slideUp(200);
+  }
+);
+$(function() {
+  $('#submit').on('click', function() {
+    if (!$('#first_name').val().length) {
+      alert('Please, type your First Name.')
+      return $('#first_name').focus()
+    }
+    if (!$('#last_name').val().length) {
+      alert('Please, type your Last Name.')
+      return $('#last_name').focus()
+    }
+    if (!$('#email').val().length) {
+      alert('Please, type your Email.')
+      return $('#email').focus()
+    }
+    if (!$('#phone').val().length) {
+      alert('Please, type your Phone Number.')
+      return $('#phone').focus()
+    }
+    var data = {
+      country: $('#country option:selected').text(),
+      first_name: $('#first_name').val(),
+      last_name: $('#last_name').val(),
+      email: $('#email').val(),
+      phone: $('#phone').val(),
+      comments: $('#comments').val() || 'contact me',
+    }
+    // console.log('data : ', data);
+    $.ajax({
+      type: 'POST',
+      url: "/api/set_contact",
+      data: data,
+      success: function (res) {
+        // console.log('res : ', res);
+        if (res.code) return alert('submit failed !');
+        alert('Successfully submitted !\n\nWe will reply as soon as We confirm your comment\n\nThanks !')
+        $('#first_name').val('')
+        $('#last_name').val('')
+        $('#email').val('')
+        $('#phone').val('')
+        $('#comments').val('')
+      }
+    })
+  })
+
+  $('#reset').on('click', function() {
+    $('#first_name').val('')
+    $('#last_name').val('')
+    $('#email').val('')
+    $('#phone').val('')
+    $('#comments').val('')
+  })
+})
+</script>
+
+</body>
+</html>

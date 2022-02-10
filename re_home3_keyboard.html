@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF8" />
+    <title>HAMMER</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="packed.js"></script>
+
+    <link rel="shortcut icon" href="1616ico.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Baloo+Thambi|Fjalla+One"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".topmenu").click(function () {
+          $(".case_sub_bg").slideToggle("slow");
+        });
+        $(".case_sub_bg").click(function () {
+          $(".case_sub_bg").slideUp(500);
+        });
+      });
+
+      /* case click 페이지 제이쿼리 start */
+      $(document).ready(function () {
+        $("#nav a").mouseover(function (e) {
+          e.preventDefault();
+          $("#nav a").removeClass("active");
+          $(this).addClass("active");
+          img_url = $(this).attr("href");
+          $("#window img").attr("src", img_url);
+        });
+      });
+
+      /* keyboard 페이지 button_g1kb layer popup start */
+      $(document).ready(function () {
+        $(".g1kb_main_bt button").click(function () {
+          $("#popup_layer, #overlay_t").show();
+          $("#popup_layer").css(
+            "top",
+            Math.max(0, $(window).scrollTop() + 300) + "px"
+          );
+          // $('#popup_layer').css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+        });
+        $("#overlay_t, .close").click(function (e) {
+          e.preventDefault();
+          $("#popup_layer, #overlay_t").hide();
+        });
+      });
+
+      /* keyboard 페이지 button_m1kb layer popup start */
+      $(document).ready(function () {
+        $(".m1kb_main_bt button").click(function () {
+          $("#popup_layer_, #overlay_t_").show();
+          $("#popup_layer_").css(
+            "top",
+            Math.max(0, $(window).scrollTop() + 300) + "px"
+          );
+          // $('#popup_layer').css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+        });
+        $("#overlay_t_, .close").click(function (e) {
+          e.preventDefault();
+          $("#popup_layer_, #overlay_t_").hide();
+        });
+      });
+    </script>
+    <style>
+      body {
+              font-family: "Arial","微软雅黑","맑은 고딕";
+              margin:0 auto;
+              text-align:center;
+      }
+      ul li {
+              list-style: none;
+      }
+      a {
+              text-decoration: none; color: #43433c;
+      }
+      .topfix {
+              margin:0 auto;
+      }
+
+      .topsidebg {
+              background-color:#5a1813;
+              height:25px;
+      }
+      .topside {
+              margin: 0 auto;
+              width:1200px;
+              height:30px;
+
+      }
+      .topside ul {
+              float-right;
+              margin:0 5px 0 0;
+      }
+      .topsidebg li {
+              cursor:pointer;
+              float:right;
+              margin-left:15px;
+              font-size:9pt;
+              margin-top:4px;
+              color:#ffffff;
+      }
+      .topmenu li {
+              cursor:pointer;
+              margin-top:32px;
+              margin-right:120px;
+              font-size:11pt;
+              overflow: hidden;
+      }
+      .topmenubg_wrapper{
+
+      }
+
+      .topmenubg {
+
+              background-color:#efeeea;
+              height:80px;
+
+      }
+      /*  가운데정렬적용때문에(?) relative속성을 absolute로 변경. 맞는지 모르겠음 */
+      .top_contents  li {
+              cursor:pointer;
+              float:left; list-style: none;
+      }
+      .top_contents {
+              list-style: none;
+              position : absolute;
+              margin:0 auto;
+              color :#43433c;
+              overflow:hidden;
+              text-align:center;
+      left: 50%; transform: translateX(-50%);
+              width:1200px;
+              height:80px;
+      }
+      .toplogo li img {
+
+              display:block;
+
+              margin-left: 40px;
+              margin-top: 18px;
+      }
+      .toplogo li{
+
+               padding: 0 5px 0 5px;
+               margin-right: 200px;
+      }
+
+
+
+      .case_sub_bg{
+      display: none;
+      z-index: 1;
+      position: absolute;
+      background :#cccccc;
+      opacity:0.97;
+      margin:0 auto;
+      left: 50%; transform: translateX(-50%);
+      height: 120px;
+      top:105px;
+      width: 1050px;
+      padding:30px;
+      text-align:center;
+      }
+      .sub_menu{
+        margin-left: 210px;
+        width: 850px;
+        height: 50px;
+        left:100px;
+
+
+
+
+      }
+      .sub_name1, .sub_name2,
+       .sub_name3, .sub_name4{
+
+        list-style: none;
+        float:left;
+        margin-right: 105px;
+        font-size: 14px;
+
+
+
+      }
+
+      .sub_menu li{
+
+        clear: both;
+        margin-bottom: 15px;
+        margin-right: 0px;
+
+
+      }
+
+      .sub_name1{
+              position: absolute;
+      left:250px;
+      }
+
+      .sub_name2{
+              position: absolute;
+
+      left:430px;
+      }
+      .sub_name2 a{
+
+        color: #8b8b88 !important;
+      }
+
+      .sub_name3{
+              position: absolute;
+      left:700px;
+      }
+
+
+      .sub_name4{
+              position: absolute;
+      left:935px;
+      }
+
+      /* -------keyboard------    */
+
+
+
+      .keyboard_wrapper{
+        background-image: url(keyboard_bg_img.png);
+        background-repeat: no-repeat
+        width:100%;
+        height:1500px;
+      }
+
+      .main_text h{
+        position: absolute;
+        top: 250px;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+      left: 50%; transform: translateX(-50%);
+
+      }
+
+      .gra_line{
+        position: absolute;
+        top: 310px;
+        width:340px;
+        left: 50%; transform: translateX(-50%);
+      }
+
+      .main_text p{
+        position: absolute;
+        font-size: 17px;
+        line-height : 140%;
+        color: white;
+        top:330px;
+        left: 50%; transform: translateX(-50%);
+      }
+
+      .g1kb_wrapper{
+        position: relative;;
+        top: 470px;
+        width: 1000px;
+        height:auto;
+        margin: 0 auto;
+
+
+      }
+
+      .g1kb_img{
+        position: absolute;
+        top: 60px;
+        left:0px;
+      }
+      .g1kb_intro{
+        position: absolute;
+        top: 78px;
+        color:white;
+        left:408px;
+        text-align: left;
+        line-height : 140%;
+
+      }
+      .g1kb_intro h{
+        font-size: 20px;
+      }
+      .g1kb_intro p{
+        color: #e7e7e7;
+        margin-top: 30px;
+        font-size: 14px;
+      }
+      .g1kb_intro_line{
+        position: absolute;
+        top:40px;
+        border-bottom: 2px solid white;
+        width: 555px;
+        z-index: 5;
+        left: 0px;
+      }
+      .g1kb_main_bt{
+        position: absolute;
+        top:310px;
+        left:900px;
+      }
+
+      .m1kb_wrapper{
+        position: absolute;
+        width: 980px;
+        height: 348px;
+        right:20px;
+        background-color: white;
+        top: 510px;
+
+      }
+      .m1kb_img{
+        position: absolute;
+        width: 400px;
+        top: 0px;
+        right:0px;
+      }
+      .m1kb_intro{
+        position: absolute;
+        top: 40px;
+        text-align: left;
+        left: 20px;
+        line-height : 140%;
+
+      }
+      .m1kb_intro h{
+
+        font-size: 20px;
+      }
+      .m1kb_intro p{
+        margin-top: 30px;
+        font-size: 14px;
+      }
+      .m1kb_intro_line{
+        position: absolute;
+        top:36px;
+        border-bottom: 2px solid black;
+        width: 440px;
+        z-index: 5;
+        left: 0px;
+      }
+      .m1kb_main_bt{
+
+        position: absolute;
+        top:310px;
+        left:900px;
+      }
+      .m1kb_main_bt button{
+
+      }
+      .m1kb_img123{
+        position: absolute;
+        left: 20px;
+        top:210px;
+
+      }
+      .m1kb_img123 li{
+        float: left;
+        margin-right: 5px;
+        background-color: #ff7676;
+        width: 173px;
+        height:80px;
+      }
+
+
+
+      #overlay_t {
+
+          background-color: #000;
+          bottom: 0;
+          left: 0;
+          opacity: 0.7;
+          filter: alpha(opacity = 50); /* IE7 & 8 */
+          position: fixed;
+          right: 0;
+          top: 0;
+          z-index: 99;
+          display:none;}
+
+      #popup_layer {
+
+          width:1000px;
+          margin-bottom:30px;
+          background:#fff;
+          border:solid 1px #ccc;
+          position:absolute;
+          top:50%;
+          left:28%;
+          margin-left:-100px;
+          box-shadow: 0px 1px 20px
+          #333;
+          z-index:100;
+          display:none;
+          }
+
+      #overlay_t_ {
+
+          background-color: #000;
+          bottom: 0;
+          left: 0;
+          opacity: 0.7;
+          filter: alpha(opacity = 50); /* IE7 & 8 */
+          position: fixed;
+          right: 0;
+          top: 0;
+          z-index: 99;
+          display:none;}
+
+      #popup_layer_ {
+
+          width:1000px;
+          margin-bottom:30px;
+          background:#fff;
+          border:solid 1px #ccc;
+          position:absolute;
+          top:50%;
+          left:28%;
+          margin-left:-100px;
+          box-shadow: 0px 1px 20px
+          #333;
+          z-index:100;
+          display:none;
+          }
+    </style>
+  </head>
+
+  <!--                     헤드라인                         -->
+  <!--                     바디시작                         -->
+  <!--                     상단고정메뉴시작                   -->
+  <body bgcolor="#f9f9f9">
+    <div class="topfix">
+      <div class="topsidebg">
+        <div class="topside">
+          <ul>
+            <li>CONTACT</li>
+            <li>SUPPORT</li>
+            <li>WHERE TO BUY</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="topmenubg_wrapper">
+        <div class="topmenubg">
+          <div class="top_contents">
+            <div class="toplogo">
+              <li>
+                <a href="/"><img src="logo.png" /></a>
+              </li>
+            </div>
+            <div class="topmenu">
+              <div class="case_bt"><li>CASE</li></div>
+              <li>POWER SUPPLY</li>
+              <li>KEYBOARD&MOUSE</li>
+              <li>ACCESSORY</li>
+            </div>
+          </div>
+        </div>
+        <div class="case_sub_bg">
+          <div class="sub_menu">
+            <div class="sub_name1">
+              <li><a href="re_home3_case_1211.html">G Series</a></li>
+              <li><a href="">Aluminium</a></li>
+            </div>
+            <div class="sub_name2">
+              <li><a href="">Coming up Soon</a></li>
+            </div>
+            <div class="sub_name3">
+              <li><a href="re_home3_keyboard.html">Keyboard</a></li>
+              <li><a href="">Mouse</a></li>
+            </div>
+            <div class="sub_name4">
+              <li><a href="re_home3_accessary.html">Accessory</a></li>
+              <li><a href="">Cooling & Tunning</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--                상단고정메뉴끝                   -->
+    <!--                홈화면내용시작                   -->
+
+    <div class="keyboard_wrapper">
+      <div class="main_text">
+        <h>TOUGH AS HAMMER</h><br /><br />
+        <img class="gra_line" src="gra_line.png" />
+        <p>
+          Before you step into battlefield, <br />
+          you must bring weapon that is the most suitable so that <br />
+          it moves as you move, fight and win the battle.
+        </p>
+      </div>
+      <div id="overlay_t"></div>
+      <div id="popup_layer">
+        <img src="case_spec_png/spec_g1kb2.png" />
+      </div>
+      <div id="overlay_t_"></div>
+      <div id="popup_layer_">
+        <img src="case_spec_png/spec_m1kb2.png" />
+      </div>
+
+      <div class="g1kb_wrapper">
+        <img class="g1kb_img" src="g1kb_main.png" />
+        <div class="g1kb_intro">
+          <h>G1KB is High-fidelity keyboard.</h>
+          <div class="g1kb_intro_line"></div>
+
+          <p>
+            The G1KB takes the best features of its competitors and makes them
+            even better. <br />
+            The keyboard comes with three different LED colors and not only
+            <br />
+            mechanical keyboard-look, <br />
+            but also real mechanical-like response thanks to its switches.
+          </p>
+        </div>
+        <div class="g1kb_main_bt">
+          <button type="button" name="button">show more</button>
+        </div>
+
+        <div class="m1kb_wrapper">
+          <div class="m1kb_intro">
+            <h>M1KB is High value Keyboard.</h>
+            <div class="m1kb_intro_line"></div>
+            <p>
+              The M1KB takes you to 6 different colors & 8 different spectacular
+              visual feast. <br />
+              With its anodized aluminum body feature, <br />
+              it will function as your invincible armor nobody can penetrate.
+            </p>
+          </div>
+          <img class="m1kb_img" src="m1kb_main.png" />
+          <div class="m1kb_main_bt">
+            <button type="button" name="button">show more</button>
+          </div>
+          <div class="m1kb_img123">
+            <ul>
+              <li><img src="m1kb_sub_01.png" /></li>
+              <li><img src="m1kb_sub_03.png" /></li>
+              <li><img src="m1kb_sub_04.png" /></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

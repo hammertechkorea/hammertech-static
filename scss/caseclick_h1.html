@@ -1,0 +1,1094 @@
+<!Doctype html >
+<html>
+<head>
+<meta charset="UTF8">
+<title> HAMMER</title>
+
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="packed.js"></script>
+
+
+<link rel="shortcut icon" href="1616ico.ico">
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Baloo+Thambi|Fjalla+One" rel="stylesheet">
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+
+
+<!-- 탑메뉴 -->
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+
+
+<script>
+
+        
+$(document).ready(function(){
+        $(".topmenu").click(function(){
+                $(".case_sub_bg").slideToggle("slow");
+        });
+        $(".case_sub_bg").click(function(){
+                $(".case_sub_bg").slideUp(500)});
+        });
+
+
+        /* case click 페이지 제이쿼리 start */
+        $(document).ready(function(){
+			$('#nav a').mouseover(function(e){
+				e.preventDefault();
+				$('#nav a').removeClass('active');
+				$(this).addClass('active');
+				img_url = $(this).attr('href');
+				$('#window img').attr('src',img_url);
+				});
+	});
+
+
+
+
+</script>
+<style>
+body {
+        font-family: "Arial","微软雅黑","맑은 고딕";
+        margin:0 auto; 
+       
+
+        
+}
+ul li {
+        list-style: none;
+}
+a {
+        text-decoration: none; color: white;
+}
+.topfix {
+        margin:0 auto;
+}
+
+.topsidebg {
+        background-color:#5a1813;
+        height:25px;
+}
+.topside {
+        
+        margin: 0 auto;
+         left: 80%; transform: translateX(-10%);
+        height:30px;
+
+}
+
+.topside ul {
+        float-right;
+        margin:0 5px 0 0;
+}
+.topsidebg li {
+        cursor:pointer;
+        float:right;
+        margin-left:15px;
+        font-size:9pt;
+        margin-top:4px;
+        color:#ffffff;
+        
+       
+    
+}
+
+.topside A :visited { text-decoration: none; color :#ffffff;
+      
+}
+
+
+
+
+
+/*  가운데정렬적용때문에(?) relative속성을 absolute로 변경. 맞는지 모르겠음 */
+.top_contents  li {
+      
+        cursor:pointer;
+       
+        float:left; list-style: none;
+        
+}
+.top_contents {
+        float:left;
+        margin-top:10px;
+        list-style: none;
+        width: 300px;
+        color :#43433c;
+        overflow:hidden;
+        text-align:center;
+        
+       
+       
+}
+.toplogo li img {
+        
+        display:block;
+        width: 80px;
+        margin-left: 0px;
+        margin-top: 19px;
+}
+.toplogo li{    
+         padding: 0 5px 0 5px;      
+}
+.top_slogun{ 
+         float:left;
+        width: 170px;      
+}
+.top_slogun img{   
+        margin-top:33px;
+        width: 170px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
+/* main Styles */
+
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+  background: #fafafa;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+a { text-decoration: none; }
+
+.container {
+  width: 1200px;
+ 
+  margin: auto;
+
+}
+
+
+h1 { text-align:center; margin-top:150px;}
+
+/* Navigation Styles */
+
+nav { background: #efeeea;  }
+
+nav ul {
+       
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+
+}
+
+nav ul li a {
+       
+  color: #3c3c3c;
+  display: block;
+  font-size: 19px;
+  padding: 40px 30px;
+  transition: 0.3s linear;
+  
+  
+}
+
+
+nav ul li:hover { background: #5a1813;  
+                z-index :5; }
+
+nav ul li :hover {
+        color: #ececec;
+}
+nav ul li ul :hover {
+        color: #5a1813;
+}
+
+nav ul li ul {
+     
+  border-bottom: 3px solid #c8c8c8;
+  display: none;
+  position: absolute;
+  width: 253px;
+  
+
+}
+
+nav ul li ul li {
+  border-top: 1px solid #ffffff;
+ 
+  display: block;
+ 
+}
+
+nav ul li ul li:first-child { border-top: none; }
+
+nav ul li ul li a {
+     
+  background: #efeeea;
+  display: block;
+  padding: 20px 14px;
+
+}
+
+nav ul li ul li a:hover { background: #efeeea; }
+
+nav .fa.fa-angle-down { margin-left: 6px; }
+
+
+
+/* --------caseclick---------  */
+
+
+
+
+.case_click_wrapper{
+  background-image: url(case_click_bg.png);
+  background-repeat: repeat-x;
+
+  overflow:hidden;
+  padding: 30px 0 20px 0;
+
+
+
+
+}
+.box_bg{ 
+  position:relative;
+
+  margin: 0 auto;
+  width: 1200px;
+  height: 920px;
+  padding: 100px 30px 100px 30px; 
+
+
+}
+.pdf{
+        position: absolute;
+        top: 140px;
+        left: 1120px;
+        font-size: 11px;
+}
+.pdf img{
+        width:53px;
+}
+
+
+#ㅜnav li{
+    float: left;
+}
+
+.case_name{
+        position: absolute;
+        top:59px;
+        left: 10px;
+        font-size: 60px; 
+       
+}
+/*
+.case_name_line{
+  position: absolute;
+  top: 190px;
+  left: 0px;
+  border-bottom: 2px solid black;
+  width: 188px;
+}
+*/
+
+.case_name2{
+       color: #585858;
+        position: absolute;
+        top: 150px;
+        left: 35px;
+        font-size:25px;
+        padding: 5px 20px;
+        background-color:#c5c5c5;
+         border-radius: 30px; 
+         color: #black;
+         
+}
+
+.case_name3{
+  position: absolute;
+  background-color: white;
+   border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  top: 460px;
+  left: 0;
+  font-size: 17px;
+}
+
+
+#wrap img{
+   width: 30px;
+}
+
+#window img{
+    position: absolute;
+    top:318px;
+    left:120px;
+    width:420px; 
+    
+}
+
+#nav{
+    position: absolute;
+    width: 420px;
+     top:620px; 
+     right: 10px;
+   
+
+}
+
+#nav img{
+     background-color: white;
+    padding:7px 7px;
+    border: 1px solid #b8b8b8;
+    width:78px;
+}
+#nav li{
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.case_list a img {
+    background-color: white;
+    padding:4px 7px;
+    border: 1px solid black;
+    width:40px;
+
+
+}
+
+
+
+ /*
+
+.spec_01 {
+        color: white;
+  position: absolute;
+  background-color: #666666;
+  opacity:0.47;
+  float:left;
+  top:200px;
+  left: 660px;
+  width: 320px;
+  height: 200px;
+
+}
+
+*/
+
+
+
+
+
+.spec_0203{
+        position: relative;
+
+        top:85px;
+        background-color: #b9bccb; 
+        width:100%;
+        height: 1700px; 
+         left: 50%; transform: translateX(-50%);
+         padding: 30px 0;
+     
+
+
+
+}
+
+/*
+.bg_0203{
+        background-color: rgba( 146, 149, 158, 0.5 ); 
+
+}
+*/
+.bg_0203{
+
+        position: absolute;
+        top:1200px;
+
+         padding: 120px 0px;
+         width: 1500px;
+         height: 665px;
+   
+          left: 50%; transform: translateX(-50%);
+        
+
+}
+.spec_line{
+        position: absolute;
+        top:1180px;
+        background-color:#808399;
+        width: 1400px;
+        height: 7px;
+          left: 50%; transform: translateX(-50%);
+          border-radius: 30px 30px 30px 30px;
+          border-top: 1px solid #dddee3;
+}
+.spec_04{
+        position:absolute;
+        padding-left: 25px;
+        z-index: 5;
+        color: #272d3e;
+        font-size: 26px;
+        top:40px;
+        left: 176px;
+        background-color: #c8cbe8;
+        border-radius: 30px;
+        padding: 10px 20px;
+       
+        
+}
+.spec_04 img {
+  position: absolute;
+  left:-40px;;
+  top:14px;
+  width: 30px;
+}
+.spec_03{
+        position:absolute;
+        border-radius: 3px;
+        font-size: 18px;
+        margin:0;
+        padding:10px 30px;
+        background-color: #797c92;
+        position: relative;
+        top: 96px;
+        width: 765px;
+        height: 250px;
+        left: 75%; transform: translateX(-50%); 
+        line-height:139%;
+        
+        
+      
+     
+
+}
+
+.spec_03 ul {
+
+        margin:0;
+        padding:0;
+        float:left;
+       
+       
+
+
+}
+.spec_03 li{
+         float:left;
+           margin-right: 14px; 
+          
+         
+
+}
+
+.h1_spec_test{
+        position: absolute;
+        top: 288px;
+        left:0;
+        font-size:18px;
+        margin-top: 100px;
+        float:left;
+        line-height:200%;
+        background-color: #aaaec0;
+        width:770px;
+        padding:20px 10px ;
+        border-radius: 4px;
+        
+}
+#h1_spec_test_line {
+       
+position: absolute;
+margin-bottom:20px;
+
+width: 600px;
+ 
+}
+
+#h1_spec_test_line li {
+       
+margin-bottom : 5px;
+
+ 
+}
+
+
+
+
+
+
+.feature{
+  position: absolute;
+  font-size: 21px;
+  left:306px;
+  top:159px;
+
+}
+.feature_line{
+  position: absolute;
+  border-bottom: 2px solid black;
+  left: 72px;
+  width:560px;
+  top: 205px;
+
+}
+.feature_spec{
+   position: absolute;
+   left: 115px;
+   top: 230px;
+   width: 460px;
+   font-size: 18px;
+   text-align: center;
+}
+
+.fullspec{
+    z-index: 3;
+  position: absolute;
+  font-size: 21px;
+  left:316px;
+  top:470px;
+
+}
+.feature_line2{
+  position: absolute;
+  z-index: 3;
+  border-bottom: 2px solid black;
+  left: 70px;
+  width:560px;
+  top: 525px;
+
+}
+
+#hi_spec_img{
+        position: absolute;
+        top:600px;
+        left:70px;
+
+}
+
+.fullspec2{
+        z-index: 3;
+        position: absolute;
+        font-size: 21px;
+        left:280px;
+        top:320px;
+        background-color:#7e8fe1;
+        padding:10px 30px;
+        border-radius:30px;
+}
+
+
+#class_id{
+  color: white;
+  font-size: 38px;
+  padding:50px; 
+}
+
+
+
+.spec_right img{
+        width:9px; 
+        margin-right:8px;
+       
+      
+
+}
+.spec_right {
+        padding:0 50px;
+       
+}
+
+
+
+
+.fullspec_bg{
+  position:absolute;
+
+background-color: #f4f4f4;
+     border-radius: 1px;
+  width: 1000px;
+  height: 200px;
+  top: 15px;
+  left: 50%; transform: translateX(-50%);
+}
+
+.fullspec_bg img{
+  padding: 0px 0 0 0;
+}
+
+
+
+
+
+
+.footer {
+    color: #a9a9aa;
+    font-size:9pt;
+    overflow:hidden;
+    background :#483637;
+    padding:40px 0 70px 0;
+    width: 100%;
+    height: 340px;
+    margin: 0 auto; 
+    
+   
+  
+   
+}
+.footer_p{
+
+        width: 1310px;
+        padding: 40px 0 30px 0;
+        text-align: left;
+        line-height : 165%;
+        font-size: 14px;
+        margin: 0 auto; 
+  
+        
+}
+.ft_logo{
+
+         float:left;
+        width:58px;
+        margin-right: 12px;
+      
+}
+.ft_main_p{
+        
+        color: #a9a9aa;
+      
+        margin : 3px;
+      
+        
+        
+       
+}
+.ft_sub_p{ 
+      width: 740px;
+        
+        float : left;
+        
+}
+
+.footer_icon{
+
+      float : left;
+
+      margin-top:0; 
+      margin-left: 350px;
+           
+}
+.footer_icon img{
+        width:186px;
+        
+}
+.footer_icon p{
+        padding:0;
+        margin:0;
+        font-size: 13px;
+        margin-left: 15px;
+}
+
+
+
+
+</style>
+</head>
+
+
+
+
+
+<!--                     헤드라인                         -->
+<!--                     바디시작                         -->
+<!--                     상단고정메뉴시작                   -->
+<body bgcolor = "#f9f9f9">
+
+
+<div class ="topfix">
+
+    <div class ="topsidebg">
+        <div class="topside">
+           <ul>
+              <li><a href="re_home3_contact.html">CONTACT</a></li>
+         <!--     <li>SUPPORT</li>   -->
+              <li>WHERE TO BUY</li>
+           </ul>
+         </div>
+    </div>
+
+
+
+<div class="topmenubg_wrapper">
+
+
+
+
+
+
+
+
+
+
+
+<nav>
+  <div class="container">
+
+
+
+           
+
+
+           <div class="top_contents">
+                   <div class="toplogo"> 
+                        <li><a href="/"><img src="logo.png"></a></li>
+                </div>
+                <div class="top_slogun">
+                        <img src="top_slogun.png">
+                </div>
+                
+ 
+           </div>
+
+
+
+    <ul>
+
+
+  
+         <li id="name"> <a href="#">CHASSIS<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_1211_h_series.html">H Series</a></li>
+          <li><a href="re_home3_1211_m_series.html">M Series</a></li>
+        </ul>
+      </li>
+        
+      <li><a href="#">POWER SUPPLY</a></li>
+      <li> <a href="#">KEYBOARD&MICE<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_keyboard.html">Keyboard</a></li>
+          <li><a href="#">Mice</a></li>
+          <li><a href="re_home3_1211_mousepad.html">Mouse pad</a></li>
+        </ul>
+      </li>
+      <li class='sub-menu'> <a href="#">ACCESSORY<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_1211_accessory.html">Accessory</a></li>
+          <li><a href="re_home3_1211_cooling_tunning.html">Cooling & Tunning</a></li>
+    
+        </ul>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    </div>
+
+
+
+    <!--                상단고정메뉴끝                   -->
+    <!--                홈화면내용시작                   -->
+
+
+<div class="case_click_wrapper">
+
+      <div class="box_bg">
+                        <div class="pdf">
+
+                                <a href="filepdf.pdf"><img src="icon_down.png"></a>
+                        </div>
+                        <div id="wrap">
+
+                                <div class="case_name">#H1</div>
+                                <div class="case_name_line"></div>
+                                <div class="case_name2">Compact ATX Mid-Tower Case</div>
+                                <div class="case_name3"></div>
+                                <ul id="nav">
+                                <li><a href="imgs/h1_main_01.png" class="active"><img src="imgs/h1_main_s_01.png" alt="" /></a></li>
+                                <li><a href="imgs/h1_main_03.png"><img src="imgs/h1_main_s_03.png" alt="" /></a></li>
+                                <li><a href="imgs/h1_main_02.png"><img src="imgs/h1_main_s_02.png" alt="" /></a></li>
+                                <li><a href="imgs/h1_main_04.png"><img src="imgs/h1_main_s_04.png" alt="" /></a></li>
+                                <li><a href="imgs/h1_main_05.png"><img src="imgs/h1_main_s_05.png" alt="" /></a></li>
+                                <li><a href="imgs/h1_main_06.png"><img src="imgs/h1_main_s_06.png" alt="" /></a></li>
+                                <li><a href="imgs/h1_main_07.png"><img src="imgs/h1_main_s_07.png" alt="" /></a></li>
+                                <li><a href="imgs/h1_main_08.png"><img src="imgs/h1_main_s_08.png" alt="" /></a></li>
+                                <li><a href="imgs/h1_main_09.png"><img src="imgs/h1_main_s_09.png" alt="" /></a></li>
+                                <li><a href="imgs/h1_main_10.png"><img src="imgs/h1_main_s_10.png" alt="" /></a></li>
+                                <li><a href="imgs/h1_main_11.png"><img src="imgs/h1_main_s_11.png" alt="" /></a></li>
+                                <li><a href="imgs/h1_main_12.png"><img src="imgs/h1_main_s_12.png" alt="" /></a></li>
+                         
+
+                                
+
+                                </ul>
+                                <div id="window"><img src="imgs/h1_main_01.png" alt="" /></div>
+
+                        </div>
+
+                <!--                슬라이드시작                  -->
+
+
+
+
+                <div id="wrapper">
+                        <div>
+                                <div class="sliderbutton"><img src="left.gif" width="32" height="38" alt="Previous" onclick="slideshow.move(-1)" /></div>
+                                <div id="slider">
+                                        <ul>
+                                                <li id="content">
+                                                <img src="imgs/h1_slide_01.png" width="425" height="300" alt="Coral Reef" />
+                                                </li>
+                                                <li><img src="imgs/h1_slide_02.png" width="425" height="300" alt="Sea turtle" /></li>
+                                                <li><img src="imgs/h1_slide_01.png" width="425" height="300" alt="Coral Reef" /></li>
+                                                <li><img src="imgs/h1_slide_02.png" width="425" height="300" alt="Blue Fish" /></li>
+                                                
+                                        </ul>
+                                </div>
+                                <div class="sliderbutton"><img src="right.gif" width="32" height="38" alt="Next" onclick="slideshow.move(1)" /></div>
+                        </div>
+
+
+
+                        <ul id="pagination" class="pagination">
+                                <li onclick="slideshow.pos(0)"></li>
+                                <li onclick="slideshow.pos(1)"></li>
+                                <li onclick="slideshow.pos(2)"></li>
+                                <li onclick="slideshow.pos(3)"></li>
+                        </ul>
+                </div>
+        </div>
+
+<!--                슬라이드끝                  -->
+
+
+
+
+
+                <div class="spec_0203"></div>
+                <div class="spec_line"></div>
+                 
+                        <div class="bg_0203">
+                                <div class="spec_04">
+                   <img src="case_spec_icon.png">
+                                       <p> SEE PRODUCT
+                                          DETAILS.</p>
+                                </div>
+                            <div class="feature">Features</div>
+                            <div class="feature_line"></div>
+                            <div class="feature_spec">
+                                        Full-sized acrylic side windows on both sides Handy I/O ports on top 
+                                    Sufficient cable routing holes LED strip & gorgeous blue LED fan to provide awesome visual effects
+                                    Fan controller to adjust up to 5 system fans at one time
+
+                            </div>
+                            
+                            <div class="fullspec">Images</div>
+                            <div id="hi_spec_img"><img src="h1_spec_img.png"></div> 
+                            <div class="feature_line2"></div>
+
+                                <div class="spec_03">
+                                        <ul>
+                                               
+                                                <li class="spec_right">
+                                                        <img src="dot_img.png">Elegant & classy-look aluminum top and front panels<br>
+                                                        <img src="dot_img.png">Aluminum brushed hairline texture front & top panels <br>
+                                                          <img src="dot_img.png">Full-sized acrylic side windows on both L/R sides.  <br>
+                                                        <img src="dot_img.png">Luxurious interior with black coating finish<br>
+                                                        <img src="dot_img.png">Spacious interior comes with expandability<br>
+                                                        <img src="dot_img.png">Support high-end graphic cards installation up to 350mm<br>
+                                                        <img src="dot_img.png">Supports CPU heatsink space up to 155mm<br>      
+                                                         <img src="dot_img.png">Supports 240mm liquid cooling radiator on both front and top<br>   
+                                                          <img src="dot_img.png">Easy removable & bottom anti-dust filter for PSU<br>                                               
+                                                </li>
+                                        </ul>
+                                       <!-- <div class="h1_spec_test">
+                                                <img src="h1_spec_test.png">
+                                        </div>  -->
+
+                                
+                                        <div class="fullspec2">Full-Specification</div>
+                                         <div class="feature_line3"></div>
+
+
+                                        <div class="h1_spec_test">
+                                                <ul>
+                                                <li> Product Name <br>
+                                                Available Colors <br>
+                                                Materials <br>
+                                                Dimensions(LxWxH) <br>
+                                                Net Weight <br>
+                                                Motherboard Support <br>
+                                                Expansion Slots <br>
+                                                Drive Bays <br>
+                                                <br>
+                                                 <br>
+                                                Fan Support <br>
+                                                <br>
+                                                <br>
+                                                I/O Ports<br>
+                                                <br>
+                                                Dust Filters <br>
+                                                <br>
+                                                Clearance<br>
+                                                <br>
+                                                <br>
+                                                Extra Features<br>
+                                        
+                                                </li>
+                                                
+                                                  <li> H1 Alumen <br>
+                                                Silver / Black <br>
+                                                Aluminum / Steel / Plastic <br>
+                                                425x200x452mm <br>
+                                                4.7Kg <br>
+                                                ATX / Micro-ATX / Mini-ITX <br>
+                                                7 <br>
+                                                5.25” <br>
+                                                Combo 3.5”/2.5” <br>
+                                                SSD <br>
+                                                Front <br>
+                                                Top <br> 
+                                                Rear <br>
+                                               1x Audio/Mic <br>
+                                                1x USB 3.0 / 2x USB 2.0<br>
+                                               Front Side(Included)<br>
+                                                Bottom Front & Rear(Included)<br>
+                                               GPU Clearance <br>
+                                               CPU Cooler<br>
+                                               PSU<br>
+                                               Full Acrylic Side Windows (L/R)<br>
+
+                                                </li>
+                                       <li> <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                               <br>
+                                                 <br>
+                                                2<br>
+                                                2 <br>
+                                                1x 120mm Blue LED fan(Included) <br>
+                                                <br>
+                                                1x 120mm Exhaust fan(Included)<br>
+                                                <br>
+                                                <br>
+                                                 <br>
+                                                <br>
+                                                Up to XXXmm<br>
+                                                Up to XXXmm<br>
+                                                XXXmm<br>
+                                                <br>
+                                        
+                                                </li>
+                                               
+                                                </ul>
+
+                                        </div>
+                             
+                        </div>
+</div>
+
+ </div>
+
+ 
+<!--홈화면내용끝-->
+
+
+<div class="footer">
+        <div class="footer_p">
+<p>
+<img class="ft_logo" src="hammer_ing_g.png">
+<div class="ft_main_p">Copyright © 2017 Hammertech. All rights reserved<br> 
+Hammertech Co., Ltd<br><br>
+</div>
+<div class="ft_sub_p">
+
+Korea Office ｜ 2/F., 19, Ihyeon-ro 29beon-gil, Giheung-gu, Yongin-si, Gyeonggi-do, Korea 16931 <br>
+_FAX : +82 02-839-4408 _E-mail : ksy8116@gmail.com </div>
+</p> 
+
+
+<div class="footer_icon">
+        <p> WANT TO BE SOCIAL US? </p>
+        <img src="footer_icon_b.png">
+        </div>
+        </div>
+</div>
+
+
+
+
+  <!--   case click 페이지 제이쿼리 start -->
+<script>
+var slideshow=new TINY.slider.slide('slideshow',{
+	id:'slider',
+	auto:3,
+	resume:true,
+	vertical:false,
+	navid:'pagination',
+	activeclass:'current',
+	position:0
+});
+
+</script>
+
+
+
+<!--홈화면탑메뉴 -->
+
+
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script> 
+<script>
+$('nav li').hover(
+  function() {
+	  $('ul', this).stop().slideDown(200);
+  },
+	function() {
+    $('ul', this).stop().slideUp(200);
+  }
+);
+</script>
+
+
+</body>
+</html>

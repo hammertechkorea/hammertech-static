@@ -1,0 +1,929 @@
+<!Doctype html>
+<html>
+
+<head>
+  <meta charset="UTF8">
+  <title> HAMMER</title>
+  <link rel="shortcut icon" href="1616ico.ico">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Baloo+Thambi|Fjalla+One" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.25, minimum-scale=0, user-scalable=no, target-densitydpi=medium-dpi"
+  />
+  <!--모바일페이지크기조절메타태그-->
+  <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+
+  <!-- 탑메뉴 -->
+
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+
+  <!-- 홈슬라이드 -->
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <!--<meta name="viewport" content="height=device-height,width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">-->
+  <meta property="og:site_name" content="VI Simple Slider">
+  <meta property="og:title" content="VI Simple Slider">
+  <meta name="description" content="VI Simple Slider 예제 및 다운로드" />
+  <meta property="og:description" content="VI Simple Slider 예제 및 다운로드">
+  <meta property="og:url" content="http://naminsik.com//blog/labfile/plugin.viSimpleSlider/">
+  <link rel="image_src" href="http://naminsik.com//blog/labfile/plugin.viSimpleSlider/tumbnail.plugin.viSimpleSlider.jpg" />
+  <meta property="og:image" content="http://naminsik.com//blog/labfile/plugin.viSimpleSlider/tumbnail.plugin.viSimpleSlider.jpg">
+  <meta property="fb:app_id" content="195353980540001" />
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/viSimpleSlider.css">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.easing.js"></script>
+  <script type="text/javascript" src="./js/vinyli.viSimpleSlider.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      $(".topmenu").click(function () {
+        $(".case_sub_bg").slideToggle("slow");
+      });
+      $(".case_sub_bg").click(function () {
+        $(".case_sub_bg").slideUp(500)
+      });
+    });
+
+
+
+
+
+  </script>
+  <style>
+    body {
+      font-family: "Arial", "微软雅黑", "맑은 고딕";
+      margin: 0 auto;
+
+
+
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .topfix {
+      margin: 0 auto;
+    }
+
+    .topsidebg {
+      background-color: #5a1813;
+      height: 25px;
+    }
+
+    .topside {
+
+      margin: 0 auto;
+      left: 80%;
+      transform: translateX(-10%);
+      height: 30px;
+
+    }
+
+    .topside ul {
+      float-right;
+      margin: 0 5px 0 0;
+    }
+
+    .topsidebg li {
+      cursor: pointer;
+      float: right;
+      margin-left: 15px;
+      font-size: 9pt;
+      margin-top: 4px;
+      color: #ffffff;
+
+
+
+    }
+
+    .topside A :visited {
+      text-decoration: none;
+      color: #ffffff;
+
+    }
+
+
+
+
+
+    /*  가운데정렬적용때문에(?) relative속성을 absolute로 변경. 맞는지 모르겠음 */
+
+    .top_contents li {
+
+      cursor: pointer;
+
+      float: left;
+      list-style: none;
+
+    }
+
+    .top_contents {
+      float: left;
+      margin-top: 10px;
+      list-style: none;
+      width: 300px;
+      color: #43433c;
+      overflow: hidden;
+      text-align: center;
+
+
+    }
+
+    .toplogo li img {
+
+      display: block;
+      width: 80px;
+      margin-left: 0px;
+      margin-top: 15px;
+
+    }
+
+    .toplogo li {
+      padding: 0 5px 0 5px;
+    }
+
+    .top_slogun {
+      float: left;
+      width: 170px;
+    }
+
+    .top_slogun img {
+      margin-top: 31px;
+      width: 170px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
+    /* main Styles */
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      background: #fafafa;
+      font-family: "Roboto", sans-serif;
+
+      font-size: 14px;
+
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 1200px;
+
+      margin: auto;
+
+    }
+
+
+    h1 {
+      text-align: center;
+      margin-top: 150px;
+    }
+
+    /* Navigation Styles */
+
+    nav {
+      background: #efeeea;
+    }
+
+    nav ul {
+
+      font-size: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      position: relative;
+
+    }
+
+    nav ul li a {
+
+      color: #3c3c3c;
+      display: block;
+      font-size: 19px;
+      padding: 40px 30px;
+      transition: 0.3s linear;
+
+    }
+
+
+    nav ul li:hover {
+      background: #5a1813;
+      z-index: 5;
+    }
+
+    nav ul li :hover {
+      color: #ececec;
+    }
+
+    nav ul li ul :hover {
+      color: #5a1813;
+    }
+
+    nav ul li ul {
+
+      border-bottom: 3px solid #c8c8c8;
+      display: none;
+      position: absolute;
+      width: 253px;
+
+
+    }
+
+    nav ul li ul li {
+      border-top: 1px solid #ffffff;
+
+      display: block;
+
+    }
+
+    nav ul li ul li:first-child {
+      border-top: none;
+    }
+
+    nav ul li ul li a {
+
+      background: #efeeea;
+      display: block;
+      padding: 20px 14px;
+      z-index: 5;
+    }
+
+    nav ul li ul li a:hover {
+      background: #efeeea;
+    }
+
+    nav .fa.fa-angle-down {
+      margin-left: 6px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .wrapper {
+
+      margin: 0 auto;
+      text-align: center;
+      overflow: hidden;
+      width: 100%;
+
+    }
+
+
+    /*  메인 슬라이드 작용옛날버전 
+
+
+.wrapper_mainimg {
+        background-image: url(main_img2_size1.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+        width:100%;
+        overflow: hidden;
+        position: relative;
+        height: 666px;
+        padding:0; text-align:center;
+
+}
+
+
+
+.arrow{
+  position: relative;
+  max-width: 1700px;
+  min-width: 1000px;
+  margin: 0 auto;
+}
+
+
+#right{
+        cursor:pointer;
+        width: 25px;
+        height: 35px;
+        position: absolute;
+        top: 300px;
+        right:0px;
+        padding-right:50px;
+
+
+
+}
+
+#left {
+        cursor:pointer;
+        width: 25px;
+        height: 35px;
+        position: absolute;
+        top: 300px;
+        left:0px;
+        padding-left:50px;
+
+}
+
+
+*/
+
+    .case {
+      display: block;
+      width: 100%;
+
+    }
+
+    .case img {
+      width: 100%
+    }
+
+
+
+
+
+
+    .wrapper_middle_bg {
+      background-image: url(main_bg.png);
+      padding: 23px 0 165px 0;
+      margin: 0 auto;
+      text-align: center;
+      overflow: hidden;
+      max-width: 100%;
+      min-width: 1000px;
+
+    }
+
+    .wrapper_middle {
+
+      margin: 0 auto;
+      width: 1400px;
+      height: 650px;
+
+
+
+    }
+
+    .middle_title {
+
+      color: black;
+      width: 1000px;
+      font-size: 35px;
+      padding: 30px 0 40px 0;
+      float: left;
+      list-style: none;
+      margin-left: 203px;
+      margin-top: 25px;
+
+      text-align: center;
+      font-family: 'Alegreya Sans SC', sans-serif;
+
+
+
+    }
+
+    .title_sub {
+      color: #5f5f5f;
+      font-size: 30px;
+      background-color: white;
+      background-: 0 10px;
+
+    }
+
+    .middle_title li {
+      margin-bottom: 4px;
+    }
+
+    .middle_img_wrapper {
+      position: relative;
+      top: 25px;
+      margin: 0;
+      padding: 0;
+      height: 480px;
+      width: 1343px;
+      margin: 0 auto;
+      clear: both;
+
+
+    }
+
+    .middle_img_wrapper ul {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    .middle_img_wrapper ul li {
+      cursor: pointer;
+      float: left;
+      margin-right: 8px;
+      margin-bottom: 8px;
+
+    }
+
+    /*
+.middle_img_wrapper ul li :hover{
+  width: 2%;
+  -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0
+    transition: width 0.5s;
+}
+*/
+
+    .middle_img_wrapper li img {
+
+      width: 100%;
+      display: block;
+    }
+
+    .footer {
+      color: #a9a9aa;
+      font-size: 9pt;
+      overflow: hidden;
+      background: #483637;
+      padding: 40px 0 70px 0;
+      width: 100%;
+      height: 340px;
+      margin: 0 auto;
+
+
+
+
+    }
+
+    .footer_p {
+
+      width: 1310px;
+      padding: 40px 0 30px 0;
+      text-align: left;
+      line-height: 165%;
+      font-size: 14px;
+      margin: 0 auto;
+
+
+    }
+
+    .ft_logo {
+
+      float: left;
+      width: 58px;
+      margin-right: 12px;
+
+    }
+
+    .ft_main_p {
+
+      color: #a9a9aa;
+
+      margin: 3px;
+
+
+
+
+    }
+
+    .ft_sub_p {
+      width: 740px;
+
+      float: left;
+
+    }
+
+    .footer_icon {
+
+      float: left;
+
+      margin-top: 0;
+      margin-left: 350px;
+
+    }
+
+    .footer_icon ul {
+      width: 200px;
+      margin-left: 0px;
+      margin-top: 5px;
+    }
+
+    .footer_icon li {
+      float: left;
+    }
+
+    .footer_icon img {
+      width: 47px;
+
+    }
+
+    .footer_icon p {
+      padding: 0;
+      margin: 0;
+      font-size: 13px;
+      margin-left: 15px;
+    }
+  </style>
+</head>
+
+
+
+
+
+<!--                     헤드라인                         -->
+<!--                     바디시작                         -->
+<!--                     상단고정메뉴시작                   -->
+
+<body bgcolor="#f9f9f9">
+
+
+  <div class="topfix">
+
+    <div class="topsidebg">
+      <div class="topside">
+        <ul>
+          <li>
+            <a href="re_home3_contact.html">CONTACT</a>
+          </li>
+          <!--     <li>SUPPORT</li>   -->
+          <li>WHERE TO BUY</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <div class="topmenubg_wrapper">
+
+
+
+
+
+
+
+
+
+
+
+      <nav>
+        <div class="container">
+
+
+
+
+
+
+          <div class="top_contents">
+            <div class="toplogo">
+              <li>
+                <a href="/">
+                  <img src="logo.png">
+                </a>
+              </li>
+            </div>
+            <div class="top_slogun">
+              <img src="top_slogun.png">
+            </div>
+
+
+          </div>
+
+
+
+          <ul>
+
+
+
+            <li id="name">
+              <a href="#">CHASSIS
+                <i class='fa fa-angle-down'></i>
+              </a>
+              <ul>
+                <li>
+                  <a href="re_home3_1211_h_series.html">H Series</a>
+                </li>
+                <li>
+                  <a href="re_home3_1211_m_series.html">M Series</a>
+                </li>
+                <li>
+                  <a href="re_home3_1211_i_series.html">I Series</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">POWER SUPPLY</a>
+            </li>
+            <li>
+              <a href="#">KEYBOARD & MICE
+                <i class='fa fa-angle-down'></i>
+              </a>
+              <ul>
+                <li>
+                  <a href="re_home3_1211_keyboard.html">Keyboard</a>
+                </li>
+                <li>
+                  <a href="#">Mice</a>
+                </li>
+                <li>
+                  <a href="re_home3_1211_mousepad.html">Mouse pad</a>
+                </li>
+              </ul>
+            </li>
+            <li class='sub-menu'>
+              <a href="#">ACCESSORY
+                <i class='fa fa-angle-down'></i>
+              </a>
+              <ul>
+                <li>
+                  <a href="re_home3_1211_accessory.html">Accessory</a>
+                </li>
+                <li>
+                  <a href="re_home3_1211_cooling_tunning.html">Cooling & Tunning</a>
+                </li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <!--                상단고정메뉴끝                   -->
+  <!--                홈화면내용시작                   -->
+
+  <div class="wrapper">
+
+
+
+
+
+
+
+
+
+
+    <div id="testDiv" style="
+        left:50%; transform:translateX(-50%); 
+	overflow:hidden; 
+	width:2400px;
+        height:660px;
+        text-align:center;
+     ">
+
+      <ul>
+
+        <li>
+          <img src="main_bn_h4.png">
+        </li>
+        <li>
+          <img src="main_bn_i3al.png">
+        </li>
+        <li data-link="#slide" data-target="_blank">
+          <img src="main_img2_size1.png">
+        </li>
+        <li>
+          <img src="main_img2_size3.png">
+        </li>
+
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 메인 슬라이드 옜날 버전
+
+    <div class="wrapper_mainimg">
+
+
+                    <div class="caseonly">
+                        <div class="case">
+
+                        </div>
+                    </div>
+                    <div class="arrow">
+                                <img id="left" src="arrow_left.png">
+                                <img id="right" src="arrow_right.png">
+                    </div>
+
+
+    </div>
+
+-->
+
+
+
+    <div class="wrapper_middle_bg">
+
+
+
+
+      <div class="subject">
+        <div class="wrapper_middle">
+          <div class="middle_title">
+            <li> EXPLORE PRODUCTS </li>
+            <li class="title_sub"> extraordinary design and designed to inspire. </li>
+          </div>
+
+          <div class="middle_img_wrapper">
+            <ul>
+              <li>
+                <a href="caseclick_i3al_01.html">
+                  <img src="main_i3al.png">
+                </a>
+              </li>
+              <li>
+                <a href="re_home3_1211_keyboard.html">
+                  <img src="img02.png">
+                </a>
+              </li>
+              <li>
+                <a href="re_home3_1211_accessory.html">
+                  <img src="img03.png">
+                </a>
+              </li>
+              <li>
+                <a href="caseclick_h4_01.html">
+                  <img src="main_m_h4.png">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--홈화면내용끝-->
+
+
+  <div class="footer">
+    <div class="footer_p">
+      <p>
+        <img class="ft_logo" src="hammer_ing_g.png">
+        <div class="ft_main_p">Copyright © 2017 Hammertech. All rights reserved
+          <br> Hammertech Co., Ltd
+          <br>
+          <br>
+        </div>
+        <div class="ft_sub_p">
+
+          Korea Office ｜ 2/F., 19, Ihyeon-ro 29beon-gil, Giheung-gu, Yongin-si, Gyeonggi-do, Korea 16931
+          <br> E-mail : ksy8116@gmail.com</div>
+      </p>
+
+
+      <div class="footer_icon">
+        <p> WANT TO BE SOCIAL US? </p>
+        <ul>
+          <a href="https://www.facebook.com/HammertechHK/">
+            <li>
+              <img src="footer_icon_fb.png">
+            </li>
+          </a>
+          <a href="">
+            <li>
+              <img src="footer_icon_yt.png">
+            </li>
+          </a>
+          <a href="">
+            <li>
+              <img src="footer_icon_insta.png">
+            </li>
+          </a>
+          <a href="">
+            <li>
+              <img src="footer_icon_t.png">
+            </li>
+          </a>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- 홈화면 슬라이드 -->
+  <script>
+    $('#testDiv').viSimpleSlider({
+      ease: 'easeOutQuart',
+      autoPlay: true,
+
+      autoTime: 6000,
+      speed: 400,
+      desktopSwipe: true
+    });    
+  </script>
+
+
+
+
+  <!--홈화면탑메뉴 -->
+
+
+  <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    $('nav li').hover(
+      function () {
+        $('ul', this).stop().slideDown(200);
+      },
+      function () {
+        $('ul', this).stop().slideUp(200);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1397 @@
+<!Doctype html >
+<html>
+<head>
+<meta charset="UTF8">
+<title> HAMMER</title>
+
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="packed.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.25, minimum-scale=0, user-scalable=no, target-densitydpi=medium-dpi" /><!--모바일페이지크기조절메타태그--> 
+<link rel="shortcut icon" href="1616ico.ico">
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Baloo+Thambi|Fjalla+One" rel="stylesheet">
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+
+
+<!-- 탑메뉴 -->
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+
+
+
+
+
+<script>
+
+        
+$(document).ready(function(){
+        $(".topmenu").click(function(){
+                $(".case_sub_bg").slideToggle("slow");
+        });
+        $(".case_sub_bg").click(function(){
+                $(".case_sub_bg").slideUp(500)
+        });
+      
+
+
+        /* case click 페이지 제이쿼리 start */
+  
+			$('#nav1 a').mouseover(function(e){
+				e.preventDefault();
+				$('#nav1 a').removeClass('active');
+				$(this).addClass('active');
+				img_url = $(this).attr('href');
+				$('#window img').attr('src',img_url);
+				});
+	
+    
+			$('#nav2 a').mouseover(function(e){
+				e.preventDefault();
+				$('#nav2 a').removeClass('active');
+				$(this).addClass('active');
+				img_url = $(this).attr('href');
+				$('#window img').attr('src',img_url);
+				});
+	});
+
+
+
+</script>
+
+
+
+
+
+<style>
+body {
+        font-family: "Arial","微软雅黑","맑은 고딕";
+        margin:0 auto; 
+       
+
+        
+}
+ul li {
+        list-style: none;
+}
+a {
+        text-decoration: none; color: white;
+}
+.topfix {
+        margin:0 auto;
+}
+
+.topsidebg {
+        background-color:#5a1813;
+        height:25px;
+}
+.topside {
+        
+        margin: 0 auto;
+         left: 80%; transform: translateX(-10%);
+        height:30px;
+
+}
+
+.topside ul {
+        float-right;
+        margin:0 5px 0 0;
+}
+.topsidebg li {
+        cursor:pointer;
+        float:right;
+        margin-left:15px;
+        font-size:9pt;
+        margin-top:4px;
+        color:#ffffff;
+        
+       
+    
+}
+
+.topside A :visited { text-decoration: none; color :#ffffff;
+      
+}
+
+
+
+
+
+/*  가운데정렬적용때문에(?) relative속성을 absolute로 변경. 맞는지 모르겠음 */
+.top_contents  li {
+      
+        cursor:pointer;
+       
+        float:left; list-style: none;
+        
+}
+.top_contents {
+        float:left;
+        margin-top:10px;
+        list-style: none;
+        width: 300px;
+        color :#43433c;
+        overflow:hidden;
+        text-align:center;
+        
+       
+       
+}
+.toplogo li img {
+        
+        display:block;
+        width: 80px;
+        margin-left: 0px;
+        margin-top: 15px;
+}
+.toplogo li{    
+         padding: 0 5px 0 5px;      
+}
+.top_slogun{ 
+         float:left;
+        width: 170px;      
+}
+.top_slogun img{   
+        margin-top:31px;
+        width: 170px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
+/* main Styles */
+
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+  background: #fafafa;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+a { text-decoration: none; }
+
+.container {
+  width: 1200px;
+ 
+  margin: auto;
+
+}
+
+
+h1 { text-align:center; margin-top:150px;}
+
+/* Navigation Styles */
+
+nav { background: #efeeea;  }
+
+nav ul {
+       
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+
+}
+
+nav ul li a {
+       
+  color: #3c3c3c;
+  display: block;
+  font-size: 19px;
+  padding: 40px 30px;
+  transition: 0.3s linear;
+  
+  
+}
+
+
+nav ul li:hover { background: #5a1813;  
+                z-index :5; }
+
+nav ul li :hover {
+        color: #ececec;
+}
+nav ul li ul :hover {
+        color: #5a1813;
+}
+
+nav ul li ul {
+     
+  border-bottom: 3px solid #c8c8c8;
+  display: none;
+  position: absolute;
+  width: 253px;
+  
+
+}
+
+nav ul li ul li {
+  border-top: 1px solid #ffffff;
+ 
+  display: block;
+ 
+}
+
+nav ul li ul li:first-child { border-top: none; }
+
+nav ul li ul li a {
+     
+  background: #efeeea;
+  display: block;
+  padding: 20px 14px;
+
+}
+
+nav ul li ul li a:hover { background: #efeeea; }
+
+nav .fa.fa-angle-down { margin-left: 6px; }
+
+
+
+/* --------caseclick---------  */
+
+
+
+
+.case_click_wrapper{
+  background-color:white;
+  background-repeat: repeat-x;
+
+  overflow:hidden;
+  padding: 30px 0 20px 0;
+
+
+
+
+}
+.box_bg{ 
+  position:relative;
+
+  margin: 0 auto;
+  width: 1400px;
+  height: 920px;
+  padding: 100px 30px 100px 30px; 
+ 
+
+
+}
+.pdf{
+        position: absolute;
+        top: 210px;
+        left: 1310px;
+        font-size: 11px;
+}
+.pdf img{
+        width:58px;
+}
+
+
+#ㅜnav1 li{
+    float: left;
+}
+
+.case_click {
+        position: absolute;
+        top : 40px;
+        font-size: 16px;
+        color: #ffffff;
+        border : 1px solid #5c5c5c;
+        background-color: #cc9797;
+        padding:3px 10px;
+        border-radius: 3px;
+        left:0px;
+}
+
+.case_name{
+        position: absolute;
+        top:99px;
+        left: 10px;
+        font-size: 61px; 
+        color:#573737;
+       
+}
+/*
+.case_name_line{
+  position: absolute;
+  top: 190px;
+  left: 0px;
+  border-bottom: 2px solid black;
+  width: 188px;
+}
+*/
+
+.case_name2{
+       color: #573737;
+        position: absolute;
+        top: 190px;
+        left: 10px;
+        font-size:25px;
+     
+         color: #black;
+         
+}
+
+.case_name3{
+  position: absolute;
+  background-color: white;
+   border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  top: 460px;
+  left: 0;
+  font-size: 17px;
+}
+
+
+#wrap img{
+   width: 30px;
+}
+#window{ 
+        top:300px;
+        left:0px;
+        position: absolute;
+        width:600px;
+        height: 600px;
+         border: 1px solid #b8b8b8;
+}
+#window img{
+    position: absolute;
+    top:8px;
+    left:55px;
+    width:500px; 
+   
+}
+
+#nav1{
+    position: absolute;
+    width: 420px;
+     top:300px; 
+     left:625px;
+     z-index: 5;
+
+}
+
+#nav1 img{
+     background-color: white;
+    padding:7px 7px;
+    border: 1px solid #b8b8b8;
+    width:78px;
+}
+#nav1 li{
+    
+    margin-right: 5px;
+    margin-bottom: 12px;
+}
+
+#nav2{
+         z-index: 6;
+    position: absolute;
+    width: 420px;
+     top:300px; 
+     left:710px;
+   
+
+}
+
+#nav2 img{
+     background-color: white;
+    padding:7px 7px;
+    border: 1px solid #b8b8b8;
+    width:78px;
+}
+#nav2 li{
+    
+    margin-right: 5px;
+    margin-bottom: 12px;
+}
+.side_video{
+        z-index: 8;
+        position: absolute;
+        top:640px;
+        right:0px;
+      
+}
+
+
+
+.case_list a img {
+    background-color: white;
+    padding:4px 7px;
+    border: 1px solid black;
+    width:40px;
+
+
+}
+
+
+
+ /*
+
+.spec_01 {
+        color: white;
+  position: absolute;
+  background-color: #666666;
+  opacity:0.47;
+  float:left;
+  top:200px;
+  left: 660px;
+  width: 320px;
+  height: 200px;
+
+}
+
+*/
+
+
+
+
+
+.spec_0203{
+        position: relative;
+
+        top:85px;
+        background-color: #d3d3d3; 
+        width:100%;
+        height: 1765px; 
+         left: 50%; transform: translateX(-50%);
+         padding: 30px 0;
+     
+
+
+
+}
+
+/*
+.bg_0203{
+        background-color: rgba( 146, 149, 158, 0.5 ); 
+
+}
+*/
+.bg_0203{
+
+        position: absolute;
+        top:1200px;
+
+         padding: 120px 0px;
+         width: 1500px;
+         height: 665px;
+   
+          left: 50%; transform: translateX(-50%);
+        
+
+}
+.spec_line{
+        position: absolute;
+        top:1168px;
+        background-color:#a06161;
+        width: 1540px;
+        height: 4px;
+          left: 50%; transform: translateX(-50%);
+          border-radius: 30px 30px 30px 30px;
+          border-top: 1px solid #dddee3;
+}
+.spec_04{
+        position:absolute;
+        padding-left: 25px;
+        z-index: 5;
+        color: #ffffff;
+        font-size: 23px;
+        top:28px;
+        left: 100px;
+        background-color: #6c4a4a;
+        border-radius: 10px;
+        padding: 12px 190px;
+       
+        
+}
+
+.spec_03{
+        position:absolute;
+        border-radius: 3px;
+        font-size: 18px;
+        margin:0;
+        padding:10px 30px;
+        border:2px solid  #7f5252;
+        background-color: #d9d8d8;
+        position: relative;
+        top: 96px;
+        width: 1300px;
+        height: 260px;
+        left: 50%; transform: translateX(-50%); 
+        line-height:149%;
+       
+        
+        
+      
+     
+
+}
+
+.spec_03 ul {
+
+        margin:0;
+        padding:0;
+        float:left;
+       
+       
+
+
+}
+.spec_03 li{
+         float:left;
+           margin-right: 14px; 
+          
+         
+
+}
+
+.h1_spec_test{
+        position: absolute;
+        top: 288px;
+        left:0;
+        font-size:18px;
+        margin-top: 100px;
+        float:left;
+        line-height:200%;
+  
+        width:1300px;
+        padding:20px 0px 20px 0px ;
+        border-radius: 4px;
+        
+        
+        
+}
+
+table {
+        border : 1px solid #797c92; border-spacing: 0px 0px; border-collapse: collapse;
+        padding : 0 50px;
+}
+
+table th, td{
+        border : 1px solid #703a3a; 
+        text-align: center;
+        border-spacing: 0px 0px;
+        padding: 0 100px;
+}
+
+table th {
+    background-color : #b69b9b;
+   
+    color:#703a3a;
+}
+table td{
+        color: #523d3d;
+        background-color: #e2d8d8;
+}
+table th{
+        width:460px;
+        padding:0;
+}
+table td{
+        width:600px;
+        padding:0;
+}
+.h1_spec_test ul{
+        background-color: #e3e3e3;
+
+}
+.h1_spec_test li {
+        
+       padding:50px;
+        margin-right:95px;
+        border-left: 1px solid #c1c1c1;
+     
+}
+
+.h1_spec_test li : nth-child(2) {
+        color:red;
+        
+}
+#h1_spec_test_line {
+       
+position: absolute;
+margin-bottom:20px;
+ 
+width: 600px;
+ 
+}
+
+#h1_spec_test_line li {
+       
+margin-bottom : 5px;
+
+ 
+}
+
+
+
+
+.h1_spec_test_line p{
+       position:relative;
+       top:449px;
+        border-bottom: 1px solid #c1c1c1;
+        z-index: 10;
+        margin-bottom:35px;
+    
+       
+}
+
+
+
+
+.feature{
+  position: absolute;
+  font-size: 23px;
+  left:136px;
+  top:155px;
+  color:#472222;
+  background-color: #cc9797;
+    border-radius: 10px;
+        padding: 5px 40px;
+ 
+
+}
+.feature_line{
+  position: absolute;
+  border-bottom: 2px solid black;
+  left: 100px;
+  width:560px;
+  top: 205px;
+
+}
+
+
+
+.fullspec2{
+        z-index: 3;
+        position: absolute;
+        font-size: 23px;
+        left:36px;
+        top:336px;
+        color:#472222;
+          background-color: #cc9797;
+    border-radius: 10px;
+        padding: 6px 40px;
+
+}
+#fullspec_icon1 {
+  position: absolute;
+  left:100px;;
+  top:160px;
+  width: 28px;
+}
+#fullspec_icon2{
+        position: absolute;
+        left:0px;
+        top:341px;
+        width: 28px;
+}
+
+
+#class_id{
+  color: white;
+  font-size: 38px;
+  padding:50px; 
+}
+
+
+
+.spec_right img{
+        width:9px; 
+        margin-right:14px;
+       
+      
+
+}
+.spec_right {
+        padding:0 50px;
+        color:#ca5252;
+       
+}
+
+.spec_icon{
+      position: absolute;
+      right: 100px;
+      top:130px;
+}
+.spec_icon ul li{
+        float:left;
+         width:62px;
+        height:62px;
+        border-radius: 30px;
+        background-color:#b9bccb;
+        margin-right:8px;
+}
+
+.fullspec_bg{
+  position:absolute;
+
+background-color: #f4f4f4;
+     border-radius: 1px;
+  width: 1000px;
+  height: 200px;
+  top: 15px;
+  left: 50%; transform: translateX(-50%);
+}
+
+.fullspec_bg img{
+  padding: 0px 0 0 0;
+}
+
+
+
+
+
+
+.footer {
+    color: #a9a9aa;
+    font-size:9pt;
+    overflow:hidden;
+    background :#483637;
+    padding:40px 0 70px 0;
+    width: 100%;
+    height: 340px;
+    margin: 0 auto; 
+    
+   
+  
+   
+}
+.footer_p{
+
+        width: 1310px;
+        padding: 40px 0 30px 0;
+        text-align: left;
+        line-height : 165%;
+        font-size: 14px;
+        margin: 0 auto; 
+  
+        
+}
+.ft_logo{
+
+         float:left;
+        width:58px;
+        margin-right: 12px;
+      
+}
+.ft_main_p{
+        
+        color: #a9a9aa;
+      
+        margin : 3px;
+      
+        
+        
+       
+}
+.ft_sub_p{ 
+      width: 740px;
+        
+        float : left;
+        
+}
+
+.footer_icon{
+
+      float : left;
+
+      margin-top:0; 
+      margin-left: 350px;
+           
+}
+.footer_icon ul{
+        width:200px;
+        margin-left:0px;
+        margin-top:5px;
+}
+.footer_icon li{
+        float: left;
+}
+.footer_icon img{
+        width:47px;
+        
+}
+.footer_icon p{
+        padding:0;
+        margin:0;
+        font-size: 13px;
+        margin-left: 15px;
+}
+
+
+
+</style>
+
+
+
+
+</head>
+
+
+
+
+
+<!--                     헤드라인                         -->
+<!--                     바디시작                         -->
+<!--                     상단고정메뉴시작                   -->
+<body bgcolor = "#f9f9f9">
+
+
+<div class ="topfix">
+
+    <div class ="topsidebg">
+        <div class="topside">
+           <ul>
+              <li><a href="re_home3_contact.html">CONTACT</a></li>
+         <!--     <li>SUPPORT</li>   -->
+              <li>WHERE TO BUY</li>
+           </ul>
+         </div>
+    </div>
+
+
+
+<div class="topmenubg_wrapper">
+
+
+
+
+
+
+
+
+
+
+
+<nav>
+  <div class="container">
+
+
+
+           
+
+
+           <div class="top_contents">
+                   <div class="toplogo"> 
+                        <li><a href="/"><img src="logo.png"></a></li>
+                </div>
+                <div class="top_slogun">
+                        <img src="top_slogun.png">
+                </div>
+                
+ 
+           </div>
+
+
+
+    <ul>
+
+
+  
+         <li id="name"> <a href="#">CHASSIS<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_1211_h_series.html">H Series</a></li>
+          <li><a href="re_home3_1211_m_series.html">M Series</a></li>
+          <li><a href="re_home3_1211_i_series.html">I Series</a></li>
+        </ul>
+      </li>
+        
+      <li><a href="#">POWER SUPPLY</a></li>
+      <li> <a href="#">KEYBOARD & MICE<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_1211_keyboard.html">Keyboard</a></li>
+          <li><a href="#">Mice</a></li>
+          <li><a href="re_home3_1211_mousepad.html">Mouse pad</a></li>
+        </ul>
+      </li>
+      <li class='sub-menu'> <a href="#">ACCESSORY<i class='fa fa-angle-down'></i></a>
+        <ul>
+          <li><a href="re_home3_1211_accessory.html">Accessory</a></li>
+          <li><a href="re_home3_1211_cooling_tunning.html">Cooling & Tunning</a></li>
+    
+        </ul>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    </div>
+
+
+
+    <!--                상단고정메뉴끝                   -->
+    <!--                홈화면내용시작                   -->
+
+
+<div class="case_click_wrapper">
+
+      <div class="box_bg">
+                        <div class="pdf">
+
+                               <!-- <a href="filepdf.pdf">--><img src="icon_down.png"></a>
+                        </div>
+                        <div id="wrap">
+                                <div class="case_click"> HOME / H SERIES / H3 </div>
+                                <div class="case_name">H3</div>
+                                <div class="case_name_line"></div>
+                                <div class="case_name2">Mini-ITX Case / Tempered glass</div>
+                                <div class="case_name3"></div>
+                                <ul id="nav1">
+                                <li><a href="imgs/h3_main_01.png" class="active"><img src="imgs/h3_main_s_01.png" alt="" /></a></li>
+                                <li><a href="imgs/h3_main_02.png"><img src="imgs/h3_main_s_02.png" alt="" /></a></li>
+                                <li><a href="imgs/h3_main_03.png"><img src="imgs/h3_main_s_03.png" alt="" /></a></li>
+                                <li><a href="imgs/h3_main_04.png"><img src="imgs/h3_main_s_04.png" alt="" /></a></li>
+                                <li><a href="imgs/h3_main_05.png"><img src="imgs/h3_main_s_05.png" alt="" /></a></li>
+                                <li><a href="imgs/h3_main_06.png"><img src="imgs/h3_main_s_06.png" alt="" /></a></li>
+                    
+                                </ul>
+                                     <ul id="nav2">
+                                
+                                <li><a href="imgs/h3_main_07.png"><img src="imgs/h3_main_s_07.png" alt="" /></a></li>
+                                <li><a href="imgs/h3_main_09.png"><img src="imgs/h3_main_s_09.png" alt="" /></a></li>
+                                <li><a href="imgs/h3_main_08.png"><img src="imgs/h3_main_s_08.png" alt="" /></a></li>
+                                <li><a href="imgs/h3_main_12.png"><img src="imgs/h3_main_s_12.png" alt="" /></a></li>
+                                <li><a href="imgs/h3_main_10.png"><img src="imgs/h3_main_s_10.png" alt="" /></a></li>
+                                <li><a href="imgs/h3_main_11.png"><img src="imgs/h3_main_s_11.png" alt="" /></a></li>
+                              
+                                </ul>
+                                <div id="window"><img src="imgs/h3_main_01.png" alt="" /></div>
+
+                        </div>
+                         <div class="side_video">
+                               <video src="h3_video.mp4" width="520" height="" controls></vidio>
+                        </div>
+                       
+                       
+
+                <!--                슬라이드시작                  -->
+
+
+
+
+                <div id="wrapper">
+                        <div>
+                                <div class="sliderbutton"><img src="left.gif" width="32" height="38" alt="Previous" onclick="slideshow.move(-1)" /></div>
+                                <div id="slider">
+                                        <ul>
+                                                <li id="content">
+                                                <img src="imgs/h3_slide_05.png" width="425" height="300" alt="Coral Reef" />
+                                                </li>
+                                                <li><img src="imgs/h3_slide_06.png" width="425" height="300" alt="Sea turtle" /></li>
+                                                <li><img src="imgs/h3_slide_07.png" width="425" height="300" alt="Coral Reef" /></li>
+                                                <li><img src="imgs/h3_slide_08.png" width="425" height="300" alt="Blue Fish" /></li>
+                                                
+                                                
+                                        </ul>
+                                </div>
+                                <div class="sliderbutton"><img src="right.gif" width="32" height="38" alt="Next" onclick="slideshow.move(1)" /></div>
+                        </div>
+
+
+
+                        <ul id="pagination" class="pagination">
+                                <li onclick="slideshow.pos(0)"></li>
+                                <li onclick="slideshow.pos(1)"></li>
+                                <li onclick="slideshow.pos(2)"></li>
+                                <li onclick="slideshow.pos(3)"></li>
+                        </ul>
+                </div>
+        </div>
+
+        
+
+<!--                슬라이드끝                  -->
+
+
+
+
+
+                <div class="spec_0203"></div>
+                <div class="spec_line"></div>
+                 
+                        <div class="bg_0203">
+                                 <img id="fullspec_icon1" src="case_spec_icon.png">
+                                <div class="spec_04">
+                  
+                                       <p> SEE PRODUCT
+                                          DETAILS</p>
+                                </div>
+                            <div class="feature">FEATURES
+                                    </div>
+                           <!-- <div class="feature_line"></div> -->
+             
+                            
+                             <!--<div class="spec_icon">
+
+                                                <ul>
+                                                        <li></li>
+                                                        <li></li>
+                                                        <li></li>
+                                                </ul>
+
+                                        </div> -->
+                          
+                           
+
+                                <div class="spec_03">
+                                        <ul>
+                                               
+                                                <li class="spec_right">
+                                                        <img src="dot_img.png">Ultra slim form factor Mini-ITX Case<br>
+                                                        <img src="dot_img.png">Small but super smart, sleek and spectacular <br>
+                                                          <img src="dot_img.png">Stylish hairline texture surface design <br>
+                                                        <img src="dot_img.png">Full-sized & Tinted tempered glass side window on left side.<br>
+                                                        <img src="dot_img.png">Can be positioned horizontally or vertically for maximum space saving<br>
+                                                        <img src="dot_img.png">Cool air intakes from front and top sides create efficient air flow for quick heat dissipation<br>
+                                                        
+                                                                                                   
+                                                </li>
+                                        </ul>
+
+                                       <!-- <div class="h1_spec_test">
+                                                <img src="h1_spec_test.png">
+                                        </div>  -->
+                               
+                                <img id="fullspec_icon2" src="case_spec_icon.png">
+                                        <div class="fullspec2">SPECIFICATIONS
+                                        
+                                        </div>
+                                         <div class="feature_line3"></div>
+
+
+
+
+
+                                         <div class="h1_spec_test">
+                                                 <table >
+                                                <tr> 
+                                                <th bgcolor="#797c92">Product Name</th>
+                                                <td colspan="2">H3 Tigant DE</td>
+                                                
+                                                </tr>
+                                                <tr> 
+                                                <th>Available Colors</th>
+                                                <td colspan="2">Silver</td>
+                                                
+                                                </tr>
+                                                <tr> 
+                                                <th>Materials</th>
+                                                <td colspan="2">Aluminum, Steel</td>
+                                                
+                                                </tr>
+                                                <tr> 
+                                                <th>Dimensions(LxWxH)</th>
+                                                <td colspan="2">292 x 79.5 x 235mm</td>
+                                                
+                                                </tr>
+                                                <tr> 
+                                                <th>Net Weight</th>
+                                                <td colspan="2">2.5Kg</td>
+                                                
+                                                </tr>
+                                                <tr> 
+                                                <th>Motherboard Support</th>
+                                                <td colspan="2">Mini-ITX</td>
+                                         
+
+                                        
+                                                <tr> 
+                                                <th >Drive Bays</th>
+                                                <td>2.5HDD / SSD</td>
+                                                <td>1</td>
+                                                </tr>
+                                                
+                                            
+
+                                                <tr> 
+                                                <th >Fan Support</th>
+                                                <td>Top</td> 
+                                                <td>60mm</td>
+                                                </tr>
+                                           
+                                          
+
+
+                                                <tr> 
+                                                <th >I/O Ports</th>
+                                                <td colspan="2">USB 2.0 x 1, USB 3.0 x 1 </td>
+                                               
+                                                </tr>
+                                              
+                                          
+
+                                                <tr> 
+                                                <th rowspan="2">Clearance</th>
+                                                <td>CPU Cooler </td>
+                                                <td> Up to 50mm</td>
+                                                </tr>
+                                                <tr> 
+                                                <td> PSU</td>
+                                                <td> Flex PSU (1U) 150 x 81.5 x 40.5mm</td>
+                                                </tr>
+                                         
+                                                <tr>
+
+                                                <th>Extra Features</th>
+                                                <td colspan="2"> One side Tempered-glass Window</td>
+                                               
+                                                </tr>
+
+                                                </table>
+
+                                        </div>   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 <!--       <div class="h1_spec_test">
+                                                <ul>
+                                                <li> Product Name <br>
+                                                Available Colors <br>
+                                                Materials <br>
+                                                Dimensions(LxWxH) <br>
+                                                Net Weight <br>
+                                                Motherboard Support <br>
+                                                Expansion Slots <br>
+                                                Drive Bays <br>
+                                                <br>
+                                                 <br>
+                                                Fan Support <br>
+                                                <br>
+                                                <br>
+                                                I/O Ports<br>
+                                                <br>
+                                                Dust Filters <br>
+                                                <br>
+                                                Clearance<br>
+                                                <br>
+                                                <br>
+                                                Extra Features<br>
+                                        
+                                                </li>
+                                                
+                                                  <li> H1 Alumen <br>
+                                                Silver / Black <br>
+                                                Aluminum / Steel / Plastic <br>
+                                                425x200x452mm <br>
+                                                4.7Kg <br>
+                                                ATX / Micro-ATX / Mini-ITX <br>
+                                                7 <br>
+                                                5.25” <br>
+                                                Combo 3.5”/2.5” <br>
+                                                SSD <br>
+                                                Front <br>
+                                                Top <br> 
+                                                Rear <br>
+                                               1x Audio/Mic <br>
+                                                1x USB 3.0 / 2x USB 2.0<br>
+                                               Front Side(Included)<br>
+                                                Bottom Front & Rear(Included)<br>
+                                               GPU Clearance <br>
+                                               CPU Cooler<br>
+                                               PSU<br>
+                                               Full Acrylic Side Windows (L/R)<br>
+
+                                                </li>
+                                       <li> <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                               <br>
+                                                 <br>
+                                                2<br>
+                                                2 <br>
+                                                1x 120mm Blue LED fan(Included) <br>
+                                                <br>
+                                                1x 120mm Exhaust fan(Included)<br>
+                                                <br>
+                                                <br>
+                                                 <br>
+                                                <br>
+                                                Up to XXXmm<br>
+                                                Up to XXXmm<br>
+                                                XXXmm<br>
+                                                <br>
+                                        
+                                                </li>
+                                               
+                                                </ul>
+
+                                        </div>    -->
+
+
+                                       <!-- <div class="h1_spec_test_line">
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                 <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>  
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                  <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                
+                                                
+
+                                        </div> -->
+
+
+
+
+
+                             
+                        </div>
+</div>
+
+ </div>
+
+                     
+
+
+
+<!--홈화면내용끝-->
+
+
+<div class="footer">
+        <div class="footer_p">
+<p>
+<img class="ft_logo" src="hammer_ing_g.png">
+<div class="ft_main_p">Copyright © 2017 Hammertech. All rights reserved<br> 
+Hammertech Co., Ltd<br><br>
+</div>
+<div class="ft_sub_p">
+
+Korea Office ｜ 2/F., 19, Ihyeon-ro 29beon-gil, Giheung-gu, Yongin-si, Gyeonggi-do, Korea 16931 <br>
+E-mail : ksy8116@gmail.com </div>
+</p> 
+
+
+<div class="footer_icon">
+        <p> WANT TO BE SOCIAL US? </p>
+        <ul>
+                <a href="https://www.facebook.com/HammertechHK/"><li><img src="footer_icon_fb.png"></li></a>
+                <a href=""><li><img src="footer_icon_yt.png"></li></a>
+                <a href=""><li><img src="footer_icon_insta.png"></li></a>
+                <a href=""><li><img src="footer_icon_t.png"></li></a>
+        </ul>
+        
+</div>
+
+
+
+        </div>
+</div>
+
+
+
+
+
+
+
+  <!--   case click 페이지 제이쿼리 start -->
+<script>
+var slideshow=new TINY.slider.slide('slideshow',{
+	id:'slider',
+	auto:3,
+	resume:true,
+	vertical:false,
+	navid:'pagination',
+	activeclass:'current',
+	position:0
+});
+
+</script>
+
+
+
+
+
+
+<!--홈화면탑메뉴 -->
+
+
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script> 
+<script>
+$('nav li').hover(
+  function() {
+	  $('ul', this).stop().slideDown(200);
+  },
+	function() {
+    $('ul', this).stop().slideUp(200);
+  }
+);
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

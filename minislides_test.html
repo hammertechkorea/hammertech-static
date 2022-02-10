@@ -1,0 +1,73 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF8">
+<title> HAMMER</title>
+
+<link rel="shortcut icon" href="1616ico.ico">
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Baloo+Thambi|Fjalla+One" rel="stylesheet">
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+<script>
+$(function() {
+    var time = 500;
+    var auto = true;
+    var cnt = 1;
+    var idx = idx2 = 0;
+    var slide_width = $("#slider").width();
+    var slide_count = $("#slider li").size();
+    $("#slider li:first").css("display", "block");
+    if(slide_count > 1)
+        $(".btn").css("display", "inline");
+ 
+    $("#prev_btn").click(function() {
+        if(slide_count > 1) {
+            idx2 = (idx - 1) % slide_count;
+            if(idx2 < 0)
+                idx2 = slide_count - 1;
+            $("#slider li:hidden").css("left", "-"+slide_width+"px");
+            $("#slider li:eq("+idx+")").animate({ left: "+="+slide_width+"px" }, time, function() {
+                $(this).css("display", "none").css("left", "-"+slide_width+"px");
+            });
+            $("#slider li:eq("+idx2+")").css("display", "block").animate({ left: "+="+slide_width+"px" }, time);
+            idx = idx2;
+        }
+    });
+ 
+    $("#next_btn").click(function() {
+        if(slide_count > 1) {
+            idx2 = (idx + 1) % slide_count;
+            $("#slider li:hidden").css("left", slide_width+"px");
+            $("#slider li:eq("+idx+")").animate({ left: "-="+slide_width+"px" }, time, function() {
+                $(this).css("display", "none").css("left", slide_width+"px");
+            });
+            $("#slider li:eq("+idx2+")").css("display", "block").animate({ left: "-="+slide_width+"px" }, time);
+            idx = idx2;
+        }
+    });
+});
+</script>
+<style>
+
+
+#prev_btn {position:absolute;top:0;left:0}
+#next_btn {position:absolute;top:0;right:0}
+.btn {width:2em;height:280px;border:0;background:#f5f6fa;display:none;}
+
+#slider {position:relative;margin:0 auto;padding:0;list-style:none;width:280px;height:280px;overflow-x:hidden}
+#slider li {display:none;position:absolute;left:0;top:0}
+#slider img {width:280px;height:280px}
+
+</style>
+</head>
+<body>
+    <button type="button" id="prev_btn" class="btn">이전</button>
+<button type="button" id="next_btn" class="btn">다음</button>
+<ul id="slider">
+    <li><img src="320200_01.png"></li>
+    <li><img src="320200_02.png"></li>
+    <li><img src="320200_01.png"></li>
+</ul>
+</body>
+</html>

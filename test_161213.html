@@ -1,0 +1,65 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF8">
+<title> HAMMER</title>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".topmenu").click(function(){
+        $(".submenu").slideDown(500)
+    });
+    $(".submenu").mouseout(function(){
+        $(".submenu").slideUp(1000)});
+   
+    });
+
+</script>
+
+<style>
+.topmenu{ background:lightcoral; 
+
+width: 300px;
+height:20px;
+cursor:pointer;
+}
+.test1{
+    float:left;
+    margin-right: 50px;
+}
+.submenu{
+    background:lightpink;
+    width: 300px;
+    height: 60px;
+    display: none;
+    cursor: pointer;
+}
+.list1{
+    float:left;
+}
+
+</style>
+</head>
+<body>
+    <nav>
+        <div class="topmenu">
+        <div class="test1">menu1</div>
+        <div class="test1">menu2</div>
+        <div class="test1">menu3</div>
+        </div>
+
+        <div class="submenu">
+                <div class="list1">
+                <div class="test2">submenu1</div>
+                <div class="test2">submenu1</div>
+                <div class="test2">submenu1</div>
+                </div>
+                <div class="list1">
+                <div class="test2">submenu1</div>
+                <div class="test2">submenu1</div>
+                <div class="test2">submenu1</div>
+                </div>
+        </div>
+
+        </nav>
+</body>
