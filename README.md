@@ -1,1 +1,3 @@
 # hammertech-static
+
+hi
