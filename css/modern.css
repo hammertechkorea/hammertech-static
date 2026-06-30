@@ -613,7 +613,11 @@ nav {
     }
     
     .nav-menu {
-        display: block !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px;
         position: static !important;
         width: 100% !important;
         background: transparent !important;
@@ -623,25 +627,35 @@ nav {
     }
     
     .nav-menu.active {
-        display: block !important;
+        display: flex !important;
     }
     
     .nav-menu > li {
         height: auto;
-        width: 100%;
-        text-align: left;
+        width: auto !important;
+        text-align: center;
+        padding: 0;
+    }
+    
+    nav {
+        padding: 10px 0;
+    }
+    .nav-container {
         padding: 0 20px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
     }
     
     .nav-menu > li > a {
-        padding: 12px 0;
-        justify-content: flex-start;
+        padding: 5px 0;
+        justify-content: center;
         width: 100%;
-        border-bottom: 2px solid var(--primary-color);
+        border-bottom: none;
         color: #1d1d1f !important;
-        font-weight: 800 !important;
-        font-size: 18px !important;
-        display: flex;
+        font-weight: 600 !important;
+        font-size: 15px !important;
+        display: block;
     }
     
     .nav-menu > li > a i {
@@ -649,38 +663,15 @@ nav {
     }
     
     .nav-menu > li > ul {
-        position: static !important;
-        transform: none !important;
-        width: 100% !important;
-        box-shadow: none !important;
-        border: none !important;
-        background-color: transparent !important;
-        display: block !important; /* Permanently show submenus */
-        opacity: 1 !important;
-        visibility: visible !important;
-        padding: 5px 0 15px 10px !important;
+        display: none !important; /* Hide completely */
     }
     
     .nav-menu > li > ul li a {
-        display: block !important;
-        padding: 8px 10px !important;
-        color: #555558 !important;
-        font-weight: 600 !important;
-        border-bottom: 1px solid #eeeeee !important;
-        font-size: 15px !important;
+        display: none !important;
     }
     
     /* JavaScript toggled submenus */
-    /* JS overrides */
-    .nav-menu > li > ul.show-mobile-sub {
-        display: block !important;
-    }
-    .nav-menu > li:hover > ul {
-        display: block !important;
-    }
-    .nav-menu > li:hover > ul.show-mobile-sub {
-        display: block !important;
-    }
+    /* JS overrides removed for Two-min style */
     
     /* 2. Brand section mobile optimization (Slogan wrap/hide) */
     .toplogo img {
