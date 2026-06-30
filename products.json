@@ -1,0 +1,34 @@
+[
+  {
+    "category": "CHASSIS",
+    "series": "H Series",
+    "name": "H1",
+    "thumbnail": "h1_main.png",
+    "detailUrl": "caseclick_h1_01.html",
+    "specImages": ["h1_spec_img.png"]
+  },
+  {
+    "category": "CHASSIS",
+    "series": "H Series",
+    "name": "H4",
+    "thumbnail": "main_m_h4.png",
+    "detailUrl": "caseclick_h4_01.html",
+    "specImages": []
+  },
+  {
+    "category": "CHASSIS",
+    "series": "M Series",
+    "name": "M8 Spectrum RGB",
+    "thumbnail": "m8_main_01.jpg",
+    "detailUrl": "caseclick_m8_01.html",
+    "specImages": []
+  },
+  {
+    "category": "CHASSIS",
+    "series": "M Series",
+    "name": "M1 Blast Mini",
+    "thumbnail": "imgs/m1_main_02.png",
+    "detailUrl": "caseclick_m1_01.html",
+    "specImages": []
+  }
+]

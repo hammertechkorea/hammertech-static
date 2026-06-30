@@ -442,6 +442,9 @@ nav {
 }
 
 /* --- Product List Page Styling --- */
+.mobile-category-tabs {
+    display: none;
+}
 .product-page-layout {
     max-width: 1200px;
     margin: 40px auto;
@@ -729,17 +732,57 @@ nav {
     /* 5. Product layout stack */
     .product-page-layout {
         grid-template-columns: 1fr;
-        gap: 25px;
-        margin: 20px auto;
+        gap: 20px;
+        margin: 10px auto;
     }
     
     .sidebar-menu-container {
-        width: 100%;
+        display: none !important; /* Hide vertical sidebar on mobile completely */
+    }
+    
+    /* Mobile Horizontal Scrollable Category Tabs */
+    .mobile-category-tabs {
+        display: flex !important;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 8px;
+        padding: 12px 15px;
+        background-color: #ffffff;
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 15px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Hide default scrollbars for premium look */
+    }
+    .mobile-category-tabs::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .mobile-tab-item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 18px;
+        background-color: #f1f2f4;
+        border: 1px solid rgba(0,0,0,0.05);
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--text-dark);
+        transition: var(--transition);
+        flex-shrink: 0;
+    }
+    
+    .mobile-tab-item.active {
+        background-color: var(--primary-color) !important;
+        color: #ffffff !important;
+        border-color: var(--primary-color) !important;
     }
     
     .product-grid-container {
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         gap: 15px;
+        padding: 0 15px;
     }
     
     .product-card-image-box {
@@ -778,81 +821,4 @@ nav {
     .footer_icon ul {
         justify-content: center;
     }
-}
-
-/* --- Table & Spec Scroll (Mobile Fix) --- */
-.spec-scroll,
-.table-scroll {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
-.spec-scroll img,
-.table-scroll table {
-    max-width: none;
-}
-
-/* --- INQUIRY Section Styling --- */
-.inquiry-section {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 40px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    text-align: center;
-}
-.inquiry-section h2 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-}
-.inquiry-section > p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-}
-.inquiry-section div:nth-of-type(1) {
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    line-height: 1.8;
-    color: #555;
-    font-size: 15px;
-}
-.inquiry-section div:nth-of-type(2) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 30px;
-    background: #f9f9f9;
-    border-radius: 6px;
-}
-.inquiry-section div:nth-of-type(2) span {
-    font-weight: bold;
-    color: #444;
-    letter-spacing: 1px;
-}
-.inquiry-section div:nth-of-type(2) a {
-    display: inline-block;
-    background: #5a1813;
-    color: #fff;
-    padding: 12px 30px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.3s;
-    word-break: break-all;
-}
-.inquiry-section div:nth-of-type(2) a:hover {
-    background: #3c0f0c;
-}
-
-@media (max-width: 360px) {
-    .inquiry-section { padding: 20px; margin: 20px 10px; }
-    .inquiry-section h2 { font-size: 22px; }
-    .inquiry-section div:nth-of-type(2) a { padding: 10px 15px; font-size: 14px; }
 }
