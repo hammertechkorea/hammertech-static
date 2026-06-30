@@ -20,9 +20,6 @@ class Program
         Migrate(dir, template, "re_home3_1211_accessory.html", "ACCESSORY", "ACCESSORY", "Custom PC Components", "ACCESSORY", "", GetAccessoryTabs("re_home3_1211_accessory.html"));
         Migrate(dir, template, "re_home3_1211_cooling_tunning.html", "ACCESSORY", "ACCESSORY", "Custom PC Components", "ACCESSORY", "Cooling & Tunning", GetAccessoryTabs("re_home3_1211_cooling_tunning.html"));
         
-        // Also update the main chassis page to include data-category
-        Migrate(dir, template, "re_home3_case_1211.html", "CHASSIS", "HAMMER TECH CASE", "YOUR HAMMER TO CONQUER!", "CHASSIS", "", GetChassisTabs("re_home3_case_1211.html"));
-        
         Console.WriteLine("All category pages migrated to new tab layout.");
     }
 
@@ -51,13 +48,12 @@ class Program
     {
         return string.Format(@"<section class=""tabs-section"">
             <div class=""tab-menu"">
-                <button class=""tab-btn {0}"" onclick=""location.href='re_home3_case_1211.html'"">ALL CHASSIS</button>
                 <button class=""tab-btn {1}"" onclick=""location.href='re_home3_1211_h_series.html'"">H Series</button>
                 <button class=""tab-btn {2}"" onclick=""location.href='re_home3_1211_m_series.html'"">M Series</button>
                 <button class=""tab-btn {3}"" onclick=""location.href='re_home3_1211_i_series.html'"">I Series</button>
             </div>
         </section>", 
-        activePage == "re_home3_case_1211.html" ? "active" : "",
+        "",
         activePage == "re_home3_1211_h_series.html" ? "active" : "",
         activePage == "re_home3_1211_m_series.html" ? "active" : "",
         activePage == "re_home3_1211_i_series.html" ? "active" : "");
@@ -67,7 +63,7 @@ class Program
     {
         return string.Format(@"<section class=""tabs-section"">
             <div class=""tab-menu"">
-                <button class=""tab-btn {0}"" onclick=""location.href='re_home3_1211_keyboard.html'"">ALL KEYBOARD</button>
+                <button class=""tab-btn {0}"" onclick=""location.href='re_home3_1211_keyboard.html'"">Keyboard</button>
                 <button class=""tab-btn {1}"" onclick=""location.href='re_home3_1211_mousepad.html'"">Mouse pad</button>
             </div>
         </section>", 
@@ -79,7 +75,7 @@ class Program
     {
         return string.Format(@"<section class=""tabs-section"">
             <div class=""tab-menu"">
-                <button class=""tab-btn {0}"" onclick=""location.href='re_home3_1211_accessory.html'"">ALL ACCESSORY</button>
+                <button class=""tab-btn {0}"" onclick=""location.href='re_home3_1211_accessory.html'"">Accessory</button>
                 <button class=""tab-btn {1}"" onclick=""location.href='re_home3_1211_cooling_tunning.html'"">Cooling & Tunning</button>
             </div>
         </section>", 
