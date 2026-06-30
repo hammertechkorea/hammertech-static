@@ -14,8 +14,6 @@ namespace HtmlFixer
 
             foreach (string file in files)
             {
-                // To safely detect encoding, we use StreamReader with true for detectEncodingFromByteOrderMarks
-                // and fallback to Default (ANSI/EUC-KR on Korean Windows)
                 Encoding encoding = Encoding.Default;
                 string content;
 
@@ -27,26 +25,18 @@ namespace HtmlFixer
 
                 string original = content;
 
-                // 1. Remove WHERE TO BUY line entirely
-                content = Regex.Replace(content, @"(?is)<li[^>]*>\s*<a[^>]*>\s*WHERE TO BUY\s*</a>\s*</li>", "");
-                content = Regex.Replace(content, @"(?is)<li[^>]*>\s*WHERE TO BUY\s*</li>", "");
-                content = Regex.Replace(content, @"(?i)WHERE TO BUY", "");
-
-                // 2. Remove (Preview) and Preview
-                content = Regex.Replace(content, @"\(Preview\)", "");
-                content = Regex.Replace(content, @"(?i)Preview", "");
-
-                // 3. CONTACT to INQUIRY
-                content = Regex.Replace(content, @">CONTACT<", ">INQUIRY<");
-
-                // 4. Remove forbidden words
-                content = Regex.Replace(content, @"단종|지원 종료|품절|판매 종료", "");
+                // Add "CHASSIS 전체보기" link to the Chassis dropdown across all files
+                if (!content.Contains("CHASSIS 전체보기") && content.Contains("re_home3_1211_h_series.html"))
+                {
+                    content = Regex.Replace(content, 
+                        @"(<li>\s*<a href=""re_home3_1211_h_series\.html"">)", 
+                        "<li><a href=\"re_home3_case_1211.html\" style=\"color:#d8232a; font-weight:800;\">CHASSIS 전체보기</a></li>\n                            $1");
+                }
 
                 if (content != original)
                 {
-                    // Write back with the EXACT SAME encoding
                     File.WriteAllText(file, content, encoding);
-                    Console.WriteLine("Fixed " + file + " (Encoding: " + encoding.EncodingName + ")");
+                    Console.WriteLine("Added CHASSIS Link to " + file + " (Encoding: " + encoding.EncodingName + ")");
                 }
             }
             Console.WriteLine("Done");
