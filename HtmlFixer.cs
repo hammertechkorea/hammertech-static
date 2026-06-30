@@ -25,19 +25,13 @@ namespace HtmlFixer
 
                 string original = content;
 
-                // 1. Change main links to point to overview pages instead of #
-                content = Regex.Replace(content, @"<a href=""#([^""]*)"">\s*CHASSIS", "<a href=\"re_home3_case_1211.html\">CHASSIS");
-                content = Regex.Replace(content, @"<a href=""#([^""]*)"">\s*KEYBOARD & MICE", "<a href=\"re_home3_1211_keyboard.html\">KEYBOARD & MICE");
-                content = Regex.Replace(content, @"<a href=""#([^""]*)"">\s*ACCESSORY", "<a href=\"re_home3_1211_accessory.html\">ACCESSORY");
-
-                // 2. Disable the mobile accordion JS by changing window.innerWidth <= 900 to window.innerWidth <= 0
-                // This allows the main links to be clicked on mobile without e.preventDefault() blocking them.
-                content = Regex.Replace(content, @"window\.innerWidth\s*<=\s*900", "window.innerWidth <= 0");
+                // Remove the "CHASSIS 전체보기" list item
+                content = Regex.Replace(content, @"<li><a href=""re_home3_case_1211\.html"" style=""color:#d8232a; font-weight:800;"">CHASSIS 전체보기</a></li>\s*", "");
 
                 if (content != original)
                 {
                     File.WriteAllText(file, content, encoding);
-                    Console.WriteLine("Updated links & JS in " + file + " (Encoding: " + encoding.EncodingName + ")");
+                    Console.WriteLine("Removed 'CHASSIS 전체보기' from " + file + " (Encoding: " + encoding.EncodingName + ")");
                 }
             }
             Console.WriteLine("Done");
