@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAMMERTECH - Cases </title>
+    <title>HAMMERTECH - CHASSIS</title>
     <link rel="shortcut icon" href="1616ico.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Refined Mobile Responsive Stylesheet -->
@@ -78,17 +78,18 @@
 
     <!-- 4. Main Content Layout (Sidebar + Grid) -->
     <section class="product-page-layout">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar-menu-container">
-            <h3 class="sidebar-title">PRODUCT CATEGORY</h3>
-            <ul class="sidebar-nav-list">
-                <li class="sidebar-nav-item"><a href="re_home3_keyboard.html">Keyboard</a></li>
-                <li class="sidebar-nav-item"><a href="re_home3_accessary.html">Accessory</a></li>
-            </ul>
-        </aside>
+        <!-- Category Tabs -->
+        <section class="tabs-section">
+            <div class="tab-menu">
+                <button class="tab-btn active" onclick="location.href='re_home3_case_1211.html'">ALL CHASSIS</button>
+                <button class="tab-btn " onclick="location.href='re_home3_1211_h_series.html'">H Series</button>
+                <button class="tab-btn " onclick="location.href='re_home3_1211_m_series.html'">M Series</button>
+                <button class="tab-btn " onclick="location.href='re_home3_1211_i_series.html'">I Series</button>
+            </div>
+        </section>
 
         <!-- Product Grid List -->
-        <main class="product-grid-container">
+        <main class="product-grid-container" data-category="CHASSIS" data-series="">
             <!-- Discontinued products (G1 - G40) have been permanently removed -->
         </main>
     </section>

@@ -2,15 +2,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const gridContainer = document.querySelector('.product-grid-container');
     if (!gridContainer) return;
 
-    // Get filter parameters from data attributes if any, e.g., data-series="M Series"
+    // Get filter parameters from data attributes if any
     const filterSeries = gridContainer.getAttribute('data-series');
+    const filterCategory = gridContainer.getAttribute('data-category');
 
     fetch('products.json')
         .then(response => response.json())
         .then(products => {
             let filteredProducts = products;
+            
+            if (filterCategory) {
+                filteredProducts = filteredProducts.filter(p => p.category === filterCategory);
+            }
             if (filterSeries) {
-                filteredProducts = products.filter(p => p.series === filterSeries || p.category === filterSeries);
+                filteredProducts = filteredProducts.filter(p => p.series === filterSeries || p.category === filterSeries);
             }
 
             gridContainer.innerHTML = ''; // Clear loading or existing static content

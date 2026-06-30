@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "category": "CHASSIS",
     "series": "H Series",
@@ -29,6 +29,39 @@
     "name": "M1 Blast Mini",
     "thumbnail": "imgs/m1_main_02.png",
     "detailUrl": "caseclick_m1_01.html",
+    "specImages": []
+  }
+,
+  {
+    "category": "KEYBOARD & MICE",
+    "series": "Keyboard",
+    "name": "G1KB",
+    "thumbnail": "logo.png",
+    "detailUrl": "/",
+    "specImages": []
+  },
+  {
+    "category": "KEYBOARD & MICE",
+    "series": "Mouse pad",
+    "name": "M1AL / M2AL",
+    "thumbnail": "logo.png",
+    "detailUrl": "/",
+    "specImages": []
+  },
+  {
+    "category": "ACCESSORY",
+    "series": "Accessory",
+    "name": "A1MS",
+    "thumbnail": "logo.png",
+    "detailUrl": "/",
+    "specImages": []
+  },
+  {
+    "category": "ACCESSORY",
+    "series": "Cooling & Tunning",
+    "name": "TYPHOON",
+    "thumbnail": "logo.png",
+    "detailUrl": "/",
     "specImages": []
   }
 ]
