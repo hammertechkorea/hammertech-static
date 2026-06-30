@@ -114,6 +114,19 @@ nav {
     opacity: 0.8;
 }
 
+/* Hamburger Menu Button (Hidden on Desktop) */
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-dark);
+    transition: var(--transition);
+}
+
+.hamburger-menu:hover {
+    color: var(--primary-color);
+}
+
 /* Navigation Links */
 .nav-menu {
     display: flex;
@@ -428,16 +441,341 @@ nav {
     transform: translateY(-2px);
 }
 
-/* --- Responsive Adjustments --- */
+/* --- Product List Page Styling --- */
+.product-page-layout {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+}
+
+/* Sidebar Menu */
+.sidebar-menu-container {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    height: fit-content;
+}
+
+.sidebar-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-color);
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 15px;
+}
+
+.sidebar-nav-list {
+    list-style: none;
+}
+
+.sidebar-nav-item {
+    margin-bottom: 8px;
+}
+
+.sidebar-nav-item > a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    color: var(--text-dark);
+}
+
+.sidebar-nav-item > a:hover,
+.sidebar-nav-item.active > a {
+    background-color: rgba(255, 96, 9, 0.08);
+    color: var(--primary-color);
+}
+
+/* Product Grid */
+.product-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.product-item-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-item-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.product-card-image-box {
+    background-color: #f7f7f8;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+}
+
+.product-card-image-box img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.product-item-card:hover .product-card-image-box img {
+    transform: scale(1.05);
+}
+
+.product-card-info-box {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    background-color: #ffffff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card-category {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 5px;
+}
+
+.product-card-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* Page Header */
+.page-intro-banner {
+    background-color: #efeeea;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.page-intro-banner h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.page-intro-banner p {
+    font-size: 16px;
+    color: var(--text-muted);
+}
+
+/* --- Responsive Adjustments (Desktop & Mobile) --- */
 @media (max-width: 900px) {
+    /* 0. container width to 100% (Crucial for mobile width bug!) */
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important;
+    }
+
+    /* 1. Navigation menu -> Mobile Slide-down Full width */
+    .topmenubg_wrapper, nav, .nav-container {
+        overflow: visible !important;
+        height: auto !important; /* Allow menu content to drop down without clipping */
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+    
     .nav-menu {
-        display: none; /* Mobile menu would be added here in full build */
+        display: none;
+        flex-direction: column;
+        position: absolute !important;
+        top: 80px !important;
+        left: 0 !important;
+        width: 100% !important;
+        background: #ffffff !important; /* Solid solid white background (not transparent) */
+        border-bottom: 3px solid var(--primary-color) !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+        padding: 20px 0 !important;
+        z-index: 999999 !important; /* Force on top of EVERYTHING */
     }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-menu > li {
+        height: auto;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-menu > li > a {
+        padding: 15px 0;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 1px solid rgba(0,0,0,0.03);
+        color: #1d1d1f !important; /* Extremely clear dark font color */
+        font-weight: 700 !important;
+        font-size: 16px !important;
+    }
+    
+    .nav-menu > li > a i {
+        transition: transform 0.2s ease;
+    }
+    
+    .nav-menu > li > ul {
+        position: relative !important; /* Cancel absolute layout on mobile */
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+        background-color: #f6f6f6 !important; /* Distinct gray background for submenus */
+        display: none !important; /* Hide by default */
+        opacity: 1 !important;
+        visibility: visible !important;
+        padding: 10px 0 !important;
+    }
+    
+    .nav-menu > li > ul li a {
+        padding: 12px 0 !important;
+        color: #555558 !important; /* Readable gray font for submenu links */
+        font-weight: 600 !important;
+    }
+    
+    /* JavaScript toggled submenus */
+    .nav-menu > li > ul.show-mobile-sub {
+        display: block !important;
+    }
+    
+    /* Disable default CSS hover submenus on mobile touch */
+    .nav-menu > li:hover > ul {
+        display: none !important;
+    }
+    .nav-menu > li:hover > ul.show-mobile-sub {
+        display: block !important;
+    }
+    
+    .rotate-arrow {
+        transform: rotate(180deg);
+    }
+    
+    /* 2. Brand section mobile optimization (Slogan wrap/hide) */
+    .toplogo img {
+        height: 40px;
+    }
+    .top_slogun img {
+        height: 15px;
+    }
+    
+    @media (max-width: 360px) {
+        .top_slogun {
+            display: none;
+        }
+    }
+    
+    /* 3. Slider height adjustments */
     .hero-slider {
-        height: 400px;
+        height: 300px;
     }
+    
+    /* 4. Explore grid adjustments */
+    .wrapper_middle_bg {
+        padding: 40px 15px;
+    }
+    
+    .middle_title {
+        margin-bottom: 30px;
+    }
+    
+    .middle_title h2 {
+        font-size: 26px;
+    }
+    
+    .middle_title .title_sub {
+        font-size: 14px;
+    }
+    
+    .middle_img_wrapper ul {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+    }
+    
+    .middle_img_wrapper li img {
+        height: 180px;
+    }
+
+    /* 5. Product layout stack */
+    .product-page-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 20px auto;
+    }
+    
+    .sidebar-menu-container {
+        width: 100%;
+    }
+    
+    .product-grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 15px;
+    }
+    
+    .product-card-image-box {
+        height: 180px;
+    }
+
+    /* 6. Footer center alignment */
+    .footer {
+        padding: 40px 15px;
+    }
+    
     .footer_p {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
         gap: 30px;
+    }
+    
+    .ft_logo_container {
+        justify-content: center;
+    }
+    
+    .ft_info_section {
+        min-width: unset;
+        width: 100%;
+    }
+    
+    .footer_icon {
+        min-width: unset;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer_icon ul {
+        justify-content: center;
     }
 }
