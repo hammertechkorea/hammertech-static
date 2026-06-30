@@ -457,14 +457,14 @@ nav {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .tab-menu {
     display: inline-flex;
     gap: 10px;
-    background-color: #f1f1f1;
-    padding: 8px;
-    border-radius: 12px;
+    background-color: #e5e5ea;
+    padding: 6px;
+    border-radius: 8px;
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
@@ -585,22 +585,26 @@ nav {
 
 /* Page Header */
 .page-intro-banner {
-    background-color: #efeeea;
-    padding: 60px 20px;
+    background-color: #fafafa;
+    padding: 40px 20px 30px;
     text-align: center;
+    border-bottom: 1px solid #e5e5ea;
+    margin-bottom: 30px;
 }
 
 .page-intro-banner h1 {
     font-family: 'Outfit', sans-serif;
     font-size: 32px;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 8px;
+    font-weight: 800;
+    color: #1d1d1f;
+    margin-bottom: 10px;
 }
 
 .page-intro-banner p {
+    font-family: 'Outfit', sans-serif;
     font-size: 16px;
-    color: var(--text-muted);
+    color: #8e8e93;
+    letter-spacing: 1px;
 }
 
 /* --- Responsive Adjustments (Desktop & Mobile) --- */
