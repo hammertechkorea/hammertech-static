@@ -54,12 +54,4 @@ li.current {border:1px solid #ccc; background:#888}
 
 li#content {width:425px; height:200px; padding:0 ; }
 
-/* --- Detail Page Mobile Overrides --- */
-body, html { max-width: 100%; overflow-x: hidden; }
-table, div, .container, .main_content { max-width: 100% !important; box-sizing: border-box; }
-img, iframe, video { max-width: 100% !important; height: auto !important; }
-@media (max-width: 768px) { 
-    .container { width: 100% !important; padding: 0 10px !important; }
-    table { width: 100% !important; }
-    td, th { display: block; width: 100% !important; }
-}
+
