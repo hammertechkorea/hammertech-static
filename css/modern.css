@@ -39,8 +39,7 @@ a {
 .topsidebg {
     background-color: #3b110e;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 11px;
-    height: 32px;
+    height: 40px; /* Increased height for bigger text */
 }
 
 .topside {
@@ -60,9 +59,10 @@ a {
 }
 
 .topside li a {
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 500;
-    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.1em;
 }
 
 .topside li a:hover {
