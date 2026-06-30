@@ -602,86 +602,84 @@ nav {
         height: auto !important; /* Allow menu content to drop down without clipping */
     }
 
+    .topmenubg_wrapper {
+        position: static !important;
+        height: auto !important;
+        padding-bottom: 10px;
+    }
+
     .hamburger-menu {
-        display: block;
+        display: none !important;
     }
     
     .nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute !important;
-        top: 80px !important;
-        left: 0 !important;
+        display: block !important;
+        position: static !important;
         width: 100% !important;
-        background: #ffffff !important; /* Solid solid white background (not transparent) */
-        border-bottom: 3px solid var(--primary-color) !important;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
-        padding: 20px 0 !important;
-        z-index: 999999 !important; /* Force on top of EVERYTHING */
+        background: transparent !important;
+        border-bottom: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
     }
     
     .nav-menu.active {
-        display: flex;
+        display: block !important;
     }
     
     .nav-menu > li {
         height: auto;
         width: 100%;
-        text-align: center;
+        text-align: left;
+        padding: 0 20px;
     }
     
     .nav-menu > li > a {
-        padding: 15px 0;
-        justify-content: center;
+        padding: 12px 0;
+        justify-content: flex-start;
         width: 100%;
-        border-bottom: 1px solid rgba(0,0,0,0.03);
-        color: #1d1d1f !important; /* Extremely clear dark font color */
-        font-weight: 700 !important;
-        font-size: 16px !important;
+        border-bottom: 2px solid var(--primary-color);
+        color: #1d1d1f !important;
+        font-weight: 800 !important;
+        font-size: 18px !important;
+        display: flex;
     }
     
     .nav-menu > li > a i {
-        transition: transform 0.2s ease;
+        display: none !important; /* Hide arrows since submenus are always visible */
     }
     
     .nav-menu > li > ul {
-        position: relative !important; /* Cancel absolute layout on mobile */
-        top: 0 !important;
-        left: 0 !important;
+        position: static !important;
         transform: none !important;
         width: 100% !important;
         box-shadow: none !important;
         border: none !important;
-        background-color: #f1f1f1 !important; /* Distinct gray background for submenus */
-        display: none !important; /* Hide by default */
+        background-color: transparent !important;
+        display: block !important; /* Permanently show submenus */
         opacity: 1 !important;
         visibility: visible !important;
-        padding: 0 !important;
+        padding: 5px 0 15px 10px !important;
     }
     
     .nav-menu > li > ul li a {
         display: block !important;
-        padding: 15px 20px !important;
-        color: #333333 !important; /* Readable dark font for submenu links */
+        padding: 8px 10px !important;
+        color: #555558 !important;
         font-weight: 600 !important;
-        border-bottom: 1px solid #e5e5e5 !important;
+        border-bottom: 1px solid #eeeeee !important;
+        font-size: 15px !important;
     }
     
     /* JavaScript toggled submenus */
+    /* JS overrides */
     .nav-menu > li > ul.show-mobile-sub {
         display: block !important;
     }
-    
-    /* Disable default CSS hover submenus on mobile touch */
     .nav-menu > li:hover > ul {
-        display: none !important;
+        display: block !important;
     }
     .nav-menu > li:hover > ul.show-mobile-sub {
         display: block !important;
-    }
-    
-    .rotate-arrow {
-        transform: rotate(180deg);
     }
     
     /* 2. Brand section mobile optimization (Slogan wrap/hide) */
