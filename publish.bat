@@ -1,11 +1,12 @@
-@echo off
-title 홈페이지 업데이트 도구
+﻿@echo off
+chcp 65001 > nul
+title 해머텍코리아 홈페이지 업데이트 도구
 echo ==========================================
-echo  홈페이지 업데이트를 시작합니다...
+echo  해머텍코리아 홈페이지 업데이트를 시작합니다...
 echo ==========================================
 echo.
 echo [1/4] 최신 파일 가져오는 중 (git pull)...
-git pull
+"C:\Program Files\Git\cmd\git.exe" pull
 if %errorlevel% neq 0 (
     echo [에러] 최신 파일을 가져오지 못했습니다. 인터넷 연결이나 권한을 확인해주세요.
     pause
@@ -13,15 +14,15 @@ if %errorlevel% neq 0 (
 )
 echo.
 echo [2/4] 수정된 파일 추가하는 중 (git add)...
-git add .
+"C:\Program Files\Git\cmd\git.exe" add .
 echo.
 echo [3/4] 변경 사항 저장하는 중 (git commit)...
-set /p commit_msg="수정 내용을 간단히 입력하세요 (예: 연락처 변경) [기본값: 수정함]: "
+set /p commit_msg="수정 내용을 간단히 입력하세요 (예: 이미지 추가) [기본값: 수정함]: "
 if "%commit_msg%"=="" set commit_msg=수정함
-git commit -m "%commit_msg%"
+"C:\Program Files\Git\cmd\git.exe" commit -m "%commit_msg%"
 echo.
 echo [4/4] 홈페이지 올리는 중 (git push)...
-git push
+"C:\Program Files\Git\cmd\git.exe" push
 if %errorlevel% neq 0 (
     echo [에러] 홈페이지에 반영하지 못했습니다. gh auth login이 완료되었는지 확인해주세요.
     pause
