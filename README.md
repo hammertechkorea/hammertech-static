@@ -34,12 +34,14 @@ gh auth login
 화면 안내를 따라가면 브라우저가 열립니다. 우리 GitHub 계정으로 로그인하세요. (한 번 로그인하면 컴퓨터가 기억하므로 다시 안 해도 됩니다.)
 
 ### 3) 홈페이지 파일 내려받기 (한 번만)
-Git Bash 창에 아래 한 줄을 입력하고 **Enter**:
+1. **I 드라이브**에 `홈페이지` 폴더를 만듭니다. (이미 폴더가 있다면 건너뛰셔도 됩니다.)
+2. Git Bash 창에 아래 두 줄을 차례로 입력하고 **Enter**:
 
 ```bash
-git clone https://github.com/hammertechkorea/hammertech-static.git
+cd /i/홈페이지
+git clone https://github.com/hammertechkorea/hammertech-static.git 해머텍코리아
 ```
-→ 컴퓨터에 `hammertech-static` 폴더가 생깁니다. 이게 우리 홈페이지예요.
+→ `I:\홈페이지\해머텍코리아` 폴더가 생성되며 홈페이지 파일이 다운로드됩니다.
 
 ---
 
@@ -51,14 +53,14 @@ git clone https://github.com/hammertechkorea/hammertech-static.git
 ## B. 그다음부터 — 홈페이지 고칠 때마다
 
 ### 1) 내용 고치기
-1. **VS Code** 를 열고 → **File** → **Open Folder** → `hammertech-static` 폴더 선택
+1. **VS Code** 를 열고 → **File** → **Open Folder** → `I:\홈페이지\해머텍코리아` 폴더 선택
 2. 원하는 파일을 클릭해 글·사진을 고친 뒤 **Ctrl + S** 로 저장
 
 ### 2) 인터넷에 올리기
 Git Bash 창에 아래 5줄을 위에서부터 차례로 복사-붙여넣기 하세요:
 
 ```bash
-cd hammertech-static
+cd /i/홈페이지/해머텍코리아
 git pull
 git add .
 git commit -m "수정함"
@@ -69,7 +71,7 @@ git push
 
 | 명령어 | 하는 일 |
 | :--- | :--- |
-| `cd hammertech-static` | 홈페이지 폴더 안으로 들어가기 |
+| `cd /i/홈페이지/해머텍코리아` | 홈페이지 폴더 안으로 들어가기 |
 | `git pull` | 최신 버전 받아오기 |
 | `git add .` | 고친 내용 담기 |
 | `git commit -m "수정함"` | "고쳤다" 도장 찍기 (따옴표 안 글자는 자유롭게) |
