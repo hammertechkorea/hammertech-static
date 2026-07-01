@@ -1,4 +1,4 @@
-<!Doctype html>
+﻿<!Doctype html>
 <html>
 <head>
 <meta charset="UTF8">
@@ -457,6 +457,9 @@ background-color: #f7f7f6;
 }
 
 </style>
+  <link rel="stylesheet" href="css/modern.css">
+  <link rel="stylesheet" href="css/modern-subpage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 
@@ -466,7 +469,7 @@ background-color: #f7f7f6;
 <!--                     헤드라인                         -->
 <!--                     바디시작                         -->
 <!--                     상단고정메뉴시작                   -->
-<body bgcolor = "#eeeae0">
+<body>
 
 
 <div class ="topfix">
@@ -710,11 +713,44 @@ background-color: #f7f7f6;
 
 
 <!--홈화면내용끝-->
-<div class="footer">
-HAMMER ., Co  LTD PC COMPONENT  CEO : Sung-chun, Jeong  </br> Business number : 128-81-90890
-Address : 406 Woolim Ebiz Center2, Guro 3 dong 184-1 Guro-gu, Seoul Korea (Seoul Branch) </br>
-TEL : 070-8896-4480   FAX :02-839-4480
-</div>
+  <!-- Modern Footer -->
+  <footer class="modern-footer">
+    <div class="footer-content">
+      <div class="footer-info">
+        <img src="hammer_ing_g.png" alt="Hammertech Logo">
+        <p>
+          <strong>Hammertech korea Co., Ltd</strong><br>
+          Korea Office | 3F, 67, Gajwa-ro, Seodaemun-gu, Seoul, 03663, Republic of Korea<br>
+          E-mail : daniel@hammertech.co.kr
+        </p>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/HammertechHK/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Copyright &copy; 2026 Hammertech. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+    window.addEventListener('scroll', function() {
+      const nav = document.querySelector('.modern-nav');
+      if (window.scrollY > 50) {
+        nav.style.background = 'rgba(10, 10, 12, 0.8)';
+        nav.style.backdropFilter = 'blur(15px)';
+      } else {
+        nav.style.background = 'rgba(15, 15, 20, 0.6)';
+        nav.style.backdropFilter = 'blur(12px)';
+      }
+    });
+  </script>
 
 
 </body>
