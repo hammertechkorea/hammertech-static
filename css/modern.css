@@ -464,9 +464,9 @@ h1, h2, h3, h4 {
     box-shadow: none;
     background: transparent;
     border: none;
-    display: none;
+    display: block;
   }
-  .nav-links li.active .dropdown-menu {
+  .nav-links li:hover .dropdown-menu {
     display: block;
   }
   .hamburger {
