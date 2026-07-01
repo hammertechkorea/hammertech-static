@@ -207,3 +207,60 @@ table {
 #fullspec_icon1, #fullspec_icon2 {
   filter: brightness(0) invert(1);
 }
+
+/* =========================================
+   Mobile Overrides for Product Listing Pages
+   (Stack items vertically and fix fixed heights)
+========================================= */
+@media (max-width: 768px) {
+  /* Allow wrappers to expand based on content height instead of fixed 1500px */
+  .h_series_wrapper, .m_series_wrapper, .i_series_wrapper, 
+  .keyboard_wrapper, .mouse_wrapper, .accessory_wrapper, .tunning_wrapper,
+  .case_sub_bg, .subject {
+    height: auto !important;
+    min-height: 100vh !important;
+    padding-bottom: 50px !important;
+  }
+
+  .h_product_bg, .m_product_bg, .i_product_bg {
+    height: auto !important;
+    min-height: 100vh !important;
+    padding-bottom: 50px !important;
+  }
+
+  /* Make the header banner responsive */
+  .h_product, .m_product, .i_product, .keyboard_product, .mouse_product, .accessory_product, .tunning_product {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  /* Container for the products */
+  .h_product_list, .m_product_list, .i_product_list {
+    width: 100% !important;
+    padding: 30px 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  /* Stack the ul/li vertically */
+  .h_product_list ul, .m_product_list ul, .i_product_list ul {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .h_product_list li, .m_product_list li, .i_product_list li {
+    float: none !important;
+    margin-right: 0 !important;
+    margin-bottom: 50px !important;
+    width: auto !important;
+  }
+
+  /* Ensure the product card itself is centered */
+  div[class$='_wrap'], .h1_wrap, .m_wrap, .i_wrap, .keyboard_wrap, .mouse_wrap, .accessory_wrap, .tunning_wrap {
+    margin: 0 auto !important;
+  }
+}
