@@ -264,3 +264,28 @@ table {
     margin: 0 auto !important;
   }
 }
+
+/* Fix product description overlap and white background issue */
+div[class$='_product_color'] ul, div[class$='_product_color'] {
+  background-color: transparent !important;
+}
+
+div[class$='_casename'] {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  padding: 15px 0 15px 23px !important;
+  line-height: 1.4;
+}
+
+div[class$='_product_white'] {
+  height: auto !important;
+  min-height: 100px !important;
+  padding-bottom: 20px !important;
+}
+
+div[class$='_wrap'] {
+  height: auto !important;
+  min-height: 460px !important;
+  padding-bottom: 20px !important;
+}
