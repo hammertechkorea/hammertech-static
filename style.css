@@ -156,19 +156,23 @@ li#content {width:425px; height:200px; padding:0 ; }
   }
   
   /* Spec sections, Footer, and other fixed-width containers */
-  .spec_0203, .bg_0203, .spec_line, .spec_04, .h1_spec_test, .spec_03, .spec_icon, .fullspec_bg, .footer, .footer_p, .ft_sub_p, .footer_icon, .spec_right {
+  .spec_0203, .bg_0203, .spec_line, .spec_04, .h1_spec_test, .spec_03, .spec_icon, .fullspec_bg, .footer, .footer_p, .ft_sub_p, .footer_icon, .spec_right, #wrapper, #slider, #slider ul, #slider li, #slider img {
     position: relative !important;
     top: auto !important;
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
     width: 100% !important;
+    max-width: 100% !important;
     height: auto !important;
     transform: none !important;
     margin: 10px 0 !important;
     padding: 10px !important;
     box-sizing: border-box !important;
+    float: none !important;
   }
+  
+  #slider { overflow: hidden !important; }
   
   /* Reset table fixed widths */
   table {
