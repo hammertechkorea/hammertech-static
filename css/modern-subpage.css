@@ -327,3 +327,8 @@ table {
   align-items: center !important;
   box-sizing: border-box !important;
 }
+
+/* Prevent product tags from wrapping */
+.h_product_white h, div[class*='_product_white'] h {
+  white-space: nowrap !important;
+}
