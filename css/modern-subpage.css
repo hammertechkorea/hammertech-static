@@ -266,11 +266,11 @@ table {
 }
 
 /* Fix product description overlap, white background, and container overflow */
-div[class$='_product_color'] ul, div[class$='_product_color'] {
+.h2_product_color ul, .h2_product_color, .h4_product_color ul, .h4_product_color, .m_product_color ul, .m_product_color {
   background-color: transparent !important;
 }
 
-div[class$='_product_list'] img, div[class$='_list'] img {
+.h_product_list img, .m_product_list img, .i_product_list img, .keyboard_product_list img, .mouse_product_list img, .accessory_product_list img, .tunning_product_list img {
   position: relative !important;
   left: auto !important;
   margin: 0 auto !important;
@@ -280,7 +280,7 @@ div[class$='_product_list'] img, div[class$='_list'] img {
   height: auto !important;
 }
 
-div[class$='_casename'] {
+.h1_casename, .m1_casename, .i1_casename {
   position: relative !important;
   top: auto !important;
   left: auto !important;
@@ -289,7 +289,7 @@ div[class$='_casename'] {
   word-wrap: break-word;
 }
 
-div[class$='_product_white'] {
+.h_product_white, .m_product_white, .i_product_white, .keyboard_product_white, .mouse_product_white, .accessory_product_white, .tunning_product_white {
   position: relative !important;
   top: auto !important;
   left: auto !important;
@@ -302,7 +302,7 @@ div[class$='_product_white'] {
   box-sizing: border-box !important;
 }
 
-div[class$='_wrap'], .h1_wrap, .m_wrap, .i_wrap, .keyboard_wrap, .mouse_wrap, .accessory_wrap, .tunning_wrap {
+.h1_wrap, .m_wrap, .i_wrap, .keyboard_wrap, .mouse_wrap, .accessory_wrap, .tunning_wrap {
   position: relative !important;
   height: auto !important;
   min-height: auto !important;
