@@ -266,8 +266,23 @@ table {
 }
 
 /* Fix product description overlap, white background, and container overflow */
-.h2_product_color ul, .h2_product_color, .h4_product_color ul, .h4_product_color, .m_product_color ul, .m_product_color {
+.h2_product_color ul, .h2_product_color, .h4_product_color ul, .h4_product_color, .m_product_color ul, .m_product_color, div[class$='_product_color'] ul, div[class$='_product_color'] {
   background-color: transparent !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+.h2_product_color li, .h4_product_color li, .m_product_color li, div[class$='_product_color'] li {
+  display: inline-block !important;
+  margin-right: 10px !important;
+  margin-bottom: 5px !important;
+  float: none !important;
 }
 
 .h_product_list img, .m_product_list img, .i_product_list img, .keyboard_product_list img, .mouse_product_list img, .accessory_product_list img, .tunning_product_list img {
