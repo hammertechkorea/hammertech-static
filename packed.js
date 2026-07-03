@@ -17,3 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+// Turn .case_click breadcrumb into a Back button
+document.addEventListener("DOMContentLoaded", function() {
+    var caseClick = document.querySelector('.case_click');
+    if (caseClick) {
+        caseClick.style.cursor = 'pointer';
+        caseClick.title = '이전 페이지로 돌아가기';
+        caseClick.innerHTML = '<i class="fa fa-chevron-left" style="margin-right:8px;"></i>' + caseClick.innerHTML;
+        caseClick.addEventListener('click', function() {
+            window.history.back();
+        });
+    }
+});

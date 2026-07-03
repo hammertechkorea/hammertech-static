@@ -196,3 +196,13 @@ li#content {width:425px; height:200px; padding:0 ; }
     display: none !important;
   }
 }
+
+/* Make case_click breadcrumb act as a button with hover effect */
+.case_click {
+  transition: all 0.3s ease;
+}
+.case_click:hover {
+  background-color: #a06161 !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
