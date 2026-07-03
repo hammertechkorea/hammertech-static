@@ -328,7 +328,9 @@ table {
   box-sizing: border-box !important;
 }
 
-/* Prevent product tags from wrapping */
+/* Prevent product tags from wrapping and breaking inline */
 .h_product_white h, div[class*='_product_white'] h {
+  display: inline-block !important;
   white-space: nowrap !important;
+  word-break: keep-all !important;
 }
