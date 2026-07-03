@@ -334,3 +334,40 @@ table {
   white-space: nowrap !important;
   word-break: keep-all !important;
 }
+
+/* Global Wrapper Height Fix (prevents footer overlap on PC and Mobile) */
+.h_series_wrapper, .m_series_wrapper, .i_series_wrapper, 
+.keyboard_wrapper, .mouse_wrapper, .accessory_wrapper, .tunning_wrapper,
+.case_sub_bg, .subject, .h_product_bg, .m_product_bg, .i_product_bg {
+  height: auto !important;
+  min-height: 100vh !important;
+  padding-bottom: 80px !important;
+}
+
+/* Global Product List Grid Fix (prevents jumbled floats on PC) */
+.h_product_list ul, .m_product_list ul, .i_product_list ul, 
+.keyboard_product_list ul, .mouse_product_list ul, 
+.accessory_product_list ul, .tunning_product_list ul {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 30px !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+}
+
+.h_product_list li, .m_product_list li, .i_product_list li, 
+.keyboard_product_list li, .mouse_product_list li, 
+.accessory_product_list li, .tunning_product_list li {
+  float: none !important;
+  margin: 0 !important;
+  display: flex !important;
+}
+
+/* Ensure consistent card heights and layout */
+.h1_wrap, .m_wrap, .i_wrap, .keyboard_wrap, .mouse_wrap, .accessory_wrap, .tunning_wrap {
+  margin: 0 !important;
+  flex: 0 0 auto;
+}
