@@ -383,3 +383,28 @@ table {
   height: 100% !important;
   box-sizing: border-box !important;
 }
+
+/* Align product description and colors to the bottom across the grid */
+div[class*='_product_white'] {
+  position: relative !important;
+  padding-bottom: 90px !important; 
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+div[class*='_casename'] {
+  position: absolute !important;
+  bottom: 40px !important;
+  left: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+div[class*='_product_color'], .color_div {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
