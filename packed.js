@@ -23,6 +23,51 @@ document.addEventListener("DOMContentLoaded", function() {
     var isDetailPage = window.location.href.indexOf('caseclick') > -1 || window.location.href.indexOf('cooling_tunning_click') > -1;
     if (isDetailPage) {
         var caseClick = document.querySelector('.case_click');
+        if (!caseClick) {
+            // Create a universal back button for pages that don't have .case_click (M series, Accessory, etc.)
+            caseClick = document.createElement('div');
+            caseClick.className = 'case_click';
+            
+            var url = window.location.href.toLowerCase();
+            var category = "PRODUCTS";
+            if (url.indexOf('_m') > -1 || url.match(/\/m\d/)) category = "M SERIES";
+            else if (url.indexOf('_i') > -1 || url.match(/\/i\d/)) category = "I SERIES";
+            else if (url.indexOf('als') > -1 || url.indexOf('access') > -1 || url.indexOf('c1') > -1 || url.indexOf('c2') > -1 || url.indexOf('j10') > -1) category = "ACCESSORY";
+            else if (url.indexOf('cooling') > -1 || url.indexOf('tunning') > -1) category = "COOLING & TUNING";
+            else if (url.indexOf('kb') > -1 || url.indexOf('keyboard') > -1 || url.indexOf('g-pad') > -1 || url.indexOf('a1ms') > -1) category = "KEYBOARD & MICE";
+            
+            var product = "BACK";
+            var m = url.match(/caseclick_([a-z0-9]+)/);
+            if (m && m[1]) {
+                product = m[1].toUpperCase();
+            } else {
+                m = url.match(/_([a-z0-9]+)_01\.html/);
+                if (m && m[1]) product = m[1].toUpperCase();
+            }
+            
+            caseClick.innerHTML = 'HOME / ' + category + ' / ' + product;
+            
+            caseClick.style.position = 'relative';
+            caseClick.style.display = 'inline-block';
+            caseClick.style.top = 'auto';
+            caseClick.style.left = 'auto';
+            caseClick.style.margin = '20px 0 0 20px';
+            caseClick.style.fontSize = '16px';
+            caseClick.style.color = '#ffffff';
+            caseClick.style.border = '1px solid #5c5c5c';
+            caseClick.style.backgroundColor = '#cc9797';
+            caseClick.style.padding = '3px 10px';
+            caseClick.style.borderRadius = '3px';
+            
+            var wrapper = document.querySelector('.case_click_m1_wrapper, .case_click_wrapper, #wrapper');
+            if (wrapper) {
+                wrapper.insertBefore(caseClick, wrapper.firstChild);
+            } else {
+                var nav = document.querySelector('nav');
+                if (nav) nav.parentNode.insertBefore(caseClick, nav.nextSibling);
+            }
+        }
+        
         if (caseClick) {
             caseClick.style.cursor = 'pointer';
             caseClick.title = '이전 페이지로 돌아가기';
@@ -30,30 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
             caseClick.addEventListener('click', function() {
                 window.history.back();
             });
-        } else {
-            // Create a universal back button for pages that don't have .case_click (M series, Accessory, etc.)
-            var backBtn = document.createElement('div');
-            backBtn.className = 'universal-back-btn';
-            backBtn.innerHTML = '<i class="fa fa-chevron-left" style="margin-right:8px;"></i> 목록으로 돌아가기';
-            backBtn.style.cursor = 'pointer';
-            backBtn.style.padding = '15px 20px';
-            backBtn.style.color = '#fff';
-            backBtn.style.fontSize = '16px';
-            backBtn.style.fontWeight = 'bold';
-            backBtn.style.maxWidth = '1200px';
-            backBtn.style.margin = '0 auto';
-            backBtn.style.textAlign = 'left';
-            backBtn.style.fontFamily = '"Noto Sans KR", sans-serif';
-            backBtn.addEventListener('click', function() {
-                window.history.back();
-            });
-            
-            var nav = document.querySelector('nav');
-            if (nav) {
-                nav.parentNode.insertBefore(backBtn, nav.nextSibling);
-            } else {
-                document.body.insertBefore(backBtn, document.body.firstChild);
-            }
+            caseClick.style.zIndex = '9999';
         }
     }
 });
