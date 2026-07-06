@@ -366,8 +366,20 @@ table {
   display: flex !important;
 }
 
+/* Ensure the link tags fill the li container */
+.h_product_list li > a, .m_product_list li > a, .i_product_list li > a, 
+.keyboard_product_list li > a, .mouse_product_list li > a, 
+.accessory_product_list li > a, .tunning_product_list li > a {
+  display: flex !important;
+  flex: 1 !important;
+  text-decoration: none !important;
+  width: 100% !important;
+}
+
 /* Ensure consistent card heights and layout */
 .h1_wrap, .m_wrap, .i_wrap, .keyboard_wrap, .mouse_wrap, .accessory_wrap, .tunning_wrap {
   margin: 0 !important;
-  flex: 0 0 auto;
+  flex: 1 1 auto !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
 }
