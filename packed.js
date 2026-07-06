@@ -18,15 +18,42 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// Turn .case_click breadcrumb into a Back button
+// Turn .case_click breadcrumb into a Back button, or create one if missing
 document.addEventListener("DOMContentLoaded", function() {
-    var caseClick = document.querySelector('.case_click');
-    if (caseClick) {
-        caseClick.style.cursor = 'pointer';
-        caseClick.title = '이전 페이지로 돌아가기';
-        caseClick.innerHTML = '<i class="fa fa-chevron-left" style="margin-right:8px;"></i>' + caseClick.innerHTML;
-        caseClick.addEventListener('click', function() {
-            window.history.back();
-        });
+    var isDetailPage = window.location.href.indexOf('caseclick') > -1 || window.location.href.indexOf('cooling_tunning_click') > -1;
+    if (isDetailPage) {
+        var caseClick = document.querySelector('.case_click');
+        if (caseClick) {
+            caseClick.style.cursor = 'pointer';
+            caseClick.title = '이전 페이지로 돌아가기';
+            caseClick.innerHTML = '<i class="fa fa-chevron-left" style="margin-right:8px;"></i>' + caseClick.innerHTML;
+            caseClick.addEventListener('click', function() {
+                window.history.back();
+            });
+        } else {
+            // Create a universal back button for pages that don't have .case_click (M series, Accessory, etc.)
+            var backBtn = document.createElement('div');
+            backBtn.className = 'universal-back-btn';
+            backBtn.innerHTML = '<i class="fa fa-chevron-left" style="margin-right:8px;"></i> 목록으로 돌아가기';
+            backBtn.style.cursor = 'pointer';
+            backBtn.style.padding = '15px 20px';
+            backBtn.style.color = '#fff';
+            backBtn.style.fontSize = '16px';
+            backBtn.style.fontWeight = 'bold';
+            backBtn.style.maxWidth = '1200px';
+            backBtn.style.margin = '0 auto';
+            backBtn.style.textAlign = 'left';
+            backBtn.style.fontFamily = '"Noto Sans KR", sans-serif';
+            backBtn.addEventListener('click', function() {
+                window.history.back();
+            });
+            
+            var nav = document.querySelector('nav');
+            if (nav) {
+                nav.parentNode.insertBefore(backBtn, nav.nextSibling);
+            } else {
+                document.body.insertBefore(backBtn, document.body.firstChild);
+            }
+        }
     }
 });
