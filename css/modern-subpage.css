@@ -387,7 +387,7 @@ table {
 /* Align product description and colors to the bottom across the grid */
 div[class*='_product_white'] {
   position: relative !important;
-  padding-bottom: 100px !important; /* Increased space for multi-line casenames */
+  padding-bottom: 115px !important; /* Increased space for multi-line casenames */
   flex: 1 1 auto !important;
   width: 100% !important;
   box-sizing: border-box !important;
@@ -396,7 +396,7 @@ div[class*='_product_white'] {
 div[class*='_casename'] {
   position: absolute !important;
   top: auto !important; /* CRITICAL: Override original inline top:58px */
-  bottom: 40px !important;
+  bottom: 55px !important; /* Push text higher above color dots */
   left: 0 !important;
   width: 100% !important;
   margin: 0 !important;
