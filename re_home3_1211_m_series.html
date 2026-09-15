@@ -351,6 +351,36 @@
     font-size: 13px;
     margin-left: 15px;
   }
+
+  .h_series { position: relative; }
+  .banner_text_overlay {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    font-weight: 900;
+    color: #0d2a45;
+    text-align: right;
+    max-width: 600px;
+  }
+  @media (max-width: 768px) {
+    .h_series {
+      min-width: 0 !important;
+      max-width: 100% !important;
+      background-size: cover !important;
+      background-position: left center !important;
+      height: 250px !important;
+    }
+    .banner_text_overlay {
+      font-size: 1.8rem;
+      right: 5%;
+      left: 5%;
+      text-align: center;
+      color: #0a1f33;
+      text-shadow: 1px 1px 3px rgba(255,255,255,0.7);
+    }
+  }
 </style>
   <link rel="stylesheet" href="css/modern.css">
   <link rel="stylesheet" href="css/modern-subpage.css?v=7">
@@ -404,7 +434,9 @@
 
   <div class="h_series_wrapper">
     <div class="h_series_banner"></div>
-    <div class="h_series"></div>
+    <div class="h_series">
+<div class="banner_text_overlay">PERFORMANCE WITHOUT COMPROMISE</div>
+</div>
     <div class="h_product_bg">
       <div class="h_product">PRODUCT / CHASSIS / M SERIES</div>
       <div class="h_product_list">
@@ -609,6 +641,7 @@
   </script>
 </body>
 </html>
+
 
 
 
