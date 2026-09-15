@@ -42,6 +42,52 @@ input, select, textarea {
   border: 1px solid var(--glass-border) !important;
   border-radius: 4px;
   padding: 5px 10px;
+  max-width: 100%;
+}
+
+/* Responsive Fixes for Contact Page */
+@media (max-width: 768px) {
+  .contact_wrapper {
+    height: auto !important;
+    padding: 40px 0 80px 0 !important;
+  }
+  
+  .contact_form,
+  .contact_bt,
+  .contact_form_right {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    height: auto !important;
+    padding: 20px !important;
+  }
+  
+  .contact_form_left {
+    display: none !important;
+  }
+  
+  .contact_form_right li,
+  .contact_form_right input,
+  .contact_form_right select,
+  .contact_form_right textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .contact_txt h, 
+  .contact_txt p {
+    display: block !important;
+    white-space: normal !important;
+    word-break: keep-all !important;
+    word-wrap: break-word !important;
+    padding: 0 10px !important;
+    line-height: 1.6 !important;
+  }
+  
+  .contact_txt h {
+    font-size: 1rem !important;
+    margin-bottom: 20px !important;
+  }
 }
 
 input:focus, select:focus, textarea:focus {
