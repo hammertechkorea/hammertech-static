@@ -143,8 +143,9 @@ input, select {
 
 /* Dropdown Menu Visibility Fix (Overrides old inline nav styles in subpages) */
 .modern-nav .dropdown-menu {
-  background-color: var(--bg-card) !important;
+  background-color: rgba(20, 20, 25, 0.95) !important;
   border: 1px solid var(--glass-border) !important;
+  z-index: 10000 !important;
 }
 
 .modern-nav .dropdown-menu li {
