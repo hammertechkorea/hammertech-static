@@ -468,8 +468,7 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
-  .hero-video { display: none !important; }
-  .hero { background: url('../imgs/h1_main_02.png') bottom right / 80% auto no-repeat, linear-gradient(135deg, #1a1a24, #050505) !important; }
+  .hero { background: url('../imgs/aluminum_cnc_hero.jpg') center/cover no-repeat !important; }
   .expertise { background: var(--bg-dark) !important; }
   .modern-nav { height: 60px; }
   body { padding-top: 60px !important; }
@@ -637,6 +636,7 @@ h1, h2, h3, h4 {
     transition: none !important;
   }
 }
+
 
 
 
