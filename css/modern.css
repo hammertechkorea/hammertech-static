@@ -461,50 +461,125 @@ h1, h2, h3, h4 {
   }
 }
 
+/* --- Mobile specific elements (hidden on desktop) --- */
+.mobile-menu-header {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  /* Full screen mobile menu */
   .nav-links {
-    display: none; /* Mobile menu logic via JS */
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
-    background: rgba(10,10,12,0.95);
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
+    background: #0a0a0c;
+    z-index: 10001; /* Above everything */
     flex-direction: column;
-    padding: 1rem 0 2rem 0;
-    text-align: center;
-    z-index: 9999;
+    padding: 0;
+    text-align: left;
+    overflow-y: auto;
   }
   .nav-links.active {
     display: flex;
   }
-  .nav-links li {
-    padding: 0.5rem 0;
+  
+  /* Mobile Header */
+  .mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #000;
+    border-bottom: 1px solid #222;
   }
+  .mobile-menu-header img {
+    height: 30px;
+    filter: brightness(0) invert(1);
+  }
+  .mobile-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* Main Menu Items (Accordion structure) */
+  .nav-links > li:not(.mobile-menu-header):not(.lang-switch) {
+    border-bottom: 1px solid #222;
+    padding: 0;
+  }
+  
+  .nav-links > li > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  /* Hide desktop chevron icon */
+  .nav-links > li > a > .fa-chevron-down {
+    display: none;
+  }
+
+  /* Accordion +/- icons */
+  .nav-links > li:has(> .dropdown-menu) > a::after {
+    content: '\002B'; /* Plus icon */
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #888;
+  }
+  .nav-links > li.expanded > a::after {
+    content: '\2212'; /* Minus icon */
+  }
+
+  /* Submenus */
   .dropdown-menu {
     position: static;
     transform: none;
-    opacity: 1;
     visibility: visible;
     box-shadow: none;
-    background: transparent;
+    background: #111;
     border: none;
-    display: block;
+    display: none; /* Hidden by default */
     padding: 0;
-    margin-top: 0.5rem;
+    opacity: 1;
+    width: 100%;
   }
-  .nav-links li:hover .dropdown-menu {
-    display: block;
+  .nav-links li.expanded > .dropdown-menu {
+    display: block; /* Show when expanded */
+  }
+  .dropdown-menu li {
+    border-bottom: 1px solid #1a1a1a;
+  }
+  .dropdown-menu li:last-child {
+    border-bottom: none;
   }
   .dropdown-menu li a {
-    padding: 0.5rem 0;
+    padding: 1rem 5% 1rem 10%; /* Indent submenu */
+    font-size: 1rem;
+    color: #bbb;
   }
+
+  /* Utilities (Language Switcher) */
   .lang-switch {
+    background: #151515;
+    padding: 1.5rem 5%;
     justify-content: center;
-    margin-left: 0;
-    margin-top: 1rem;
+    margin: 0;
+    border-bottom: 1px solid #222;
+    margin-top: auto;
   }
+  .lang-switch::after {
+    content: '\1F310'; /* Globe emoji to simulate language icon like Zalman */
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
+
   .hamburger {
     display: block;
     padding: 10px;
