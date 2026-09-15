@@ -1,4 +1,4 @@
-ï»¿<!Doctype html >
+<!Doctype html >
 <html>
 <head>
 <meta charset="UTF8">
@@ -14,7 +14,7 @@
 <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
 
 
-<!-- íƒ‘ë©”ë‰´ -->
+<!-- Å¾¸Ş´º -->
 
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
@@ -36,7 +36,7 @@ $(document).ready(function(){
       
 
 
-        /* case click í˜ì´ì§€ ì œì´ì¿¼ë¦¬ start */
+        /* case click ÆäÀÌÁö Á¦ÀÌÄõ¸® start */
   
 			$('#nav1 a').mouseover(function(e){
 				e.preventDefault();
@@ -66,7 +66,7 @@ $(document).ready(function(){
 
 <style>
 body {
-        font-family: "Arial","å¾®è½¯é›…é»‘","ë§‘ì€ ê³ ë”•";
+        font-family: "Arial","Ú°?äºıÙ","¸¼Àº °íµñ";
         margin:0 auto; 
        
 
@@ -118,7 +118,7 @@ a {
 
 
 
-/*  ê°€ìš´ë°ì •ë ¬ì ìš©ë•Œë¬¸ì—(?) relativeì†ì„±ì„ absoluteë¡œ ë³€ê²½. ë§ëŠ”ì§€ ëª¨ë¥´ê² ìŒ */
+/*  °¡¿îµ¥Á¤·ÄÀû¿ë¶§¹®¿¡(?) relative¼Ó¼ºÀ» absolute·Î º¯°æ. ¸Â´ÂÁö ¸ğ¸£°ÚÀ½ */
 .top_contents  li {
       
         cursor:pointer;
@@ -309,7 +309,7 @@ nav .fa.fa-angle-down { margin-left: 6px; }
 }
 
 
-#ã…œnav1 li{
+#¤Ìnav1 li{
     float: left;
 }
 
@@ -700,9 +700,9 @@ background-color: #f4f4f4;
 
 
 
-<!--                     í—¤ë“œë¼ì¸                         -->
-<!--                     ë°”ë””ì‹œì‘                         -->
-<!--                     ìƒë‹¨ê³ ì •ë©”ë‰´ì‹œì‘                   -->
+<!--                     Çìµå¶óÀÎ                         -->
+<!--                     ¹Ùµğ½ÃÀÛ                         -->
+<!--                     »ó´Ü°íÁ¤¸Ş´º½ÃÀÛ                   -->
 <body>
 
 
@@ -713,6 +713,10 @@ background-color: #f4f4f4;
     </a>
     <button class="hamburger"><i class="fas fa-bars"></i></button>
     <ul class="nav-links">
+      <li class="mobile-menu-header">
+        <img src="logo.png" alt="Hammertech">
+        <button class="mobile-close"><i class="fas fa-times"></i></button>
+      </li>
       <li>
         <a href="#">CHASSIS <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
         <ul class="dropdown-menu">
@@ -742,8 +746,8 @@ background-color: #f4f4f4;
 
 
 
-    <!--                ìƒë‹¨ê³ ì •ë©”ë‰´ë                   -->
-    <!--                í™ˆí™”ë©´ë‚´ìš©ì‹œì‘                   -->
+    <!--                »ó´Ü°íÁ¤¸Ş´º³¡                   -->
+    <!--                È¨È­¸é³»¿ë½ÃÀÛ                   -->
 
 
 <div class="case_click_wrapper">
@@ -797,7 +801,7 @@ background-color: #f4f4f4;
 
                        
 
-                <!--                ìŠ¬ë¼ì´ë“œì‹œì‘                  -->
+                <!--                ½½¶óÀÌµå½ÃÀÛ                  -->
 
 
 
@@ -833,7 +837,7 @@ background-color: #f4f4f4;
 
         
 
-<!--                ìŠ¬ë¼ì´ë“œë                  -->
+<!--                ½½¶óÀÌµå³¡                  -->
 
 
 
@@ -897,7 +901,7 @@ background-color: #f4f4f4;
 
 
 
-<!--í™ˆí™”ë©´ë‚´ìš©ë-->
+<!--È¨È­¸é³»¿ë³¡-->
 
 
   <!-- Modern Footer -->
@@ -924,8 +928,24 @@ background-color: #f4f4f4;
   </footer>
 
   <script>
+    const navLinks = document.querySelector('.nav-links');
     document.querySelector('.hamburger').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('active');
+      navLinks.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+    document.querySelector('.mobile-close').addEventListener('click', function() {
+      navLinks.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    const accordionLinks = document.querySelectorAll('.nav-links > li > a');
+    accordionLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768 && this.nextElementSibling && this.nextElementSibling.classList.contains('dropdown-menu')) {
+          e.preventDefault();
+          this.parentElement.classList.toggle('expanded');
+        }
+      });
     });
     window.addEventListener('scroll', function() {
       const nav = document.querySelector('.modern-nav');
@@ -945,7 +965,7 @@ background-color: #f4f4f4;
 
 
 
-  <!--   case click í˜ì´ì§€ ì œì´ì¿¼ë¦¬ start -->
+  <!--   case click ÆäÀÌÁö Á¦ÀÌÄõ¸® start -->
 <script>
 var slideshow=new TINY.slider.slide('slideshow',{
 	id:'slider',
@@ -964,19 +984,12 @@ var slideshow=new TINY.slider.slide('slideshow',{
 
 
 
-<!--í™ˆí™”ë©´íƒ‘ë©”ë‰´ -->
+<!--È¨È­¸éÅ¾¸Ş´º -->
 
 
 <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script> 
 <script>
-$('nav li').hover(
-  function() {
-	  $('ul', this).stop().slideDown(200);
-  },
-	function() {
-    $('ul', this).stop().slideUp(200);
-  }
-);
+
 </script>
 
 
@@ -987,6 +1000,7 @@ $('nav li').hover(
 
 </body>
 </html>
+
 
 
 
