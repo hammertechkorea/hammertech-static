@@ -539,32 +539,37 @@ h1, h2, h3, h4 {
 
   /* Submenus */
   .dropdown-menu {
-    position: static;
-    transform: none;
-    visibility: visible;
-    box-shadow: none;
-    background: #111;
-    border: none;
-    display: none; /* Hidden by default */
-    padding: 0;
-    opacity: 1;
-    width: 100%;
+    position: static !important;
+    transform: none !important;
+    visibility: visible !important;
+    box-shadow: none !important;
+    background: #111 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    display: none !important; /* Hidden by default */
+    padding: 0 !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    transition: none !important; /* Disable desktop transitions to prevent stuck states */
   }
   .nav-links li.expanded > .dropdown-menu {
-    display: block; /* Show when expanded */
+    display: block !important; /* Show when expanded */
   }
   .dropdown-menu li {
-    border-bottom: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a !important;
   }
   .dropdown-menu li:last-child {
-    border-bottom: none;
+    border-bottom: none !important;
   }
   .dropdown-menu li a {
-    padding: 1rem 5% 1rem 10%; /* Indent submenu */
-    font-size: 1.1rem;
-    color: #ffffff;
-    display: block;
-    font-weight: 500;
+    padding: 1rem 5% 1rem 10% !important; /* Indent submenu */
+    font-size: 1.1rem !important;
+    color: #ffffff !important;
+    display: block !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: none !important;
   }
 
   /* Utilities (Language Switcher) */
