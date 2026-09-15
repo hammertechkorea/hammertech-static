@@ -106,6 +106,26 @@ h1, h2, h3, h4 {
   color: var(--metallic-silver);
 }
 
+/* Lang Switch */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+.lang-switch a {
+  padding: 5px;
+  color: var(--text-muted);
+}
+.lang-switch a.active {
+  color: #fff;
+  font-weight: 700;
+}
+.lang-switch a:hover {
+  color: var(--metallic-silver);
+}
+
 /* Dropdown */
 .dropdown-menu {
   position: absolute;
@@ -448,13 +468,19 @@ h1, h2, h3, h4 {
     top: 80px;
     left: 0;
     width: 100%;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
     background: rgba(10,10,12,0.95);
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 1rem 0 2rem 0;
     text-align: center;
+    z-index: 9999;
   }
   .nav-links.active {
     display: flex;
+  }
+  .nav-links li {
+    padding: 0.5rem 0;
   }
   .dropdown-menu {
     position: static;
@@ -465,15 +491,34 @@ h1, h2, h3, h4 {
     background: transparent;
     border: none;
     display: block;
+    padding: 0;
+    margin-top: 0.5rem;
   }
   .nav-links li:hover .dropdown-menu {
     display: block;
   }
+  .dropdown-menu li a {
+    padding: 0.5rem 0;
+  }
+  .lang-switch {
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
   .hamburger {
     display: block;
+    padding: 10px;
+    z-index: 10000;
   }
   .hero-title { font-size: 2.2rem; }
   .expertise-features { grid-template-columns: 1fr; }
+  
+  /* Fix product info display on mobile */
+  .product-info {
+    transform: translateY(0);
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 20%, transparent);
+  }
 }
 
 /* Fix logo visibility on dark background */
