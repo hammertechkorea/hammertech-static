@@ -44,6 +44,7 @@ input, select, textarea {
   padding: 5px 10px;
   max-width: 100%;
 }
+  min-height: 44px;
 
 /* Responsive Fixes for Contact Page */
 @media (max-width: 768px) {
@@ -162,6 +163,12 @@ html body div, html body p, html body span, html body li, html body h1, html bod
   color: var(--text-main) !important;
 }
 
+html body .highlight,
+html body .spec-emphasis,
+html body .text-primary {
+  color: var(--primary-color) !important;
+}
+
 html body a {
   color: var(--text-main) !important;
 }
@@ -266,12 +273,14 @@ table {
   .case_sub_bg, .subject {
     height: auto !important;
     min-height: 100vh !important;
+  min-height: 100dvh !important;
     padding-bottom: 50px !important;
   }
 
   .h_product_bg, .m_product_bg, .i_product_bg {
     height: auto !important;
     min-height: 100vh !important;
+  min-height: 100dvh !important;
     padding-bottom: 50px !important;
   }
 
@@ -388,6 +397,7 @@ table {
 .case_sub_bg, .subject, .h_product_bg, .m_product_bg, .i_product_bg {
   height: auto !important;
   min-height: 100vh !important;
+  min-height: 100dvh !important;
   padding-bottom: 80px !important;
 }
 
@@ -457,3 +467,4 @@ div[class*='_product_color'], .color_div {
   width: 100% !important;
   margin: 0 !important;
 }
+

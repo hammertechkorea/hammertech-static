@@ -176,6 +176,7 @@ h1, h2, h3, h4 {
 .hero {
   position: relative;
   height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -467,12 +468,18 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
+  .hero-video { display: none !important; }
+  .hero { background: url('../accessary_bg1.png') center/cover no-repeat !important; }
+  .expertise { background: var(--bg-dark) !important; }
+  .modern-nav { height: 60px; }
+  body { padding-top: 60px !important; }
   /* Full screen mobile menu */
   .nav-links {
     display: none;
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100vh;
+  height: 100dvh;
     background: #0a0a0c;
     z-index: 10001; /* Above everything */
     flex-direction: column;
@@ -599,8 +606,11 @@ h1, h2, h3, h4 {
   .product-info {
     transform: translateY(0);
     opacity: 1;
-    background: linear-gradient(to top, rgba(0,0,0,0.95) 20%, transparent);
+    position: static;
+    background: none;
+    padding: 1rem 5%;
   }
+
 }
 
 /* Fix logo visibility on dark background */
@@ -611,3 +621,20 @@ h1, h2, h3, h4 {
 .nav-logo img:hover {
   opacity: 1;
 }
+
+
+/* P1-5: Small screen */
+@media (max-width: 480px) {
+  .hero-title { font-size: 1.7rem; letter-spacing: 1px; }
+  .hero-desc { font-size: 1rem; }
+  .section-title { font-size: 1.8rem; }
+}
+
+/* P3-10: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
