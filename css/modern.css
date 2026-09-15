@@ -469,7 +469,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 768px) {
   .hero-video { display: none !important; }
-  .hero { background: url('../accessary_bg1.png') center/cover no-repeat !important; }
+  .hero { background: url('../imgs/mobile_hero_bg.jpg') center/cover no-repeat !important; }
   .expertise { background: var(--bg-dark) !important; }
   .modern-nav { height: 60px; }
   body { padding-top: 60px !important; }
@@ -637,4 +637,6 @@ h1, h2, h3, h4 {
     transition: none !important;
   }
 }
+
+
 
