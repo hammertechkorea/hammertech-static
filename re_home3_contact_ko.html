@@ -19,6 +19,81 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
 <style>
+.contact_form { 
+    width: 100%;
+    max-width: 1400px;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inner_contact_form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 50px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.contact_txt {
+    text-align: center;
+    width: 100%;
+}
+.contact_form_left { 
+    font-size: 18px; 
+    margin:0; 
+    background-color: #a38585; 
+    min-height: 692px; 
+    color: white; 
+    padding: 30px 60px; 
+    text-align: right; 
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.contact_form_right { 
+    background-color: white; 
+    min-height: 692px; 
+    padding: 30px 60px; 
+    text-align: left; 
+    flex-grow: 1;
+    position: relative;
+}
+.contact_input {
+    background-color: #333;
+    color: white;
+    width: 300px;
+    font-size: 13px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+.contact_bt {
+    width: 100%;
+    background-color: white;
+    padding: 20px 60px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+}
+.contact_bt button {
+    margin-left: 10px;
+    width: 120px;
+    height: 40px;
+    background-color: #5a1813;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+textarea {
+    width: 100%;
+    max-width: 700px;
+}
 body {
   font-family: "Arial","ڰ?���","���� ���";
   margin:0 auto;
@@ -231,93 +306,24 @@ nav .fa.fa-angle-down { margin-left: 6px; }
     flex-direction: column;
     align-items: center;
 }
-.inner_contact_form {
-    display: flex;
-    justify-content: center;
+
+
+
+
+.contact_input {
+    background-color: #333;
+    color: white;
+    width: 300px;
+    font-size: 13px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+
+textarea {
     width: 100%;
-    max-width: 1300px;
-    margin-top: 50px;
-}
-.contact_txt {
-    text-align: center;
-    width: 100%;
-}
-.contact_txt{
-       
-}
-.contact_txt p{
-         padding: 0 23px;
-         font-size: 40px;
-         color: #a38585;
-}
-.contact_txt h{
-        padding: 0 28px;
-        font-size: 19px;
-        color: #a38585;
-}
-.contact_form_left { font-size: 18px; margin:0; background-color: #a38585; height: 692px; color: white; padding: 30px 60px; text-align: right; border-radius: 8px 0 0 8px; }
-.contact_form_left ul{
-        margin: 0;
-        padding: 0;
-        display: block;
-       
-}
-.contact_form_left li{
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        display: block;
-        margin-bottom :53px;
-        
-}
-.contact_form_right { background-color: white; height: 692px; padding: 30px 60px; text-align: left; }
-.contact_form_right li{
-         margin-bottom :47px;
-}
-select{ font-size: 18px;
-        width: 350px;
-        height: 25px;
-}
-
-input{
-        width: 350px;
-        height: 30px;
-        font-size: 15px;
-        
-}
-textarea{
-         width: 700px;
-         font-size: 15px;
-}
-
-.contact_bt{
-        clear:both;
-        background-color:white;
-        padding: 30px 60px;
-        text-align: right;
-       
-        width: 1294px;
-}
-.contact_bt button{
-        margin-right: 10px;
-        width: 120px;
-        height: 30px;
-
-}
-
-.contact_input{
-        
-        background-color: white;
-        position: absolute;
-        width: 300px;
-        height: 220px;
-        top: 230px;
-        left: 980px;
-        font-size: 13px;
-        padding: 10px 10px;
-        border:dotted 1px;
-       
-        
+    max-width: 700px;
 }
 
 
