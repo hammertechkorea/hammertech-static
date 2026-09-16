@@ -223,14 +223,24 @@ nav .fa.fa-angle-down { margin-left: 6px; }
 
 
 .contact_form { 
- 
-  width:1400px;
-  position: relative;
-  margin: 80px auto 0 auto;
-  text-align: left;
-   left: 52%; transform: translateX(-51%);
-     
-     
+    width: 100%;
+    max-width: 1400px;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inner_contact_form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1300px;
+    margin-top: 50px;
+}
+.contact_txt {
+    text-align: center;
+    width: 100%;
 }
 .contact_txt{
        
@@ -245,18 +255,7 @@ nav .fa.fa-angle-down { margin-left: 6px; }
         font-size: 19px;
         color: #a38585;
 }
-.contact_form_left {
-        font-size: 18px;
-        margin:0;
-        float:left;
-        background-color: #a38585;
-        height: 692px;
-        color: white;
-        padding : 30px 120px ;
-        
-       
-        
-}
+.contact_form_left { font-size: 18px; margin:0; background-color: #a38585; height: 692px; color: white; padding: 30px 60px; text-align: right; border-radius: 8px 0 0 8px; }
 .contact_form_left ul{
         margin: 0;
         padding: 0;
@@ -271,14 +270,7 @@ nav .fa.fa-angle-down { margin-left: 6px; }
         margin-bottom :53px;
         
 }
-.contact_form_right {
-        background-color:white;
-        height: 692px;
-        padding: 30px 120px;
-        float:left;
-        
-         
-}
+.contact_form_right { background-color: white; height: 692px; padding: 30px 60px; text-align: left; }
 .contact_form_right li{
          margin-bottom :47px;
 }
@@ -552,8 +544,7 @@ textarea{
       <p>고객 지원 / 문의하기</p><br>
       <h>해머텍에 대한 문의사항이나 의견이 있으시면 아래 양식을 통해 남겨주세요. 확인 후 신속하게 답변해 드리겠습니다.</h>
     </div>
-    <div class="contact_form">
-      <div class="contact_form_left">
+    <div class="inner_contact_form"><div class="contact_form_left">
         <ul>
           <li>국가</li>
           <li>이름</li>
