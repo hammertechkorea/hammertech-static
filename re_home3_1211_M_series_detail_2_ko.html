@@ -720,6 +720,32 @@ position: relative;
 
 
 
+<style>
+  .mobile-lang-quick { display: none; }
+  @media (max-width: 768px) {
+    .mobile-lang-quick { display: flex; align-items: center; margin-right: 15px; font-size: 0.85rem; font-weight: bold; }
+    .mobile-lang-quick a { color: #888; padding: 0 4px; text-decoration: none; }
+    .mobile-lang-quick a.active { color: #fff; }
+    .nav-right-group { display: flex; align-items: center; }
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var nav = document.querySelector('.modern-nav');
+    var hamburger = document.querySelector('.hamburger');
+    var originalLang = document.querySelector('.nav-links .lang-switch');
+    if(nav && hamburger && originalLang && !document.querySelector('.mobile-lang-quick')) {
+      var group = document.createElement('div');
+      group.className = 'nav-right-group';
+      var quickLang = document.createElement('div');
+      quickLang.className = 'mobile-lang-quick';
+      quickLang.innerHTML = originalLang.innerHTML;
+      nav.insertBefore(group, hamburger);
+      group.appendChild(quickLang);
+      group.appendChild(hamburger);
+    }
+  });
+</script>
 </body>
 </html>
 
