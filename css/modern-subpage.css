@@ -275,6 +275,61 @@ table {
    (Stack items vertically and fix fixed heights)
 ========================================= */
 @media (max-width: 768px) {
+      /* Fix nav1, nav2, and window layout on mobile product detail pages */
+  #wrap {
+    text-align: center !important;
+  }
+  #nav1, #nav2 {
+    position: static !important;
+    width: auto !important;
+    display: inline !important;
+    left: auto !important;
+    top: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  #nav1 li, #nav2 li {
+    display: inline-block !important;
+    float: none !important;
+    margin: 5px !important;
+    width: auto !important;
+    vertical-align: top !important;
+  }
+  #window {
+    position: static !important;
+    width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+    text-align: center !important;
+    border: none !important;
+    display: block !important;
+  }
+  #window img {
+    position: static !important;
+    max-width: 90% !important;
+    height: auto !important;
+    left: auto !important;
+    top: auto !important;
+  }
+  .case_click, .case_name, .case_name2, .case_name3 {
+    position: static !important;
+    text-align: center !important;
+    margin: 10px auto !important;
+    left: auto !important;
+    top: auto !important;
+    width: auto !important;
+    display: block !important;
+  }
+  .case_name {
+    font-size: 2rem !important;
+  }
+  .case_name2 {
+    font-size: 1.2rem !important;
+  }
+
+
   /* Allow wrappers to expand based on content height instead of fixed 1500px */
   .h_series_wrapper, .m_series_wrapper, .i_series_wrapper, 
   .keyboard_wrapper, .mouse_wrapper, .accessory_wrapper, .tunning_wrapper,
