@@ -348,7 +348,7 @@ table {
     position: static !important;
   }
   
-  #db img, .db img, div[id*='db'] img, img[src*='db_'], img {
+  #db img, .db img, div[id*='db'] img, img[src*='db_'] {
     max-width: 100% !important;
     height: auto !important;
   }
