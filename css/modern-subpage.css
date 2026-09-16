@@ -346,8 +346,11 @@ table {
   margin: 0 auto !important;
   padding: 0 !important;
   display: block !important;
-  max-width: 100% !important;
-  height: auto !important;
+  width: 100% !important;
+  height: 250px !important;
+  object-fit: contain !important;
+  background-color: #ffffff !important;
+  border-radius: 4px !important;
 }
 
 .h1_casename, .m1_casename, .i1_casename {
