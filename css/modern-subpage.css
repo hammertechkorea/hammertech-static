@@ -401,6 +401,28 @@ table {
   }
 
 
+    /* Fix giant banner background on mobile (logo cut off) */
+  .h_series {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 150px !important;
+    background-size: cover !important;
+    background-position: right center !important; /* Focus on the product side of the banner */
+    background-repeat: no-repeat !important;
+  }
+  
+  .banner_text_overlay {
+    font-size: 1.3rem !important;
+    right: 5% !important;
+    left: 5% !important;
+    text-align: center !important;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.9), -1px -1px 3px rgba(0,0,0,0.5) !important;
+    color: #ffffff !important;
+    transform: translateY(-50%) !important;
+    top: 50% !important;
+    width: auto !important;
+  }
+
   /* Allow wrappers to expand based on content height instead of fixed 1500px */
   .h_series_wrapper, .m_series_wrapper, .i_series_wrapper, 
   .keyboard_wrapper, .mouse_wrapper, .accessory_wrapper, .tunning_wrapper,
