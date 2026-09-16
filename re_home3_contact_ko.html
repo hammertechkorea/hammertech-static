@@ -226,7 +226,7 @@ nav .fa.fa-angle-down { margin-left: 6px; }
  
   width:1400px;
   position: relative;
-  margin-top:80px;
+  margin: 80px auto 0 auto;
   text-align: left;
    left: 52%; transform: translateX(-51%);
      
@@ -789,13 +789,13 @@ textarea{
         </ul>
       </div>
       <div class="contact_bt">
-        <button id='submit'>Submit</button>
-        <button id='reset'>Reset</button>
+        <button id='submit'>전송하기</button>
+        <button id='reset'>초기화</button>
       </div>
     </div>
     <div class="contact_input">
       본사 | 서울특별시 서대문구 가좌로 67, 3층 (우: 03663) <br><br><br><br>
-      ��  이메일 : daniel@hammertech.co.kr</p>
+      ��이메일 : daniel@hammertech.co.kr</p>
     </div>
   </div>
 </div>
@@ -819,7 +819,7 @@ textarea{
         <p>
           <strong>(주) 해머텍 코리아</strong><br>
           본사 | 서울특별시 서대문구 가좌로 67, 3층 (우: 03663)<br>
-          이메일 : daniel@hammertech.co.kr
+        이메일 : daniel@hammertech.co.kr
         </p>
       </div>
       <div class="footer-social">
@@ -893,7 +893,7 @@ var slideshow = new TINY.slider.slide('slideshow', {
 $(function() {
   $('#submit').on('click', function() {
     if (!$('#first_name').val().length) {
-      alert('Please, type your 이름.')
+      alert('이름을 입력해 주세요.')
       return $('#first_name').focus()
     }
     if (!$('#last_name').val().length) {
@@ -923,8 +923,8 @@ $(function() {
       data: data,
       success: function (res) {
         // console.log('res : ', res);
-        if (res.code) return alert('submit failed !');
-        alert('Successfully submitted !\n\nWe will reply as soon as We confirm your comment\n\nThanks !')
+        if (res.code) return alert('전송에 실패했습니다.');
+        alert('성공적으로 전송되었습니다!\n\n문의하신 내용을 확인 후 신속하게 답변해 드리겠습니다.\n\n감사합니다!')
         $('#first_name').val('')
         $('#last_name').val('')
         $('#이메일 주소').val('')
