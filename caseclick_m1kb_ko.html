@@ -1210,6 +1210,7 @@ var slideshow=new TINY.slider.slide('slideshow',{
   });
 </script>
 
+
 <style>
   .footer-lang-quick { display: flex; align-items: center; font-size: 0.95rem; font-weight: bold; color: #888; }
   .footer-lang-quick a { color: #888; padding: 0 5px; text-decoration: none; transition: color 0.3s; }
@@ -1220,15 +1221,26 @@ var slideshow=new TINY.slider.slide('slideshow',{
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var footerSocial = document.querySelector('.footer-social');
-    var originalLang = document.querySelector('.nav-links .lang-switch');
-    if(footerSocial && originalLang && !document.querySelector('.footer-lang-quick')) {
+    if(footerSocial && !document.querySelector('.footer-lang-quick')) {
       var group = document.createElement('div');
       group.className = 'footer-right-group';
       footerSocial.parentNode.insertBefore(group, footerSocial);
       
       var quickLang = document.createElement('div');
       quickLang.className = 'footer-lang-quick';
-      quickLang.innerHTML = originalLang.innerHTML;
+      
+      var path = window.location.pathname;
+      var file = path.substring(path.lastIndexOf('/') + 1);
+      if(!file) file = "index.html";
+      
+      var isEng = file.indexOf('_ko.html') === -1;
+      var engFile = isEng ? file : file.replace('_ko.html', '.html');
+      var korFile = isEng ? file.replace('.html', '_ko.html') : file;
+      
+      var engClass = isEng ? 'class="active"' : '';
+      var korClass = isEng ? '' : 'class="active"';
+      
+      quickLang.innerHTML = '<a href="' + korFile + '" ' + korClass + '>KOR</a> | <a href="' + engFile + '" ' + engClass + '>ENG</a>';
       
       group.appendChild(footerSocial);
       group.appendChild(quickLang);
