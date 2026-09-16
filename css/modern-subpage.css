@@ -328,6 +328,77 @@ table {
   .case_name2 {
     font-size: 1.2rem !important;
   }
+  /* Fix video and detail images for mobile */
+  .side_video, .side_video video, video {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 20px auto !important;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    display: block !important;
+  }
+  
+  /* Any large detail images (e.g. db_m1.jpg) should scale down */
+  #db, .db, div[id*='db'] {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: static !important;
+  }
+  
+  #db img, .db img, div[id*='db'] img, img[src*='db_'], img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  /* Fix M series and other fixed-width galleries/videos on mobile */
+    /* Normalize all massive desktop wrappers for mobile detail pages */
+  .bg_0203, .box_bg, .case_sub_bg, .container, .footer_p, .ft_sub_p, 
+  .fullspec_bg, .fullspec_sq, .h1_spec_test, .h1_spec_test2, .side_video, 
+  .spec_03, .spec_line, .sub_menu, .top_contents, .topside, .m_db, #db, 
+  .zoom-section, .zoom-section ul, .detail_page_video, .case_bg_2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+  }
+  
+    
+  .spec_line, .case_name_line {
+    display: none !important;
+  }
+  
+  /* Restore zoom-section gallery flex layout */
+  .zoom-section {
+    padding: 20px 0 !important;
+  }
+  .zoom-section ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .zoom-section li {
+    float: none !important;
+    margin: 5px !important;
+    width: auto !important;
+  }
+  .zoom-section img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Except for icons or thumbnails that might need specific styling */
+  .hamburger img, .logo img, #nav1 img, #nav2 img, .pdf img {
+    max-width: none; /* Let them follow their own rules if needed, though max-width 100% is usually harmless */
+  }
 
 
   /* Allow wrappers to expand based on content height instead of fixed 1500px */
