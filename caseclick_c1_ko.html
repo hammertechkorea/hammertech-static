@@ -921,6 +921,26 @@ var slideshow=new TINY.slider.slide('slideshow',{
 </script>
 
 
+<script>
+  // Add universal floating back button
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!document.querySelector('.floating-back-btn')) {
+      var btn = document.createElement('button');
+      var isEng = window.location.href.indexOf('_ko') === -1;
+      btn.innerHTML = '<i class="fas fa-arrow-left"></i> ' + (isEng ? 'Go Back' : '목록으로');
+      btn.className = 'floating-back-btn';
+      btn.onclick = function() { 
+        // Try to go back in history. If history is empty, maybe fallback to home, but history.back() is standard.
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.location.href = isEng ? 'index.html' : 'index_ko.html';
+        }
+      };
+      document.body.appendChild(btn);
+    }
+  });
+</script>
 </body>
 </html>
 

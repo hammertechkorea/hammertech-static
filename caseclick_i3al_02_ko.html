@@ -759,7 +759,7 @@ background-color: #f4f4f4;
                                <!-- <a href="filepdf.pdf">--><img src="icon_down.png"></a>
                         </div>
                         <div id="wrap">
-                                <div class="case_click"> HOME / I 시리즈 / I-3AL </div>
+                                <div class="case_click"> <a href="index_ko.html">HOME</a> / <a href="re_home3_1211_i_series_ko.html">I 시리즈</a> / I-3AL </div>
                                 <div class="case_name">I-3AL</div>
                                 <div class="case_name_line"></div>
                                 <div class="case_name2">Micro ATX 큐브 /<br>미니타워 PC 케이스</div>
@@ -998,6 +998,26 @@ var slideshow=new TINY.slider.slide('slideshow',{
 
 
 
+<script>
+  // Add universal floating back button
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!document.querySelector('.floating-back-btn')) {
+      var btn = document.createElement('button');
+      var isEng = window.location.href.indexOf('_ko') === -1;
+      btn.innerHTML = '<i class="fas fa-arrow-left"></i> ' + (isEng ? 'Go Back' : '목록으로');
+      btn.className = 'floating-back-btn';
+      btn.onclick = function() { 
+        // Try to go back in history. If history is empty, maybe fallback to home, but history.back() is standard.
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.location.href = isEng ? 'index.html' : 'index_ko.html';
+        }
+      };
+      document.body.appendChild(btn);
+    }
+  });
+</script>
 </body>
 </html>
 

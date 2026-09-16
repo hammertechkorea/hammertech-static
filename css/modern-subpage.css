@@ -627,3 +627,49 @@ div[class*='_product_color'], .color_div {
   margin: 0 !important;
 }
 
+
+/* Universal Breadcrumb Link Style */
+.case_click a {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.case_click a:hover {
+  text-decoration: underline !important;
+  color: #b60000 !important;
+}
+
+/* Floating Back Button */
+.floating-back-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* left side is usually better for 'back' */
+  background-color: #333333;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-family: 'Alegreya Sans SC', 'Baloo Thambi', sans-serif, "Malgun Gothic";
+}
+.floating-back-btn:hover {
+  background-color: #b60000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+@media (min-width: 769px) {
+  .floating-back-btn {
+    bottom: 40px;
+    left: 40px;
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+}
