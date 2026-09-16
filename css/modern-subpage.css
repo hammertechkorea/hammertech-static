@@ -1,4 +1,13 @@
 ﻿/* =========================================
+   Korean UX Writing Guideline Implementations
+   (어절 단위 줄바꿈 및 조사 분리 방지 전역 적용)
+========================================= */
+body, div, p, span, td, th, li, a, h, h1, h2, h3, h4, h5, h6 {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* =========================================
    Hammertech Korea - Subpage Dark Mode Overrides
 ========================================= */
 
