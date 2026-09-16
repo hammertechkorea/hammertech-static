@@ -1,4 +1,4 @@
-/* =========================================
+﻿/* =========================================
    Hammertech Korea - Subpage Dark Mode Overrides
 ========================================= */
 
@@ -44,7 +44,6 @@ input, select, textarea {
   padding: 5px 10px;
   max-width: 100%;
 }
-  min-height: 44px;
 
 /* Responsive Fixes for Contact Page */
 @media (max-width: 768px) {
@@ -277,7 +276,7 @@ table {
     padding-bottom: 50px !important;
   }
 
-  .h_product_bg, .m_product_bg, .i_product_bg {
+  .h_product_bg, .m_product_bg, .i_product_bg, .keyboard_product_bg, .mouse_product_bg, .accessory_product_bg, .tunning_product_bg {
     height: auto !important;
     min-height: 100vh !important;
   min-height: 100dvh !important;
@@ -291,7 +290,7 @@ table {
   }
 
   /* Container for the products */
-  .h_product_list, .m_product_list, .i_product_list {
+  .h_product_list, .m_product_list, .i_product_list, .keyboard_product_list, .mouse_product_list, .accessory_product_list, .tunning_product_list {
     width: 100% !important;
     padding: 30px 0 !important;
     display: flex !important;
@@ -299,7 +298,7 @@ table {
   }
 
   /* Stack the ul/li vertically */
-  .h_product_list ul, .m_product_list ul, .i_product_list ul {
+  .h_product_list ul, .m_product_list ul, .i_product_list ul, .keyboard_product_list ul, .mouse_product_list ul, .accessory_product_list ul, .tunning_product_list ul {
     width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
@@ -308,7 +307,7 @@ table {
     margin: 0 !important;
   }
 
-  .h_product_list li, .m_product_list li, .i_product_list li {
+  .h_product_list li, .m_product_list li, .i_product_list li, .keyboard_product_list li, .mouse_product_list li, .accessory_product_list li, .tunning_product_list li {
     float: none !important;
     margin-right: 0 !important;
     margin-bottom: 50px !important;
@@ -394,7 +393,7 @@ table {
 /* Global Wrapper Height Fix (prevents footer overlap on PC and Mobile) */
 .h_series_wrapper, .m_series_wrapper, .i_series_wrapper, 
 .keyboard_wrapper, .mouse_wrapper, .accessory_wrapper, .tunning_wrapper,
-.case_sub_bg, .subject, .h_product_bg, .m_product_bg, .i_product_bg {
+.case_sub_bg, .subject, .h_product_bg, .m_product_bg, .i_product_bg, .keyboard_product_bg, .mouse_product_bg, .accessory_product_bg, .tunning_product_bg {
   height: auto !important;
   min-height: 100vh !important;
   min-height: 100dvh !important;
