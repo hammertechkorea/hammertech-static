@@ -601,49 +601,9 @@ nav .fa.fa-angle-down { margin-left: 6px; }
         font-size: 13px;
         margin-left: 15px;
 }
-
-  .h_series { position: relative; }
-  /* [방안 2] 데스크탑에서는 오버레이 텍스트 숨김 (배경 이미지 원본만 깔끔하게 노출) */
-  .banner_text_overlay {
-    display: none !important;
-  }
-  @media (max-width: 768px) {
-    .h_series {
-      min-width: 0 !important;
-      max-width: 100% !important;
-      height: 160px !important;
-      background-size: auto 280px !important;
-      background-position: right center !important;
-      background-repeat: no-repeat !important;
-      overflow: hidden !important;
-    }
-    /* 모바일에서는 오버레이 텍스트 표시 및 반투명 딤 처리로 텍스트 가독성 확보 */
-    .banner_text_overlay {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      bottom: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      transform: none !important;
-      background: rgba(0, 0, 0, 0.45) !important;
-      color: #ffffff !important;
-      font-size: 1.35rem !important;
-      font-weight: 700 !important;
-      text-align: center !important;
-      padding: 0 20px !important;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
-      box-sizing: border-box !important;
-      letter-spacing: -0.5px;
-    }
-  }
 </style>
   <link rel="stylesheet" href="css/modern.css">
-  <link rel="stylesheet" href="css/modern-subpage.css?v=9">
+  <link rel="stylesheet" href="css/modern-subpage.css?v=10">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -703,10 +663,11 @@ nav .fa.fa-angle-down { margin-left: 6px; }
 <div class="h_series_wrapper">
         <div class="h_series_banner"> </div>
         <div class="h_series">
-             <!--   <img src="h_series_banner.png">   -->
-        
-<div class="banner_text_overlay">PERFORMANCE WITHOUT COMPROMISE</div>
-</div>
+          <div class="mobile-banner-header">
+            <div class="mobile-hero-title">H SERIES CHASSIS</div>
+            <div class="mobile-hero-subtitle">Compact & High-Performance Aluminum PC Cases</div>
+          </div>
+        </div>
         
         <div class="h_product_bg">
         <div class="h_product">

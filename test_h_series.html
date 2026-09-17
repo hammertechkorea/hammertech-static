@@ -601,103 +601,10 @@ nav .fa.fa-angle-down { margin-left: 6px; }
         font-size: 13px;
         margin-left: 15px;
 }
-
-  .h_series { position: relative; }
-  /* [방안 2 테스트] 데스크탑에서는 오버레이 텍스트 숨김 (배경 이미지 원본만 깔끔하게 노출) */
-  .banner_text_overlay {
-    display: none !important;
-  }
-  @media (max-width: 768px) {
-    .h_series {
-      min-width: 0 !important;
-      max-width: 100% !important;
-      background-size: cover !important;
-      background-position: center !important;
-      height: 160px !important; background-size: auto 280px !important; background-position: right center !important; overflow: hidden !important;
-    }
-    /* 모바일에서는 오버레이 텍스트 표시 및 반투명 딤 처리로 텍스트 가독성 확보 */
-    .banner_text_overlay {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      bottom: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      transform: none !important;
-      background: rgba(0, 0, 0, 0.45) !important;
-      color: #ffffff !important;
-      font-size: 1.35rem !important;
-      font-weight: 700 !important;
-      text-align: center !important;
-      padding: 0 20px !important;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
-      box-sizing: border-box !important;
-      letter-spacing: -0.5px;
-    }
-  }
 </style>
   <link rel="stylesheet" href="css/modern.css">
-  <link rel="stylesheet" href="css/modern-subpage.css?v=9">
+  <link rel="stylesheet" href="css/modern-subpage.css?v=10">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-  /* [Option 2 Test] Desktop: Keep original high-res banner graphic, hide mobile text header */
-  .mobile-banner-header {
-    display: none !important;
-  }
-  
-  /* [Option 2 Test] Mobile: Remove cropped panoramic graphic and show modern dark typography header */
-  @media (max-width: 768px) {
-    .h_series {
-      min-width: 0 !important;
-      max-width: 100% !important;
-      height: auto !important;
-      min-height: 125px !important;
-      background-image: none !important;
-      background: linear-gradient(135deg, #18191f 0%, #0d0e12 100%) !important;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      justify-content: center !important;
-      padding: 24px 20px !important;
-      text-align: center !important;
-      box-sizing: border-box !important;
-      position: relative !important;
-    }
-    
-    .mobile-banner-header {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      justify-content: center !important;
-      width: 100% !important;
-    }
-    
-    .mobile-hero-title {
-      font-size: 1.5rem !important;
-      font-weight: 800 !important;
-      letter-spacing: 1.5px !important;
-      color: #ffffff !important;
-      margin: 0 0 6px 0 !important;
-      text-transform: uppercase !important;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-      line-height: 1.2 !important;
-    }
-    
-    .mobile-hero-subtitle {
-      font-size: 0.88rem !important;
-      font-weight: 400 !important;
-      color: #9a9ea8 !important;
-      margin: 0 !important;
-      letter-spacing: -0.2px !important;
-      line-height: 1.4 !important;
-    }
-  }
-</style>
 </head>
 
 
