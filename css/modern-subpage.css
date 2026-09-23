@@ -4,6 +4,10 @@
 
 /* Option 2: Hide banner text overlay on desktop */
 .banner_text_overlay { display: none !important; }
+
+/* Desktop strictly hides mobile menu drawer header */
+.mobile-menu-header { display: none !important; }
+.mobile-menu-header img { max-height: 30px !important; width: auto !important; }
 /* =========================================
    Korean UX Writing Guideline Implementations
    (어절 단위 줄바꿈 및 조사 분리 방지 전역 적용)

@@ -1,4 +1,4 @@
-﻿/* =========================================
+/* =========================================
    Korean UX Writing Guideline Implementations
    (어절 단위 줄바꿈 및 조사 분리 방지 전역 적용)
 ========================================= */
@@ -473,7 +473,11 @@ h1, h2, h3, h4 {
 
 /* --- Mobile specific elements (hidden on desktop) --- */
 .mobile-menu-header {
-  display: none;
+  display: none !important;
+}
+.mobile-menu-header img {
+  max-height: 30px !important;
+  width: auto !important;
 }
 
 @media (max-width: 768px) {
