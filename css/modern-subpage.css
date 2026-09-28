@@ -746,3 +746,196 @@ div[class*='_casename'] {
 div[class*='_product_color'] {
     padding-left: 10px !important;
 }
+/* === GLOBAL ENHANCED SUBPAGE NAVIGATION === */
+.h_product.test-h-product {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 1300px !important;
+  min-height: 48px !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  padding: 8px 18px !important;
+  background: linear-gradient(90deg, #8b120c 0%, #5a1813 100%) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35) !important;
+  box-sizing: border-box !important;
+}
+.h-product-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+}
+.test-back-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: rgba(0, 0, 0, 0.4) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-radius: 4px !important;
+  padding: 5px 12px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  line-height: 1 !important;
+}
+.test-back-btn:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-color: #ffffff !important;
+  transform: translateX(-2px) !important;
+}
+.test-breadcrumb {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  letter-spacing: 0.5px !important;
+}
+.test-breadcrumb a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+.test-breadcrumb a:hover {
+  color: #ffb3b3 !important;
+  text-decoration: underline !important;
+}
+.test-breadcrumb .crumb-current {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+.test-breadcrumb .fa-angle-right {
+  font-size: 11px !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+.h-product-tabs {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+.h-product-tabs .tab-label {
+  font-size: 13px !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-weight: 500 !important;
+  margin-right: 4px !important;
+}
+.h-product-tabs .series-tab {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 6px 14px !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 20px !important;
+  color: #e0e0e0 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.2s ease !important;
+  line-height: 1 !important;
+}
+.h-product-tabs .series-tab:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+.h-product-tabs .series-tab.active {
+  background: #ffffff !important;
+  color: #8b120c !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+@media (max-width: 900px) {
+  .h_product.test-h-product {
+    width: 94% !important;
+    max-width: 94% !important;
+    margin: 10px auto !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    align-items: stretch !important;
+    padding: 10px 14px !important;
+  }
+  .h-product-left {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  .h-product-tabs {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 6px !important;
+    padding: 2px 0 4px 0 !important;
+    scrollbar-width: none !important;
+  }
+  .h-product-tabs::-webkit-scrollbar {
+    display: none !important;
+  }
+  .h-product-tabs .tab-label {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+  .h-product-tabs .series-tab {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+}
+@media (max-width: 768px) {
+  .test-breadcrumb a,
+  .test-breadcrumb .fa-angle-right {
+    display: none !important;
+  }
+  .test-breadcrumb .crumb-current {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    white-space: nowrap !important;
+  }
+  .test-back-btn {
+    padding: 6px 11px !important;
+    font-size: 12px !important;
+    border-radius: 4px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    min-height: 32px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+  }
+  .h-product-tabs {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 6px !important;
+    padding: 2px 0 4px 0 !important;
+    scrollbar-width: none !important;
+  }
+  .h-product-tabs::-webkit-scrollbar {
+    display: none !important;
+  }
+  .h-product-tabs .tab-label {
+    font-size: 11px !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    margin-right: 2px !important;
+  }
+  .h-product-tabs .series-tab {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    padding: 5px 12px !important;
+    font-size: 12px !important;
+    border-radius: 16px !important;
+  }
+}
