@@ -805,21 +805,102 @@ nav .fa.fa-angle-down { margin-left: 6px; }
       display: none !important;
     }
 
-    /* 4. 모바일/태블릿 반응형 처리 */
+        /* 4. 모바일/태블릿 반응형 처리 (데스크톱 디자인은 그대로 유지) */
     @media (max-width: 900px) {
       .h_product.test-h-product {
-        width: 92% !important;
+        width: 94% !important;
+        max-width: 94% !important;
+        margin: 10px auto !important;
         flex-direction: column !important;
-        gap: 12px !important;
-        align-items: flex-start !important;
-        padding: 12px 16px !important;
+        gap: 10px !important;
+        align-items: stretch !important;
+        padding: 10px 14px !important;
+      }
+      .h-product-left {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
       }
       .h-product-tabs {
         width: 100% !important;
-        flex-wrap: wrap !important;
+        display: flex !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 6px !important;
+        padding: 2px 0 4px 0 !important;
+        scrollbar-width: none !important;
+      }
+      .h-product-tabs::-webkit-scrollbar {
+        display: none !important;
+      }
+      .h-product-tabs .tab-label {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+      }
+      .h-product-tabs .series-tab {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
       }
     }
     @media (max-width: 768px) {
+      /* ① 모바일 화면에서 Breadcrumb 상위 경로(HOME > ...) 숨김 및 현재 카테고리명만 간결히 표시 */
+      .test-breadcrumb a,
+      .test-breadcrumb .fa-angle-right {
+        display: none !important;
+      }
+      .test-breadcrumb .crumb-current {
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        white-space: nowrap !important;
+      }
+
+      /* ② [← Back] 버튼 여백 및 터치 영역 모바일 컴팩트 최적화 */
+      .test-back-btn {
+        padding: 6px 11px !important;
+        font-size: 12px !important;
+        border-radius: 4px !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+        min-height: 32px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+      }
+
+      /* ③ 하단 카테고리/시리즈 탭 넘침 시 줄바꿈 없이 가로 스와이프(overflow-x: auto) */
+      .h-product-tabs {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 6px !important;
+        padding: 2px 0 4px 0 !important;
+        scrollbar-width: none !important;
+      }
+      .h-product-tabs::-webkit-scrollbar {
+        display: none !important;
+      }
+      .h-product-tabs .tab-label {
+        font-size: 11px !important;
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        margin-right: 2px !important;
+      }
+      .h-product-tabs .series-tab {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        padding: 5px 12px !important;
+        font-size: 12px !important;
+        border-radius: 16px !important;
+      }
+
+      /* 모바일 GNB 아코디언 드롭다운 */
       .modern-nav .dropdown-menu {
         position: static !important;
         transform: none !important;
