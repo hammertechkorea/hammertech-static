@@ -779,8 +779,31 @@ nav .fa.fa-angle-down { margin-left: 6px; }
         border-radius: 16px !important;
       }
 
-      /* 모바일 GNB 아코디언 드롭다운 */
-      .modern-nav .dropdown-menu {
+            /* ACCESSORY 및 전체 하위 메뉴 텍스트 강제 표시 및 흰색 지정 (모바일 버그 수정) */
+      .mobile-menu .accessory-submenu a,
+      .mobile-nav [data-menu="accessory"] ul li a,
+      .mobile-menu ul li ul li a,
+      .modern-nav .dropdown-menu li a,
+      .modern-nav .nav-links li.expanded > .dropdown-menu li a,
+      nav ul li ul li a,
+      nav.modern-nav ul.nav-links ul.dropdown-menu li a {
+        color: #ffffff !important;
+        background: transparent !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        font-size: 14px !important;
+        padding: 12px 15px 12px 25px !important;
+        text-decoration: none !important;
+        line-height: 1.5 !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        border-bottom: 1px solid #1a1a1a !important;
+      }
+      .modern-nav .dropdown-menu,
+      .modern-nav .nav-links li.expanded > .dropdown-menu,
+      nav ul li.expanded ul {
         position: static !important;
         transform: none !important;
         background: #111116 !important;
@@ -789,18 +812,15 @@ nav .fa.fa-angle-down { margin-left: 6px; }
         opacity: 1 !important;
         visibility: visible !important;
         width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
         pointer-events: auto !important;
         box-shadow: none !important;
       }
-      .modern-nav .nav-links li.expanded > .dropdown-menu {
+      .modern-nav .nav-links li.expanded > .dropdown-menu,
+      nav ul li.expanded ul {
         display: block !important;
-      }
-      .modern-nav .dropdown-menu li a {
-        padding: 1rem 5% 1rem 10% !important;
-        font-size: 1.05rem !important;
-        color: #ffffff !important;
-        border-bottom: 1px solid #1a1a1a !important;
-        margin: 0 !important;
       }
     }
   </style>
