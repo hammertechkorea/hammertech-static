@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF8">
-<title>HAMMER - I Series (Navigation Test Page)</title>
+<title>해머텍 - H 시리즈 케이스 (내비게이션 사전 검증용 테스트)</title>
 <link rel="shortcut icon" href="1616ico.ico">
 <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Baloo+Thambi|Fjalla+One" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
@@ -13,16 +13,19 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
 
-
 <!-- �����������ǰ�޴��ٲ�°�-->
 <SCRIPT LANGUAGE="JavaScript">
-function changeImage_m1(filename) { mainimage_m1.src = filename; }
+function changeImage_h2(filename) { mainimage_h2.src = filename; }
 </script>
-
 <SCRIPT LANGUAGE="JavaScript">
-function changeImage_m2(filename) { mainimage_m2.src = filename; }
+function changeImage_h1(filename) { mainimage_h1.src = filename; }
 </script>
-
+<SCRIPT LANGUAGE="JavaScript">
+function changeImage_h3(filename) { mainimage_h3.src = filename; }
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+function changeImage_h4(filename) { mainimage_h4.src = filename; }
+</script>
 
 
 
@@ -268,7 +271,7 @@ nav .fa.fa-angle-down { margin-left: 6px; }
 }
 
 .h_series{
-        background-image: url(i_series_banner.png);  
+       background-image: url(h_series_banner_2.png);  
         background-position: center;
         max-width:2000px;
         min-width:1000px;
@@ -282,11 +285,9 @@ nav .fa.fa-angle-down { margin-left: 6px; }
 }
 
 .h_series img{
-         max-width:2000px;
-        min-width:1000px;
+        width: 2000px;
         margin:0 auto;
         display:block;
-        
 
 }
 .h_product_bg{
@@ -338,18 +339,13 @@ nav .fa.fa-angle-down { margin-left: 6px; }
 .h1_wrap{
         position: relative;
         width: 300px;
-        height: 420px;
+        height: 460px;
         padding: 40px 10px 30px 10px;
         border-radius: 4px;
-        background: #ffffff;
-
-
-       
-
-     
-     
+        background: #ffffff;    
        
 }
+
 
 .h_product_white{
         position: absolute;
@@ -375,7 +371,7 @@ nav .fa.fa-angle-down { margin-left: 6px; }
 
 .h_product_white {
         
-        font-size: 27px;
+        font-size: 32px;
 
        
 
@@ -388,6 +384,26 @@ nav .fa.fa-angle-down { margin-left: 6px; }
         padding:0;
        
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #h1_case_color{
         position: absolute;
         top: 283px;
@@ -402,27 +418,29 @@ nav .fa.fa-angle-down { margin-left: 6px; }
         position: absolute;
         font-size: 17px;
         top:58px;
-        left: 25px;
+        left: 23px;
 }
 
 
 
-
-
-
-
-
-
-.m_product_color ul{
+.h2_product_color ul{
         display: block;
         padding: 0;
         margin:0;
-        padding: 40px 0 0 22px;
+        padding: 10px 0 0 22px;
         background-color: #ffffff;
-        height:90px;
+        height:70px;
 }
 
-.m_product_color li{
+.h4_product_color ul{
+        display: block;
+        padding: 0;
+        margin-top:22px;
+        padding: 10px 0 0 22px;
+        background-color: #ffffff;
+        height:70px;
+}
+.h2_product_color li{
         display: block;
         padding: 0;
         margin:0;
@@ -430,23 +448,79 @@ nav .fa.fa-angle-down { margin-left: 6px; }
         
 
 }
-.m_color_black{
+.h2_color_black_red_left{
         float: left;
-        width:26px;
+        width:15px;
         height:26px;
-        background-color: #cfcfcf;
-        border-radius: 13px;
+        background-color: black;
+        border-radius: 13px 0 0 13px;
        
 }
+.h2_color_black_red_right{
+        margin-left:12px;
+        width:15px;
+        height:26px;
+        background-color: #c80c0c;
+        border-radius: 0 13px 13px 0;
+        
+}
+.h2_color_black_green_left{
+        float: left;
+        width:15px;
+        height:26px;
+        background-color: black;
+        border-radius: 13px 0 0 13px;
+}
+.h2_color_black_green_right{
+       margin-left:12px;
+        width:15px;
+        height:26px;
+        background-color: #00570c;
+        border-radius: 0 13px 13px 0;
+}
+.h2_color_white_pink_left{
+          float: left;
+        width:15px;
+        height:26px;
+        background-color: #eeeeee;
+        border-radius: 13px 0 0 13px;
+}
+.h2_color_white_pink_right{
+       margin-left:12px;
+        width:15px;
+        height:26px;
+        background-color: #ffb7c1;
+        border-radius: 0 13px 13px 0;
+}
+.h2_color_white_black_left{
+         float: left;
+        width:15px;
+        height:26px;
+        background-color: #eeeeee;
+        border-radius: 13px 0 0 13px;
+}
+.h2_color_white_black_right{
+        margin-left:12px;
+        width:15px;
+        height:26px;
+        background-color: black;
+        border-radius: 0 13px 13px 0;
+}
 
-
-
-
-
-
-
-
-
+.h1_color_gray{
+         float: left;
+        width:26px;
+        height:26px;
+        background-color: #808080;
+        border-radius: 13px;
+}
+.h4_color_gray{
+         float: left;
+        width:26px;
+        height:26px;
+        background-color: #444444;
+        border-radius: 13px;
+}
 
 
 
@@ -782,10 +856,10 @@ nav .fa.fa-angle-down { margin-left: 6px; }
 <body>
 
 
-  <!-- Navigation -->
+    <!-- Navigation -->
   <nav class="modern-nav">
-    <a href="index.html" class="nav-logo">
-      <img src="logo.png" alt="Hammertech Korea">
+    <a href="index_ko.html" class="nav-logo">
+      <img src="logo.png" alt="해머텍 코리아">
     </a>
     <button class="hamburger"><i class="fas fa-bars"></i></button>
     <ul class="nav-links">
@@ -794,36 +868,37 @@ nav .fa.fa-angle-down { margin-left: 6px; }
         <button class="mobile-close"><i class="fas fa-times"></i></button>
       </li>
       <li>
-        <a href="re_home3_1211_h_series_test.html">CHASSIS <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
+        <a href="re_home3_1211_h_series_test_ko.html">케이스 (CHASSIS) <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="re_home3_1211_h_series_test.html">H Series</a></li>
-          <li><a href="re_home3_1211_m_series_test.html">M Series</a></li>
-          <li><a href="re_home3_1211_i_series_test.html">I Series</a></li>
+          <li><a href="re_home3_1211_h_series_test_ko.html">H 시리즈</a></li>
+          <li><a href="re_home3_1211_m_series_test_ko.html">M 시리즈</a></li>
+          <li><a href="re_home3_1211_i_series_test_ko.html">I 시리즈</a></li>
         </ul>
       </li>
-      <li><a href="#">POWER SUPPLY</a></li>
+      <li><a href="#">파워서플라이</a></li>
       <li>
-        <a href="re_home3_1211_keyboard_test.html">KEYBOARD & MICE <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
+        <a href="re_home3_1211_keyboard_test_ko.html">키보드 & 마우스 <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="re_home3_1211_keyboard_test.html">Keyboard</a></li>
-          <li><a href="re_home3_1211_mousepad_test.html">Mouse pad</a></li>
+          <li><a href="re_home3_1211_keyboard_test_ko.html">키보드</a></li>
+          <li><a href="re_home3_1211_mousepad_test_ko.html">마우스패드</a></li>
         </ul>
       </li>
       <li>
-        <a href="re_home3_1211_accessory_test.html">ACCESSORY <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
+        <a href="re_home3_1211_accessory_test_ko.html">액세서리 <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="re_home3_1211_accessory_test.html">Accessory</a></li>
-          <li><a href="re_home3_1211_cooling_tunning_test.html">Cooling & Tuning</a></li>
+          <li><a href="re_home3_1211_accessory_test_ko.html">액세서리</a></li>
+          <li><a href="re_home3_1211_cooling_tunning_test_ko.html">쿨링 & 튜닝</a></li>
         </ul>
       </li>
-      <li><a href="re_home3_contact.html">CONTACT</a></li>
+      <li><a href="re_home3_contact_ko.html">고객지원 / 문의</a></li>
+      <li class="lang-switch"><a href="index_ko.html" class="active">KOR</a> | <a href="index.html">ENG</a></li>
     </ul>
   </nav>
 
   <!-- Test Notification Banner -->
   <div class="test-notice-banner">
     <span class="test-badge">PREVIEW TEST</span>
-    <span><strong>[Preview Test - I SERIES]</strong> Top navigation bar improved with <strong>[Back / Breadcrumb / Quick Category Tabs]</strong> & interactive dropdown.</span>
+    <span><strong>[사전 검증용 H 시리즈 테스트]</strong> 상단 내비게이션 바 <strong>[뒤로가기 / Breadcrumb / 빠른 카테고리 탭]</strong> 및 드롭다운 개선이 적용되었습니다.</span>
   </div>
 
 
@@ -835,63 +910,178 @@ nav .fa.fa-angle-down { margin-left: 6px; }
         <div class="h_series_banner"> </div>
         <div class="h_series">
           <div class="mobile-banner-header">
-            <div class="mobile-hero-title">I SERIES CHASSIS</div>
-            <div class="mobile-hero-subtitle">Space-Saving Cube Form Factor<br>Best Mini-Tower PC Cases</div>
+            <div class="mobile-hero-title">H 시리즈 케이스</div>
+            <div class="mobile-hero-subtitle">심플한 디자인과 정교한 알루미늄 가공의<br>베스트 프리미엄 PC 케이스</div>
           </div>
         </div>
         
         <div class="h_product_bg">
                 <div class="h_product test-h-product">
           <div class="h-product-left">
-            <button type="button" onclick="if(window.history.length>1){window.history.back();}else{location.href='index.html';}" class="test-back-btn" title="Back">
-              <i class="fas fa-arrow-left"></i> Back
+            <button type="button" onclick="if(window.history.length>1){window.history.back();}else{location.href='index_ko.html';}" class="test-back-btn" title="뒤로가기">
+              <i class="fas fa-arrow-left"></i> 뒤로가기
             </button>
             <span class="test-breadcrumb">
-              <a href="index.html">HOME</a> <i class="fas fa-angle-right"></i>
-              <a href="re_home3_1211_h_series_test.html" class="crumb-link">CHASSIS</a> <i class="fas fa-angle-right"></i>
-              <span class="crumb-current">I SERIES</span>
+              <a href="index_ko.html">HOME</a> <i class="fas fa-angle-right"></i>
+              <a href="re_home3_1211_h_series_test_ko.html" class="crumb-link">케이스</a> <i class="fas fa-angle-right"></i>
+              <span class="crumb-current">H 시리즈</span>
             </span>
           </div>
           <div class="h-product-tabs">
-            <span class="tab-label"><i class="fas fa-layer-group"></i> Series:</span>
-            <a href="re_home3_1211_h_series_test.html" class="series-tab">H SERIES</a>
-            <a href="re_home3_1211_m_series_test.html" class="series-tab">M SERIES</a>
-            <a href="re_home3_1211_i_series_test.html" class="series-tab active">I SERIES</a>
+            <span class="tab-label"><i class="fas fa-layer-group"></i> 시리즈 이동:</span>
+            <a href="re_home3_1211_h_series_test_ko.html" class="series-tab active">H 시리즈</a>
+            <a href="re_home3_1211_m_series_test_ko.html" class="series-tab">M 시리즈</a>
+            <a href="re_home3_1211_i_series_test_ko.html" class="series-tab">I 시리즈</a>
           </div>
         </div>
         <div class="h_product_list">
                 <ul>
-                        <li>
-                                <a href="caseclick_i3al_02.html">
+                         <li>
+                                <a href="caseclick_h1_01_ko.html">
                                 <div class="h1_wrap">
-                                <img name="mainimage_m1" src="imgs/i3al_main_01.png">
-                               
+                                <img name="mainimage_h1" src="imgs/h1_main_02.png">
+                                <!--<div id="h1_case_color"></div>-->
                                 <div class="h_product_white">
-                                        <h>I-3AL</h>
-<div class="model-nickname"></div>
-                                        <div class="h1_casename">Micro ATX Cube /<br> Mini Tower PC Case</div>
+                                        <h>H1</h>
+<div class="model-nickname">Alumen</div>
+                                        <div class="h1_casename">심플 & 베스트 ATX 미들타워 케이스</div>
 
-
-                                         <div class="m_product_color" width=200 >
+                                         <div class="h2_product_color" width=200 >
 
                                         <ul>
                                                  <li> 
-                                                         <div class="m_color_black" onmouseover="changeImage_m1('imgs/i3al_main_01.png')"></div>
+                                                         <div class="h1_color_gray" onmouseover="changeImage_h1('imgs/h1_main_02.png')"></div>
                                                      
                                                 </li>
-            
+                                              
+                                               
+                                               
+                                              
+                                                
                                         </ul>
-
                                         </div>
+                                </div>
+                                </div> 
+                                </a>
+                        </li>
+
+           
+
+                
 
 
+
+                        <li>
+                           <a href="caseclick_h2_01_ko.html"> 
+                                <div class="h1_wrap">
+                                <img name="mainimage_h2" src="imgs/h2_main_02.png">
+                                <div class="h_product_white">
+                                        <h>H2</h>
+<div class="model-nickname">Snowzilla</div>
+                                        <div class="h1_casename">조립 편의성을 극대화한 ATX 미들타워 케이스</div>
+                                        
+                                <div class="h2_product_color" width=200 >
+
+                                        <ul>
+                                                 <li> 
+                                                         <div class="h2_color_white_black_left" onmouseover="changeImage_h2('imgs/h2_main_02.png')"></div>
+                                                         <div class="h2_color_white_black_right" onmouseover="changeImage_h2('imgs/h2_main_02.png')"></div> 
+                                                </li>
+                                              
+                                                <li width=120> 
+                                                     <div class="h2_color_black_red_left" onmouseover="changeImage_h2('imgs/h2_main_15.png')"></div> 
+                                                     <div class="h2_color_black_red_right" onmouseover="changeImage_h2('imgs/h2_main_15.png')"></div> 
+                                                </li>
+                                                <li>  
+                                                        <div class="h2_color_black_green_left" onmouseover="changeImage_h2('imgs/h2_main_14.png')"></div> 
+                                                        <div class="h2_color_black_green_right" onmouseover="changeImage_h2('imgs/h2_main_14.png')"></div>
+                                                </li>
+                                                    <li> 
+                                                         <div class="h2_color_white_pink_left" onmouseover="changeImage_h2('imgs/h2_main_13.png')"></div>
+                                                         <div class="h2_color_white_pink_right" onmouseover="changeImage_h2('imgs/h2_main_13.png')"></div> 
+                                                </li>
+                                               
+                                              
+                                                
+                                        </ul>
+                                </div>
+                               
+                                </div>
+                                </div> 
+                                
+                                </a>
+                        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+                         <li>
+                                <a href="caseclick_h3_01_ko.html"> 
+                                <div class="h1_wrap">
+                                <img name="mainimage_h3" src="imgs/h3_main_02.png">
+                                <div class="h_product_white">
+                                        <h>H3</h>
+<div class="model-nickname">Tigant DE</div>
+                                        <div class="h1_casename">Mini-ITX 케이스 / 측면 강화유리 </div>
+                                        
+                                                         <div class="h2_product_color" width=200 >
+
+                                        <ul>
+                                                 <li> 
+                                                         <div class="h1_color_gray" onmouseover="changeImage_h3('imgs/h3_main_02.png')"></div>
+                                                     
+                                                </li>
+                                                                          
+                                                
+                                        </ul>
+                                        </div>
 
                                 </div>
                                 </div> 
                                 </a>
                         </li>
 
-                       
+
+
+
+
+
+                         <li>
+                                <a href="caseclick_h4_01_ko.html"> 
+                                <div class="h1_wrap">
+                                <img name="mainimage_h4" src="imgs/h4_2018_main_02.png">
+                                <div class="h_product_white">
+                                        <h>H4</h>
+<div class="model-nickname">Tigant Pro</div>
+                                        <div class="h1_casename">고성능 그래픽카드 장착을 위한<br>Mini-ITX 케이스</div>
+
+                                                   <div class="h4_product_color" width=200 >
+
+                                        <ul>
+                                                 <li> 
+                                                         <div class="h4_color_gray" onmouseover="changeImage_h4('imgs/h4_main_02.png')"></div>
+                                                     
+                                                </li>
+                                                                          
+                                                
+                                        </ul>
+                                        </div>
+
+                                </div>
+                                </div>
+                                </a> 
+                        </li>
           
                         
                 </ul>
@@ -926,15 +1116,15 @@ nav .fa.fa-angle-down { margin-left: 6px; }
 <!--Ȩȭ�鳻�볡-->
 
 
-  <!-- Modern Footer -->
+    <!-- Modern Footer -->
   <footer class="modern-footer">
     <div class="footer-content">
       <div class="footer-info">
-        <img src="hammer_ing_g.png" alt="Hammertech Logo">
+        <img src="hammer_ing_g.png" alt="해머텍 로고">
         <p>
-          <strong>Hammertech korea Co., Ltd</strong><br>
-          Korea Office | 3F, 67, Gajwa-ro, Seodaemun-gu, Seoul, 03663, Republic of Korea<br>
-          E-mail : daniel@hammertech.co.kr
+          <strong>(주) 해머텍 코리아</strong><br>
+          본사 | 서울특별시 서대문구 가좌로 67, 3층 (우: 03663)<br>
+          이메일 : daniel@hammertech.co.kr
         </p>
       </div>
       <div class="footer-social">

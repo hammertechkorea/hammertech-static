@@ -635,7 +635,7 @@ nav .fa.fa-angle-down { margin-left: 6px; }
       white-space: nowrap;
     }
 
-    /* 2. 상단 붉은색 바 (개선된 반응형 네비게이션 & 시리즈 탭) */
+    /* 2. 상단 붉은색 바 (개선된 반응형 네비게이션 & 카테고리/시리즈 탭) */
     .h_product.test-h-product {
       display: flex !important;
       justify-content: space-between !important;
@@ -739,7 +739,7 @@ nav .fa.fa-angle-down { margin-left: 6px; }
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
     }
 
-    /* 3. 데스크톱 GNB CHASSIS 드롭다운 정상 작동 복구 (레거시 display:none 오버라이드) */
+    /* 3. 데스크톱 GNB 드롭다운 정상 작동 복구 (레거시 display:none 오버라이드) */
     .modern-nav .dropdown-menu {
       display: block !important;
       position: absolute !important;
@@ -877,17 +877,17 @@ nav .fa.fa-angle-down { margin-left: 6px; }
       </li>
       <li><a href="#">POWER SUPPLY</a></li>
       <li>
-        <a href="re_home3_1211_keyboard.html">KEYBOARD & MICE <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
+        <a href="re_home3_1211_keyboard_test.html">KEYBOARD & MICE <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="re_home3_1211_keyboard.html">Keyboard</a></li>
-          <li><a href="re_home3_1211_mousepad.html">Mouse pad</a></li>
+          <li><a href="re_home3_1211_keyboard_test.html">Keyboard</a></li>
+          <li><a href="re_home3_1211_mousepad_test.html">Mouse pad</a></li>
         </ul>
       </li>
       <li>
-        <a href="re_home3_1211_accessory.html">ACCESSORY <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
+        <a href="re_home3_1211_accessory_test.html">ACCESSORY <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="re_home3_1211_accessory.html">Accessory</a></li>
-          <li><a href="re_home3_1211_cooling_tunning.html">Cooling & Tuning</a></li>
+          <li><a href="re_home3_1211_accessory_test.html">Accessory</a></li>
+          <li><a href="re_home3_1211_cooling_tunning_test.html">Cooling & Tuning</a></li>
         </ul>
       </li>
       <li><a href="re_home3_contact.html">CONTACT</a></li>
@@ -897,7 +897,7 @@ nav .fa.fa-angle-down { margin-left: 6px; }
   <!-- Test Notification Banner -->
   <div class="test-notice-banner">
     <span class="test-badge">PREVIEW TEST</span>
-    <span><strong>[사전 검증용 테스트 페이지]</strong> 상단 GNB <strong>'CHASSIS ∨'</strong> 드롭다운 및 붉은색 바의 <strong>[시리즈 이동 탭 / 뒤로가기]</strong>가 개선 적용되었습니다.</span>
+    <span><strong>[Preview Test - H SERIES]</strong> Top navigation bar improved with <strong>[Back / Breadcrumb / Quick Category Tabs]</strong> & interactive dropdown.</span>
   </div>
 
 
@@ -915,10 +915,10 @@ nav .fa.fa-angle-down { margin-left: 6px; }
         </div>
         
         <div class="h_product_bg">
-        <div class="h_product test-h-product">
+                <div class="h_product test-h-product">
           <div class="h-product-left">
-            <button type="button" onclick="if(window.history.length>1){window.history.back();}else{location.href='index.html';}" class="test-back-btn" title="이전 페이지로 이동">
-              <i class="fas fa-arrow-left"></i> 뒤로가기
+            <button type="button" onclick="if(window.history.length>1){window.history.back();}else{location.href='index.html';}" class="test-back-btn" title="Back">
+              <i class="fas fa-arrow-left"></i> Back
             </button>
             <span class="test-breadcrumb">
               <a href="index.html">HOME</a> <i class="fas fa-angle-right"></i>
@@ -927,7 +927,7 @@ nav .fa.fa-angle-down { margin-left: 6px; }
             </span>
           </div>
           <div class="h-product-tabs">
-            <span class="tab-label"><i class="fas fa-layer-group"></i> 시리즈 이동:</span>
+            <span class="tab-label"><i class="fas fa-layer-group"></i> Series:</span>
             <a href="re_home3_1211_h_series_test.html" class="series-tab active">H SERIES</a>
             <a href="re_home3_1211_m_series_test.html" class="series-tab">M SERIES</a>
             <a href="re_home3_1211_i_series_test.html" class="series-tab">I SERIES</a>
