@@ -943,6 +943,31 @@ nav .fa.fa-angle-down { margin-left: 6px; }
     background-color: rgba(255, 255, 255, 0.08) !important;
     color: #ffffff !important;
   }
+  /* ==========================================================
+     [방법 B] 열려있는 아코디언 하위의 모든 링크 강제 화이트 및 박스 100% 확장
+     ========================================================== */
+  nav * ul li a,
+  .mobile-menu * a,
+  div[class*="menu"] ul li a,
+  div[class*="nav"] ul li a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* 서브메뉴 박스 가로폭 100% 확장 */
+  nav * ul,
+  .mobile-menu * ul,
+  div[class*="menu"] ul ul,
+  div[class*="nav"] ul ul,
+  .modern-nav .dropdown-menu,
+  .dropdown-menu {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
 }
 </style>
 </head>
@@ -971,24 +996,24 @@ nav .fa.fa-angle-down { margin-left: 6px; }
       <li>
         <a href="re_home3_1211_h_series_test.html">CHASSIS <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="re_home3_1211_h_series_test.html">H Series</a></li>
-          <li><a href="re_home3_1211_m_series_test.html">M Series</a></li>
-          <li><a href="re_home3_1211_i_series_test.html">I Series</a></li>
+          <li><a href="re_home3_1211_h_series_test.html" style="color: #ffffff !important; display: block !important; width: 100% !important; padding: 12px 20px !important;">H Series</a></li>
+          <li><a href="re_home3_1211_m_series_test.html" style="color: #ffffff !important; display: block !important; width: 100% !important; padding: 12px 20px !important;">M Series</a></li>
+          <li><a href="re_home3_1211_i_series_test.html" style="color: #ffffff !important; display: block !important; width: 100% !important; padding: 12px 20px !important;">I Series</a></li>
         </ul>
       </li>
       <li><a href="#">POWER SUPPLY</a></li>
       <li>
         <a href="re_home3_1211_keyboard_test.html">KEYBOARD & MICE <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="re_home3_1211_keyboard_test.html">Keyboard</a></li>
-          <li><a href="re_home3_1211_mousepad_test.html">Mouse pad</a></li>
+          <li><a href="re_home3_1211_keyboard_test.html" style="color: #ffffff !important; display: block !important; width: 100% !important; padding: 12px 20px !important;">Keyboard</a></li>
+          <li><a href="re_home3_1211_mousepad_test.html" style="color: #ffffff !important; display: block !important; width: 100% !important; padding: 12px 20px !important;">Mouse pad</a></li>
         </ul>
       </li>
       <li>
         <a href="re_home3_1211_accessory_test.html">ACCESSORY <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="re_home3_1211_accessory_test.html">Accessory</a></li>
-          <li><a href="re_home3_1211_cooling_tunning_test.html">Cooling & Tuning</a></li>
+          <li><a href="re_home3_1211_accessory_test.html" style="color: #ffffff !important; display: block !important; width: 100% !important; padding: 12px 20px !important;">Accessory</a></li>
+          <li><a href="re_home3_1211_cooling_tunning_test.html" style="color: #ffffff !important; display: block !important; width: 100% !important; padding: 12px 20px !important;">Cooling & Tuning</a></li>
         </ul>
       </li>
       <li><a href="re_home3_contact.html">CONTACT</a></li>

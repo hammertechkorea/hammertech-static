@@ -775,3 +775,28 @@ h1, h2, h3, h4 {
     color: #ffffff !important;
   }
 }
+  /* ==========================================================
+     [방법 B] 열려있는 아코디언 하위의 모든 링크 강제 화이트 및 박스 100% 확장
+     ========================================================== */
+  nav * ul li a,
+  .mobile-menu * a,
+  div[class*="menu"] ul li a,
+  div[class*="nav"] ul li a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* 서브메뉴 박스 가로폭 100% 확장 */
+  nav * ul,
+  .mobile-menu * ul,
+  div[class*="menu"] ul ul,
+  div[class*="nav"] ul ul,
+  .modern-nav .dropdown-menu,
+  .dropdown-menu {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }

@@ -898,6 +898,31 @@ nav .fa.fa-angle-down { margin-left: 6px; }
     background-color: rgba(255, 255, 255, 0.08) !important;
     color: #ffffff !important;
   }
+  /* ==========================================================
+     [방법 B] 열려있는 아코디언 하위의 모든 링크 강제 화이트 및 박스 100% 확장
+     ========================================================== */
+  nav * ul li a,
+  .mobile-menu * a,
+  div[class*="menu"] ul li a,
+  div[class*="nav"] ul li a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* 서브메뉴 박스 가로폭 100% 확장 */
+  nav * ul,
+  .mobile-menu * ul,
+  div[class*="menu"] ul ul,
+  div[class*="nav"] ul ul,
+  .modern-nav .dropdown-menu,
+  .dropdown-menu {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
 }
 </style>
 </head>
@@ -926,24 +951,24 @@ nav .fa.fa-angle-down { margin-left: 6px; }
       <li>
         <a href="re_home3_1211_h_series_ko.html">케이스 (CHASSIS) <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="re_home3_1211_h_series_ko.html">H 시리즈</a></li>
-          <li><a href="re_home3_1211_m_series_ko.html">M 시리즈</a></li>
-          <li><a href="re_home3_1211_i_series_ko.html">I 시리즈</a></li>
+          <li><a href="re_home3_1211_h_series_ko.html" style="color: #ffffff !important; display: block !important; width: 100% !important; padding: 12px 20px !important;">H 시리즈</a></li>
+          <li><a href="re_home3_1211_m_series_ko.html" style="color: #ffffff !important; display: block !important; width: 100% !important; padding: 12px 20px !important;">M 시리즈</a></li>
+          <li><a href="re_home3_1211_i_series_ko.html" style="color: #ffffff !important; display: block !important; width: 100% !important; padding: 12px 20px !important;">I 시리즈</a></li>
         </ul>
       </li>
       <li><a href="#">파워서플라이</a></li>
       <li>
         <a href="re_home3_1211_keyboard_ko.html">키보드 & 마우스 <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="re_home3_1211_keyboard_ko.html">키보드</a></li>
-          <li><a href="re_home3_1211_mousepad_ko.html">마우스패드</a></li>
+          <li><a href="re_home3_1211_keyboard_ko.html" style="color: #ffffff !important; display: block !important; width: 100% !important; padding: 12px 20px !important;">키보드</a></li>
+          <li><a href="re_home3_1211_mousepad_ko.html" style="color: #ffffff !important; display: block !important; width: 100% !important; padding: 12px 20px !important;">마우스패드</a></li>
         </ul>
       </li>
       <li>
         <a href="re_home3_1211_accessory_ko.html">액세서리 <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left:5px;"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="re_home3_1211_accessory_ko.html">액세서리</a></li>
-          <li><a href="re_home3_1211_cooling_tunning_ko.html">쿨링 & 튜닝</a></li>
+          <li><a href="re_home3_1211_accessory_ko.html" style="color: #ffffff !important; display: block !important; width: 100% !important; padding: 12px 20px !important;">액세서리</a></li>
+          <li><a href="re_home3_1211_cooling_tunning_ko.html" style="color: #ffffff !important; display: block !important; width: 100% !important; padding: 12px 20px !important;">쿨링 & 튜닝</a></li>
         </ul>
       </li>
       <li><a href="re_home3_contact_ko.html">고객지원 / 문의</a></li>
