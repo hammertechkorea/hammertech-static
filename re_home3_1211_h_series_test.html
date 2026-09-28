@@ -945,6 +945,53 @@ nav .fa.fa-angle-down { margin-left: 6px; }
       }
     }
   </style>
+<style id="emergency-mobile-submenu-fix">
+/* ==========================================================
+   모바일 내비게이션 서브메뉴 글자 일괄 노출 복구 CSS
+   ========================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. 모바일 메뉴 내 모든 2차 하위 링크 글자색 강제 흰색 지정 */
+  .mobile-nav ul ul li a,
+  .mobile-menu ul ul li a,
+  .sub-menu li a,
+  .dropdown-menu li a,
+  nav.mobile ul li ul a,
+  .modern-nav .dropdown-menu li a,
+  .modern-nav .nav-links li.expanded > .dropdown-menu li a,
+  .nav-links li.expanded > ul li a,
+  nav ul li ul li a,
+  nav.modern-nav ul.nav-links ul.dropdown-menu li a {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 14px !important;
+    padding: 10px 16px !important;
+    text-decoration: none !important;
+    line-height: 1.5 !important;
+  }
+
+  /* 2. 서브메뉴 컨테이너 열림 상태 강제 유지 및 투명도/높이 버그 해제 */
+  .mobile-nav .open > ul,
+  .mobile-menu .active > ul,
+  .sub-menu.active,
+  .sub-menu.show,
+  .modern-nav .nav-links li.expanded > .dropdown-menu,
+  .nav-links li.expanded > ul,
+  nav ul li.expanded ul,
+  .dropdown-menu.active,
+  .dropdown-menu.show,
+  .dropdown-menu.open {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+</style>
 </head>
 
 
