@@ -637,7 +637,6 @@ nav .fa.fa-angle-down { margin-left: 6px; }
       margin: 0 !important;
       list-style: none !important;
     }
-    .modern-nav .nav-links > li:hover > .dropdown-menu,
     .modern-nav .nav-links > li.menu-open > .dropdown-menu {
       opacity: 1 !important;
       visibility: visible !important;
@@ -666,11 +665,7 @@ nav .fa.fa-angle-down { margin-left: 6px; }
       margin: 2px 6px !important;
       text-decoration: none !important;
     }
-    .modern-nav .dropdown-menu li a:hover {
-      background: rgba(255, 255, 255, 0.08) !important;
-      color: #ffffff !important;
-      padding-left: 1.65rem !important;
-    }
+    
     .modern-nav .nav-links > li > a .fa-chevron-down {
       transition: transform 0.3s ease;
     }
@@ -933,7 +928,7 @@ nav .fa.fa-angle-down { margin-left: 6px; }
     opacity: 1 !important;
   }
 
-  /* 서브메뉴 박스 가로폭 100% 확장 */
+    /* 서브메뉴 박스 가로폭 100% 확장 */
   nav * ul,
   .mobile-menu * ul,
   div[class*="menu"] ul ul,
@@ -944,6 +939,141 @@ nav .fa.fa-angle-down { margin-left: 6px; }
     min-width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+  }
+
+  /* ==========================================================
+     모바일 전용: 탭/터치(:hover, :active, :focus, :focus-within) 시 
+     헤더 붉은 배경(#5a1813) 방지, 박스 폭 100% 유지, 텍스트 흰색 보장
+     ========================================================== */
+  /* 1. 헤더 배경색이 hover/active/focus 때문에 빨간색(#5a1813)으로 바뀌지 않음 */
+  nav ul li:hover,
+  nav ul li:active,
+  nav ul li:focus,
+  nav ul li:focus-within,
+  nav ul li.expanded,
+  .modern-nav .nav-links > li:hover,
+  .modern-nav .nav-links > li:active,
+  .modern-nav .nav-links > li:focus,
+  .modern-nav .nav-links > li:focus-within,
+  .modern-nav .nav-links > li.expanded {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  nav ul li a:hover,
+  nav ul li a:active,
+  nav ul li a:focus,
+  nav ul li :hover,
+  .modern-nav .nav-links > li > a:hover,
+  .modern-nav .nav-links > li > a:active,
+  .modern-nav .nav-links > li > a:focus {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+  }
+
+  /* 2. hover/active/focus/expanded 여부와 상관없이 하위 메뉴 컨테이너 폭 100% 및 transform 리셋 */
+  .modern-nav .dropdown-menu,
+  .modern-nav .nav-links li > .dropdown-menu,
+  .modern-nav .nav-links > li:hover > .dropdown-menu,
+  .modern-nav .nav-links > li:active > .dropdown-menu,
+  .modern-nav .nav-links > li:focus > .dropdown-menu,
+  .modern-nav .nav-links > li:focus-within > .dropdown-menu,
+  .modern-nav .nav-links li.expanded > .dropdown-menu,
+  nav ul li ul,
+  nav ul li:hover ul,
+  nav ul li:active ul,
+  nav ul li:focus ul,
+  nav ul li:focus-within ul,
+  nav ul li.expanded ul {
+    position: static !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    left: auto !important;
+    right: auto !important;
+  }
+
+  /* 3. 모바일 하위 항목 글자색 흰색, opacity 1, visibility visible 보장 */
+  .modern-nav .dropdown-menu li,
+  .modern-nav .nav-links > li:hover > .dropdown-menu li,
+  .modern-nav .nav-links li.expanded > .dropdown-menu li,
+  nav ul li ul li {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    background: transparent !important;
+  }
+
+  .modern-nav .dropdown-menu li a,
+  .modern-nav .dropdown-menu li a:hover,
+  .modern-nav .dropdown-menu li a:active,
+  .modern-nav .dropdown-menu li a:focus,
+  .modern-nav .nav-links > li:hover > .dropdown-menu li a,
+  .modern-nav .nav-links li.expanded > .dropdown-menu li a,
+  nav ul li ul li a,
+  nav ul li ul li a:hover,
+  nav ul li ul li a:active,
+  nav ul li ul li a:focus,
+  nav ul li ul :hover {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 14px 24px !important;
+  }
+
+  .modern-nav .dropdown-menu li a:hover,
+  .modern-nav .dropdown-menu li a:active,
+  nav ul li ul li a:hover,
+  nav ul li ul li a:active {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+  }
+}
+
+/* ==========================================================
+   데스크톱 전용 GNB CHASSIS 서브메뉴 한 줄 표시 및 너비 자동 확장
+   ========================================================== */
+@media screen and (min-width: 769px) {
+  .modern-nav .nav-links > li > .dropdown-menu,
+  .modern-nav .dropdown-menu,
+  .dropdown-menu {
+    width: max-content !important;
+    min-width: 160px !important;
+    max-width: none !important;
+  }
+
+  .modern-nav .dropdown-menu li,
+  .modern-nav .dropdown-menu li a,
+  .dropdown-menu li,
+  .dropdown-menu li a {
+    white-space: nowrap !important;
+  }
+}
+
+/* ==========================================================
+   데스크톱 전용 hover 드롭다운 동작 및 메뉴 링크 효과
+   ========================================================== */
+@media screen and (min-width: 769px) and (hover: hover) {
+  .modern-nav .nav-links > li:hover > .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateX(-50%) translateY(0) !important;
+  }
+  .modern-nav .dropdown-menu li a:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    padding-left: 1.65rem !important;
   }
 }
 </style>
