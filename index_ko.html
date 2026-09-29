@@ -155,6 +155,26 @@
     box-sizing: border-box !important;
   }
 }
+
+/* ==========================================================
+   데스크톱 전용 GNB CHASSIS 서브메뉴 한 줄 표시 및 너비 자동 확장
+   ========================================================== */
+@media screen and (min-width: 769px) {
+  .modern-nav .nav-links > li > .dropdown-menu,
+  .modern-nav .dropdown-menu,
+  .dropdown-menu {
+    width: max-content !important;
+    min-width: 160px !important;
+    max-width: none !important;
+  }
+
+  .modern-nav .dropdown-menu li,
+  .modern-nav .dropdown-menu li a,
+  .dropdown-menu li,
+  .dropdown-menu li a {
+    white-space: nowrap !important;
+  }
+}
 </style>
 </head>
 <body>

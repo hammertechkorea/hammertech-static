@@ -351,6 +351,26 @@
     font-size: 13px;
     margin-left: 15px;
   }
+
+/* ==========================================================
+   데스크톱 전용 GNB CHASSIS 서브메뉴 한 줄 표시 및 너비 자동 확장
+   ========================================================== */
+@media screen and (min-width: 769px) {
+  .modern-nav .nav-links > li > .dropdown-menu,
+  .modern-nav .dropdown-menu,
+  .dropdown-menu {
+    width: max-content !important;
+    min-width: 160px !important;
+    max-width: none !important;
+  }
+
+  .modern-nav .dropdown-menu li,
+  .modern-nav .dropdown-menu li a,
+  .dropdown-menu li,
+  .dropdown-menu li a {
+    white-space: nowrap !important;
+  }
+}
 </style>
   <link rel="stylesheet" href="css/modern.css">
   <link rel="stylesheet" href="css/modern-subpage.css?v=10">
@@ -502,7 +522,8 @@
       border: 1px solid rgba(255, 255, 255, 0.12) !important;
       border-radius: 8px !important;
       padding: 0.6rem 0 !important;
-      width: 200px !important;
+      width: max-content !important;
+      min-width: 160px !important;
       opacity: 0 !important;
       visibility: hidden !important;
       pointer-events: none !important;
@@ -528,6 +549,7 @@
       width: 100% !important;
     }
     .modern-nav .dropdown-menu li a {
+      white-space: nowrap !important;
       padding: 0.65rem 1.4rem !important;
       display: block !important;
       font-size: 0.92rem !important;
